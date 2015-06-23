@@ -1,0 +1,52 @@
+/* background color */
+#status,
+.spo-button,
+.spo-cap-bg,
+.spo-see-full,
+.spo-about-icon,
+.qvs-send-button:hover,
+.spo-quote-slider:before,
+.spo-quote-slider-trans:before,
+.spo-quote:before,
+.spo-counter-item-icon,
+.qvs-button-default,
+.spo-media-icon-2 i,
+.spo-page-title-section,
+.qvs-accordion dt:before,
+.qvs-toggle dt:before,
+.qvs-icon-social a i:hover,
+.blog-article-read-more:hover,
+.spo-tags-widget ul li a:hover,
+.spo-heading-wrap-left:after,
+.spo-blog-masonry-article-icon,
+.blog-grid-article-cap,
+.blog-article-comments-count:hover,
+.spo-pagination-count li a:hover,
+.qvs-team-member-social-icons a:hover,
+.spo-portfolio-filter li a.current-filter,
+.spo-primary-navigation>ul>li.selected:after,
+.qvs-pricing-table.active .pricing-table-button a{
+	background-color: #1fb2e2;
+}
+/* color */
+a:hover,
+.spo-default-color,
+.spo-media-icon i,
+
+.qvs-media-item-icon i,
+.spo-blog-article-title a:hover,
+.qvs-tab-nav li.ui-state-active a,
+.spo-project-details>ul>li>dd>a:hover,
+.spo-primary-navigation>ul>li.selected>a,
+.spo-primary-navigation>ul>li>ul>li:hover>a,
+.spo-project-details>ul>li>dd>ul>li>a:hover,
+.qvs-tabs-icon .qvs-tab-nav li.ui-state-active a{
+	color: #1fb2e2;
+}
+/* border color */
+.qvs-media-item-icon,
+.qvs-pricing-table.active,
+.spo-portfolio-filter li a.current-filter,
+.qvs-tabs-icon .qvs-tab-nav li.ui-state-active a{
+	border-color: #1fb2e2;
+}

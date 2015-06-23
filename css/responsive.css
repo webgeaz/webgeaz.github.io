@@ -1,0 +1,268 @@
+@media only screen and (max-width : 1480px) {
+	.spo-portfolio-container-full-6 .spo-portfolio-item {
+		width: 25%;
+	}
+}
+@media only screen and (max-width : 1200px) {
+	.spo-portfolio-container-full-5 .spo-portfolio-item {
+		width: 25%;
+	}
+	.qvs-banner-title{
+		font-size: 1.8em;
+	}
+}
+@media only screen and (max-width : 1023px) {
+	.no-tab-view{
+		display: none;
+	}
+	/*******************************************************
+	********************* Header
+	*******************************************************/
+	header {
+		position: relative;
+	}
+	.spo-primary-navigation {
+		display: none;
+	}
+	.spo-responsive-trigger {
+		display: block;
+	}
+	header.transparent{
+		background: #ffffff;
+	}
+	header.transparent .spo-logo{
+		background: transparent url('../images/logo.png') no-repeat;
+	}
+	header.black-header{
+		background: #222222;
+	}
+	header.black-header .spo-logo{
+		background: transparent url('../images/logo-white.png') no-repeat;
+	}
+	/*******************************************************
+	********************* INTRO
+	*******************************************************/
+	.spo-intro-title{
+		font-size: 2.5em;
+	}
+	.spo-intro-subtitle{
+		font-size: 1.4em;
+	}
+	/*******************************************************
+	********************* CONTENT
+	*******************************************************/
+	#content {
+		margin-top: 0;
+	}
+	/*******************************************************
+	********************* BLOG
+	*******************************************************/
+	.blog-grid-article{
+		width: 50%;
+	}
+	.blog-carousel-title{
+		font-size: 1.2em;
+		margin-top: 10%;
+	}
+	/*******************************************************
+	********************* SERVICES
+	*******************************************************/
+	.spo-services-container{
+		width: 48%;
+		margin-left: 1%;
+		margin-right: 1%;  
+	}
+	/*******************************************************
+	********************* PORTFOLIO
+	*******************************************************/
+	.spo-portfolio-container .spo-portfolio-item,
+	.spo-portfolio-gutters-4 .spo-portfolio-item,
+	.spo-portfolio-container-full-5 .spo-portfolio-item,
+	.spo-portfolio-container-full-6 .spo-portfolio-item {
+		width: 49%;	
+	}
+	/*******************************************************
+	********************* COUNTER 
+	*******************************************************/
+	.spo-counter-item{
+		width: 50%;
+		margin-bottom: 30px;
+	}
+	/*******************************************************
+	********************* SHORTCODES
+	*******************************************************/
+	.qvs-banner-title{
+		width: 100%;
+		font-size: 1.6em;
+	}
+}	
+/* Smartphones */
+@media only screen and (max-width : 767px) {
+/* ========= General Settings & Helper Classes ============= */
+	.no-phone-view{
+		display: none;
+	}
+	/*******************************************************
+	********************* General settings
+	*******************************************************/
+	h1 { font-size: 1.8em;}
+	h2 { font-size: 1.5em;}
+	h3 { font-size: 1.3em;}
+	h4 { font-size: 1.2em;}
+	h5 { font-size: 1em;}
+
+	/*******************************************************
+	********************* HELPER CLASSES
+	*******************************************************/
+	.spo-section-title{
+		font-size: 1.8em;
+	}
+	.spo-section-box-title{
+		padding: 30px 0;
+	}
+	.spo-section-box-title h1{
+		margin-top: 0;
+	}
+	/*******************************************************
+	********************* SHORTCODES
+	*******************************************************/
+	/* #PRICING
+	================================================== */
+	.qvs-pricing-table {
+		margin-bottom: 30px;
+	}
+	/*******************************************************
+	********************* PORTFOLIO
+	*******************************************************/
+	#spo-portfolio-filter {
+		text-align: left;
+	}
+	#spo-portfolio-filter li {
+		margin-bottom: 8px;
+	}
+	.spo-portfolio-container .spo-portfolio-item,
+	.spo-portfolio-container-full-5 .spo-portfolio-item,
+	.spo-portfolio-container-full-6 .spo-portfolio-item {
+		width: 50%;
+	}
+	.spo-portfolio-gutters-4 .spo-portfolio-item,
+	.spo-portfolio-gutters-3 .spo-portfolio-item,
+	.spo-portfolio-gutters-2 .spo-portfolio-item {
+		width: 49%;
+	}
+	.spo-portfolio-item-caption .spo-portfolio-item-title,
+	.spo-portfolio-drag-item-title {
+		font-size: 1.5em;
+	}
+	.spo-sidebar-widgets {
+		padding: 0;
+	}
+	.spo-blog-pagination {
+		margin-bottom: 30px;
+	}
+	.spo-project-details{
+		padding-left: 0;
+	}
+	/*******************************************************
+	********************* BLOG
+	*******************************************************/
+	.spo-blog-article-title,
+	.link-post-type .spo-blog-article-title {
+		font-size: 1.8em;
+	}
+	.link-post-type .spo-blog-article-title {
+		margin-top: 15px;
+	}
+	.spo-comment-reply{
+		margin-bottom: 40px;
+	}
+	.blog-article-comments-count, .blog-article-read-more{
+		width: 40px;
+		height: 40px;
+	}
+	.blog-article-read-more i{
+		font-size: 1.3em;
+		line-height: 40px;
+	}
+	.blog-article-comments-count i{
+		font-size: 1.2em;
+		margin-top: 5px;
+	}
+	.blog-article-comments-count span{
+		font-size: .8em;
+	}
+	.spo-blog-masonry-article{
+		width: 100%;
+	}
+	.spo-blog-masonry-list li{
+		width: 100%;
+	}
+	/*******************************************************
+	********************* QUOTE
+	*******************************************************/
+	.spo-quote-slider ul li p,
+	.spo-quote-slider-trans ul li p {
+		font-size: 1.4em;
+	}
+	/*******************************************************
+	********************* SERVICES
+	*******************************************************/
+	.spo-services-container{
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;  
+	}
+	.spo-service-box{
+		margin-bottom: 20px; 
+	}
+	/*******************************************************
+	********************* IN TOUCH
+	*******************************************************/
+	.subscribe-button{
+		font-size: 1em;
+	}
+	/*******************************************************
+	********************* SHORTCODES
+	*******************************************************/
+	.qvs-banner{
+		width: 100%;
+	}
+	.qvs-team-member{
+		width: 50%;
+	}
+	/*******************************************************
+	********************* CONTACT
+	*******************************************************/
+	.spo-input-container,
+	.spo-comment-reply .input-container{
+		width: 100%;
+		margin-right: 0;
+	}
+}
+
+@media only screen and (max-width : 480px) {
+	/*******************************************************
+	********************* PORTFOLIO
+	*******************************************************/
+	.spo-portfolio-container .spo-portfolio-item,
+	.spo-portfolio-gutters-4 .spo-portfolio-item,
+	.spo-portfolio-gutters-3 .spo-portfolio-item,
+	.spo-portfolio-gutters-2 .spo-portfolio-item,
+	.spo-portfolio-container-full-5 .spo-portfolio-item,
+	.spo-portfolio-container-full-6 .spo-portfolio-item {
+		width: 100%;	
+	}
+	/*******************************************************
+	********************* BLOG
+	*******************************************************/
+	.spo-blog-masonry-list li{
+		width: 100%;
+	}
+	.spo-blog-masonry-article{
+		width: 100%;
+	}
+	.spo-comment-author-img{
+		display: none;
+	}
+
+}

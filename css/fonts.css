@@ -1,0 +1,27 @@
+/*******************************************************
+********************* FONTS
+*******************************************************/
+a,
+p,
+span,
+input,
+.rev-sm-cap,
+.spo-quote p,
+.spo-service-wrap h3,
+.spo-section-subtitle,
+.spo-portfolio-item-cats,
+.spo-portfolio-item-title,
+#spo-portfolio-filter li a,
+.spo-portfolio-drag-item-title{
+	font-family: 'Open Sans', sans-serif, Arial, Verdana, 'Tahoma';
+}
+.rev-big-cap,
+.spo-subtitle,
+.about-subtitle,
+.spo-section-title,
+h1, h2, h3, h4, h5,
+.pricing-table-title,
+.spo-portfolio-item-cats,
+.spo-intro-heading .spo-intro-subtitle{
+	font-family: 'Raleway', sans-serif, Arial, Verdana, 'Tahoma';
+}
