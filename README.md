@@ -1,1 +1,1 @@
-# webgeaz.github.io
+Content for www.webgeaz.com
