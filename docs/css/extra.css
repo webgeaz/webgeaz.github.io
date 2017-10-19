@@ -1,0 +1,8 @@
+.md-typeset__table {
+   min-width: 100%;
+}
+.md-logo > img {
+    height: 50px !important;
+    width: auto !important;
+    margin: -15px 0;
+}

@@ -1,0 +1,839 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="./img/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.3">
+    
+    
+      
+        <title>SUFIA Installation & Usage Guide</title>
+      
+    
+    
+      <script src="./assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="./assets/stylesheets/application-9011e2d3f8.css">
+      
+        <link rel="stylesheet" href="./assets/stylesheets/application-23f75ab9c7.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="./css/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="." title="SUFIA Installation & Usage Guide" class="md-header-nav__button md-logo">
+          
+            
+              <img src="./img/webgeaz_logo_sm.png" width="24" height="24">
+            
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Introduction
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        
+          <img src="./img/webgeaz_logo_sm.png">
+        
+      
+    </div>
+    SUFIA Installation & Usage Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Introduction
+      </label>
+    
+    <a href="." title="Introduction" class="md-nav__link md-nav__link--active">
+      Introduction
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" title="Architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-concept" title="Basic Concept" class="md-nav__link">
+    Basic Concept
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-category" title="User Category" class="md-nav__link">
+    User Category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment" title="Environment" class="md-nav__link">
+    Environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-go-next" title="Where to go next?" class="md-nav__link">
+    Where to go next?
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Administrator
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Administrator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="administrator/intro/" title="Administration" class="md-nav__link">
+      Administration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="administrator/settings/" title="Settings" class="md-nav__link">
+      Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="administrator/menu/" title="Menu Management" class="md-nav__link">
+      Menu Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="administrator/user/" title="User Management" class="md-nav__link">
+      User Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="administrator/role/" title="Role Management" class="md-nav__link">
+      Role Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="administrator/acl/" title="Access Control" class="md-nav__link">
+      Access Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="administrator/file-manager/" title="File Manager" class="md-nav__link">
+      File Manager
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Developer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Developer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/intro/" title="Development" class="md-nav__link">
+      Development
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/database/" title="Database" class="md-nav__link">
+      Database
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/data/" title="Data" class="md-nav__link">
+      Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/query/" title="Query" class="md-nav__link">
+      Query
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/transaction/" title="Transaction" class="md-nav__link">
+      Transaction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/services/" title="Services" class="md-nav__link">
+      Services
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/variables/" title="Variable" class="md-nav__link">
+      Variable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/page-layout/" title="Page Layout" class="md-nav__link">
+      Page Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/utility-class/" title="Utility" class="md-nav__link">
+      Utility
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/batch/" title="Scheduler" class="md-nav__link">
+      Scheduler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11" type="checkbox" id="nav-4-11">
+    
+    <label class="md-nav__link" for="nav-4-11">
+      How-To
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-11">
+        How-To
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/how-to/action-pattern/" title="Action Pattern" class="md-nav__link">
+      Action Pattern
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/how-to/ajax/" title="AJAX" class="md-nav__link">
+      AJAX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/how-to/generate-pdf/" title="Generate PDF" class="md-nav__link">
+      Generate PDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/how-to/upload-file/" title="Upload / Download" class="md-nav__link">
+      Upload / Download
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/how-to/send-mail/" title="Send E-Mail" class="md-nav__link">
+      Send E-Mail
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/how-to/customize-user/" title="Customize User" class="md-nav__link">
+      Customize User
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developer/how-to/user-program/" title="Free Format Program" class="md-nav__link">
+      Free Format Program
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Operator
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Operator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="operator/console/" title="Operator Console" class="md-nav__link">
+      Operator Console
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" title="Architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-concept" title="Basic Concept" class="md-nav__link">
+    Basic Concept
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-category" title="User Category" class="md-nav__link">
+    User Category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment" title="Environment" class="md-nav__link">
+    Environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-go-next" title="Where to go next?" class="md-nav__link">
+    Where to go next?
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="sufia-single-unified-framework-for-internet-application">SUFIA - Single Unified Framework for Internet Application<a class="headerlink" href="#sufia-single-unified-framework-for-internet-application" title="Permanent link">&para;</a></h1>
+<p><img alt="SUFIA" src="./img/sufia_logo_red.png" /></p>
+<p>SUFIA is a framework combining the best open source libraries, tools, application development best-practices and utilities
+in an unified and integrated environment. By using SUFIA you can develop from small to large enterprise application.</p>
+<p>Your focus should be on developing your application <strong>business logic</strong>. Other commons components (such as user management, roles, menus etc.),
+commons functions (database access, connection pools, scheduler) is already build-in for your utilization.</p>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<p>SUFIA web application framework is a Java<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> based application which run on JVM. It uses MySQL database by default, but able to support
+major database. SUFIA follows standard web MVC architecture which is similar to most of the Java based web application.</p>
+<p><img alt="SUFIA Architecture" src="./img/architecture.jpg" /></p>
+<h2 id="basic-concept">Basic Concept<a class="headerlink" href="#basic-concept" title="Permanent link">&para;</a></h2>
+<p>Application build on SUFIA will follows SUFIA conventions. These includes access control, users, roles, menu and transaction. <a href="developer/transaction/">Transaction</a>
+is the crux of the application. You're likely to spend most of the development time on building Transactions.</p>
+<p>As a holistic platform, SUFIA includes all the tools and mechanism needed to build an application. Starting from database management tools
+to create tables, writing a specification for use-cases, generating CRUD (Create, Retrieve, Update, Delete) code, generating queries (data listing),
+writing business logic (using scripting language), writing UI frontend (form builder, custom template) up to testing and deployment of
+application to production.</p>
+<p>Users of SUFIA are divided into three exclusive categories. Each category has its own build-in roles and functions.</p>
+<h3 id="user-category">User Category<a class="headerlink" href="#user-category" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>System Management</p>
+<p>User under this category are SUFIA administrator.</p>
+</li>
+<li>
+<p>Application Management</p>
+<p>User under this category are application developer. It includes business analyst, programmer, tester and DBA.</p>
+</li>
+<li>
+<p>End User</p>
+<p>User under this category are actual user of the application. They can have their own menus, roles, functions (based on either transaction, data or query).
+End user will be assigned to specific environment based on user mode.</p>
+</li>
+</ol>
+<h3 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h3>
+<p>SUFIA is built-in with two environment i.e. Development &amp; Production. You can start SUFIA
+with both environment (default) or with either development or production.</p>
+<p>SUFIA environment rely heavily on user category. SUFIA user will be assigned to the environment depending on
+the user category.</p>
+<p>Each environment is having its own database. With this, it's safe to run both environment side-by-side
+and you can have the production user using the application while at the same time testing user
+can test the application without the data being shared. The databases can be on the same server, or you
+can have dedicated server for every environment.</p>
+<h2 id="where-to-go-next">Where to go next?<a class="headerlink" href="#where-to-go-next" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="installation/">Installation</a> - Once you've purchased SUFIA, you can follow this guideline to install and configure SUFIA</li>
+</ul>
+<p>After successful installation, you can proceed with below usage guideline:</p>
+<ul>
+<li><a href="administrator/intro/">Administration</a> - SUFIA administration guide for system administrator</li>
+<li><a href="developer/intro/">Development</a> - SUFIA development guide for developer</li>
+<li><a href="operator/console/">Operation</a> - SUFIA operational guide for system operator</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="installation/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Installation
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Webgeaz Sdn Berhad
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="./assets/javascripts/application-f3ab9e5ff8.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

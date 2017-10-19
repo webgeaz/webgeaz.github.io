@@ -1,0 +1,449 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "SUFIA - Single Unified Framework for Internet Application\n\n\n\n\nSUFIA is a framework combining the best open source libraries, tools, application development best-practices and utilities\nin an unified and integrated environment. By using SUFIA you can develop from small to large enterprise application.\n\n\nYour focus should be on developing your application \nbusiness logic\n. Other commons components (such as user management, roles, menus etc.),\ncommons functions (database access, connection pools, scheduler) is already build-in for your utilization.\n\n\nArchitecture\n\n\nSUFIA web application framework is a Java\n1\n based application which run on JVM. It uses MySQL database by default, but able to support\nmajor database. SUFIA follows standard web MVC architecture which is similar to most of the Java based web application.\n\n\n\n\nBasic Concept\n\n\nApplication build on SUFIA will follows SUFIA conventions. These includes access control, users, roles, menu and transaction. \nTransaction\n\nis the crux of the application. You're likely to spend most of the development time on building Transactions.\n\n\nAs a holistic platform, SUFIA includes all the tools and mechanism needed to build an application. Starting from database management tools\nto create tables, writing a specification for use-cases, generating CRUD (Create, Retrieve, Update, Delete) code, generating queries (data listing),\nwriting business logic (using scripting language), writing UI frontend (form builder, custom template) up to testing and deployment of\napplication to production.\n\n\nUsers of SUFIA are divided into three exclusive categories. Each category has its own build-in roles and functions.\n\n\nUser Category\n\n\n\n\n\n\nSystem Management\n\n\nUser under this category are SUFIA administrator.\n\n\n\n\n\n\nApplication Management\n\n\nUser under this category are application developer. It includes business analyst, programmer, tester and DBA.\n\n\n\n\n\n\nEnd User\n\n\nUser under this category are actual user of the application. They can have their own menus, roles, functions (based on either transaction, data or query).\nEnd user will be assigned to specific environment based on user mode.\n\n\n\n\n\n\nEnvironment\n\n\nSUFIA is built-in with two environment i.e. Development \n Production. You can start SUFIA\nwith both environment (default) or with either development or production.\n\n\nSUFIA environment rely heavily on user category. SUFIA user will be assigned to the environment depending on\nthe user category.\n\n\nEach environment is having its own database. With this, it's safe to run both environment side-by-side\nand you can have the production user using the application while at the same time testing user\ncan test the application without the data being shared. The databases can be on the same server, or you\ncan have dedicated server for every environment.\n\n\nWhere to go next?\n\n\n\n\nInstallation\n - Once you've purchased SUFIA, you can follow this guideline to install and configure SUFIA\n\n\n\n\nAfter successful installation, you can proceed with below usage guideline:\n\n\n\n\nAdministration\n - SUFIA administration guide for system administrator\n\n\nDevelopment\n - SUFIA development guide for developer\n\n\nOperation\n - SUFIA operational guide for system operator\n\n\n\n\n\n\n\n\n\n\n\n\nOracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/#sufia-single-unified-framework-for-internet-application", 
+            "text": "SUFIA is a framework combining the best open source libraries, tools, application development best-practices and utilities\nin an unified and integrated environment. By using SUFIA you can develop from small to large enterprise application.  Your focus should be on developing your application  business logic . Other commons components (such as user management, roles, menus etc.),\ncommons functions (database access, connection pools, scheduler) is already build-in for your utilization.", 
+            "title": "SUFIA - Single Unified Framework for Internet Application"
+        }, 
+        {
+            "location": "/#architecture", 
+            "text": "SUFIA web application framework is a Java 1  based application which run on JVM. It uses MySQL database by default, but able to support\nmajor database. SUFIA follows standard web MVC architecture which is similar to most of the Java based web application.", 
+            "title": "Architecture"
+        }, 
+        {
+            "location": "/#basic-concept", 
+            "text": "Application build on SUFIA will follows SUFIA conventions. These includes access control, users, roles, menu and transaction.  Transaction \nis the crux of the application. You're likely to spend most of the development time on building Transactions.  As a holistic platform, SUFIA includes all the tools and mechanism needed to build an application. Starting from database management tools\nto create tables, writing a specification for use-cases, generating CRUD (Create, Retrieve, Update, Delete) code, generating queries (data listing),\nwriting business logic (using scripting language), writing UI frontend (form builder, custom template) up to testing and deployment of\napplication to production.  Users of SUFIA are divided into three exclusive categories. Each category has its own build-in roles and functions.", 
+            "title": "Basic Concept"
+        }, 
+        {
+            "location": "/#user-category", 
+            "text": "System Management  User under this category are SUFIA administrator.    Application Management  User under this category are application developer. It includes business analyst, programmer, tester and DBA.    End User  User under this category are actual user of the application. They can have their own menus, roles, functions (based on either transaction, data or query).\nEnd user will be assigned to specific environment based on user mode.", 
+            "title": "User Category"
+        }, 
+        {
+            "location": "/#environment", 
+            "text": "SUFIA is built-in with two environment i.e. Development   Production. You can start SUFIA\nwith both environment (default) or with either development or production.  SUFIA environment rely heavily on user category. SUFIA user will be assigned to the environment depending on\nthe user category.  Each environment is having its own database. With this, it's safe to run both environment side-by-side\nand you can have the production user using the application while at the same time testing user\ncan test the application without the data being shared. The databases can be on the same server, or you\ncan have dedicated server for every environment.", 
+            "title": "Environment"
+        }, 
+        {
+            "location": "/#where-to-go-next", 
+            "text": "Installation  - Once you've purchased SUFIA, you can follow this guideline to install and configure SUFIA   After successful installation, you can proceed with below usage guideline:   Administration  - SUFIA administration guide for system administrator  Development  - SUFIA development guide for developer  Operation  - SUFIA operational guide for system operator       Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners", 
+            "title": "Where to go next?"
+        }, 
+        {
+            "location": "/installation/", 
+            "text": "Installation Guide\n\n\nThere is two type is packaging for SUFIA, standalone (default package) and WAR file. Depending on your\nrequirement, you have to choose what suits you best.\n\n\nSUFIA Standalone package includes everything needed to run it as a server application, except the database.\nYou have to manually install your database (default supported database is MySQL / MariaDB).\n\n\nSUFIA can run on any OS that support JVM, however currently the supported platform is Linux and Windows only.\n\n\nInstallation of SUFIA Standalone Package\n\n\n\n\n\n\nInstall Java JDK and MySQL\n\n\nDepending on your operating system (OS), you need to download and install JDK and MySQL\n\n\n\n\nJDK (version 1.7+)\n\n\nMySQL (version 5.x)\n\n\n\n\n\n\nTip\n\n\nIf you're using Ubuntu, you can refer to this excellent guides:\n\n\n\n\nInstall Java with Apt-Get on Ubuntu\n\n\nInstall MySQL on Ubuntu\n\n\n\n\n\n\n\n\n\n\nUnpack (unzip) SUFIA standalone package in your preferred location.\n   The location of SUFIA package will be the value for \nSUFIA_HOME\n later.\n   \n$ \npwd\n\n/home/ubuntu\n$ unzip sufia-app.zip\n$ \ncd\n sufia-app\n$ \npwd\n\n/home/ubuntu/sufia-app\n\n\n   For example as above, our \nSUFIA_HOME\n value will be \n/home/ubuntu/sufia-app\n\n\n\n\n\n\nSetup MySQL database for SUFIA\n\n\n\n\n\n\nCreate 3 different users (with password)\n\nmysql\n \ncreate\n \nuser\n \nsufia_base_user\n \nidentified\n \nby\n \npassword\n;\n\n\nmysql\n \ncreate\n \nuser\n \nsufia_test_user\n \nidentified\n \nby\n \npassword\n;\n\n\nmysql\n \ncreate\n \nuser\n \nsufia_prod_user\n \nidentified\n \nby\n \npassword\n;\n\n\n\n\nChange the password to more secured phrase. You can use any name or password that you want, we're going\nto need these on the configuration file.\n\n\n\n\n\n\nCreate the databases and tables using script file provided.\n\n$ mysql -u root -p \n sufia-db.sql\n\n\n\n\n\n\n\nThe script will create 3 databases: \nsufia_base\n, \nsufia_test\n and \nsufia_prod\n. Grant privileges to these databases\nusing previously created user.\n\nmysql\n \ngrant\n \nall\n \nprivileges\n \non\n \nsufia_base\n.\n*\n \nto\n \nsufia_base_user\n;\n\n\nmysql\n \ngrant\n \nall\n \nprivileges\n \non\n \nsufia_test\n.\n*\n \nto\n \nsufia_test_user\n;\n\n\nmysql\n \ngrant\n \nall\n \nprivileges\n \non\n \nsufia_prod\n.\n*\n \nto\n \nsufia_prod_user\n;\n\n\nmysql\n \nflush\n \nprivileges\n;\n\n\n\n\n\n\n\n\n\n\n\n\nSet database credential for SUFIA:\n\n\n\n\nOpen context.xml file using editor.\n\n$ vim sufia-app/webapp/META-INF/context.xml\n\n\n\nChange the username and password accordingly.\n\n?xml version=\n1.0\n encoding=\nUTF-8\n?\n\n\nContext\n \nantiJARLocking=\ntrue\n \npath=\n/\n\n    \nResource\n \nname=\njdbc/sufia_base\n \nauth=\nContainer\n\n        \ntype=\njavax.sql.DataSource\n\n        \nmaxActive=\n100\n \nmaxIdle=\n30\n \nmaxWait=\n10000\n\n        \nvalidationQuery=\nSELECT 1\n \ntestOnBorrow=\ntrue\n\n        \ntestWhileIdle=\ntrue\n\n\n        \nusername=\nsufia_base_user\n \npassword=\npassword\n\n\n        \ndriverClassName=\ncom.mysql.jdbc.Driver\n\n        \nurl=\njdbc:mysql://127.0.0.1:3306/sufia_base\n/\n\n    \nResource\n \nname=\njdbc/sufia_test\n \nauth=\nContainer\n\n        \ntype=\njavax.sql.DataSource\n\n        \nmaxActive=\n100\n \nmaxIdle=\n30\n \nmaxWait=\n10000\n\n        \nvalidationQuery=\nSELECT 1\n \ntestOnBorrow=\ntrue\n\n        \ntestWhileIdle=\ntrue\n\n\n        \nusername=\nsufia_test_user\n \npassword=\npassword\n\n\n        \ndriverClassName=\ncom.mysql.jdbc.Driver\n\n        \nurl=\njdbc:mysql://127.0.0.1:3306/sufia_test\n/\n\n    \nResource\n \nname=\njdbc/sufia_prod\n \nauth=\nContainer\n\n        \ntype=\njavax.sql.DataSource\n\n        \nmaxActive=\n100\n \nmaxIdle=\n30\n \nmaxWait=\n10000\n\n        \nvalidationQuery=\nSELECT 1\n \ntestOnBorrow=\ntrue\n\n        \ntestWhileIdle=\ntrue\n\n\n        \nusername=\nsufia_prod_user\n \npassword=\npassword\n\n\n        \ndriverClassName=\ncom.mysql.jdbc.Driver\n\n        \nurl=\njdbc:mysql://127.0.0.1:3306/sufia_prod\n/\n\n\n/Context\n\n\n\n\n\n\n\n\n\n\nUpdate configuration files for SUFIA_HOME location\n    \n$ vim sufia-app/webapp/WEB-INF/classes/sufia.properties\n\n\n    \nsufia.home \n=\n /home/ubuntu/sufia-app\n\n\n\n\n\nNote\n\n\nSUFIA can be set to start with DEVEPMENT MODE or PRODUCTION MODE\n\n\nIf file \ndevelopment.properties\n is present, SUFIA will turn-on DEVEPMENT MODE\n\n\nIf file \nproduction.properties\n is present, SUFIA will turn-on PRODUCTION MODE\n\n\n\n\n\n\n\n\nTest run SUFIA:\n    \n$ \nexport\n \nSUFIA_HOME\n=\n/home/pakcu/sufia-app\n$ chmod +x *.sh\n$ ./startup.sh\n\n\n    If everything goes well, you should see a tomcat.log file created on home folder.\n    Check the log file and make sure the server is running successfully without any error.\n\n\nNow the server is running on default port (8080), go to your browser and open:\n\nhttp://localhost:8080\n. You should see the default SUFIA login page\n\n\n\n\n\n\nTip\n\n\nYou can now setup web server as proxy to SUFIA server e.g. nginx, apache\nYou also can setup SSL on the web server (offloading SSL from SUFIA server).\nRefer to these excellent articles:\n\n\n\n\nInstall Nginx on Ubuntu\n\n\nSecure Nginx with Let's Encrypt\n\n\nNginx Reverse Proxy\n\n\n\n\n\n\n\n\n\n\nInstall SUFIA as a service\n\n\nDepending on your OS, we provide script to install SUFIA as a service and make it auto start when you reboot the OS.\nPlease refer to script details on your platform.\n\n\n\n\n\n\nUpdate License Information\n\n\nFor time login, only \nMASTER\n user allowed to login. You will be given with default username and password for SUFIA master user. Use that for first time login.\n\n\nUpon successful login, the page will be directed to settings page. Copy the key and E-Mail it to info@webgeaz.com to request for your license key\n\n\n\nAs soon as you get your license key, update the license key field with given key and click \"\nValidate Licene\n\"\n\n\n\n\n\n\nNow your SUFIA application is ready. Proceed to \nAdministration\n section for setting up site information, users, roles and menus.", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/installation/#installation-guide", 
+            "text": "There is two type is packaging for SUFIA, standalone (default package) and WAR file. Depending on your\nrequirement, you have to choose what suits you best.  SUFIA Standalone package includes everything needed to run it as a server application, except the database.\nYou have to manually install your database (default supported database is MySQL / MariaDB).  SUFIA can run on any OS that support JVM, however currently the supported platform is Linux and Windows only.", 
+            "title": "Installation Guide"
+        }, 
+        {
+            "location": "/installation/#installation-of-sufia-standalone-package", 
+            "text": "Install Java JDK and MySQL  Depending on your operating system (OS), you need to download and install JDK and MySQL   JDK (version 1.7+)  MySQL (version 5.x)    Tip  If you're using Ubuntu, you can refer to this excellent guides:   Install Java with Apt-Get on Ubuntu  Install MySQL on Ubuntu      Unpack (unzip) SUFIA standalone package in your preferred location.\n   The location of SUFIA package will be the value for  SUFIA_HOME  later.\n    $  pwd \n/home/ubuntu\n$ unzip sufia-app.zip\n$  cd  sufia-app\n$  pwd \n/home/ubuntu/sufia-app \n   For example as above, our  SUFIA_HOME  value will be  /home/ubuntu/sufia-app    Setup MySQL database for SUFIA    Create 3 different users (with password) mysql   create   user   sufia_base_user   identified   by   password ;  mysql   create   user   sufia_test_user   identified   by   password ;  mysql   create   user   sufia_prod_user   identified   by   password ;   Change the password to more secured phrase. You can use any name or password that you want, we're going\nto need these on the configuration file.    Create the databases and tables using script file provided. $ mysql -u root -p   sufia-db.sql    The script will create 3 databases:  sufia_base ,  sufia_test  and  sufia_prod . Grant privileges to these databases\nusing previously created user. mysql   grant   all   privileges   on   sufia_base . *   to   sufia_base_user ;  mysql   grant   all   privileges   on   sufia_test . *   to   sufia_test_user ;  mysql   grant   all   privileges   on   sufia_prod . *   to   sufia_prod_user ;  mysql   flush   privileges ;       Set database credential for SUFIA:   Open context.xml file using editor. $ vim sufia-app/webapp/META-INF/context.xml  Change the username and password accordingly. ?xml version= 1.0  encoding= UTF-8 ?  Context   antiJARLocking= true   path= / \n     Resource   name= jdbc/sufia_base   auth= Container \n         type= javax.sql.DataSource \n         maxActive= 100   maxIdle= 30   maxWait= 10000 \n         validationQuery= SELECT 1   testOnBorrow= true \n         testWhileIdle= true           username= sufia_base_user   password= password           driverClassName= com.mysql.jdbc.Driver \n         url= jdbc:mysql://127.0.0.1:3306/sufia_base / \n     Resource   name= jdbc/sufia_test   auth= Container \n         type= javax.sql.DataSource \n         maxActive= 100   maxIdle= 30   maxWait= 10000 \n         validationQuery= SELECT 1   testOnBorrow= true \n         testWhileIdle= true           username= sufia_test_user   password= password           driverClassName= com.mysql.jdbc.Driver \n         url= jdbc:mysql://127.0.0.1:3306/sufia_test / \n     Resource   name= jdbc/sufia_prod   auth= Container \n         type= javax.sql.DataSource \n         maxActive= 100   maxIdle= 30   maxWait= 10000 \n         validationQuery= SELECT 1   testOnBorrow= true \n         testWhileIdle= true           username= sufia_prod_user   password= password           driverClassName= com.mysql.jdbc.Driver \n         url= jdbc:mysql://127.0.0.1:3306/sufia_prod /  /Context      Update configuration files for SUFIA_HOME location\n     $ vim sufia-app/webapp/WEB-INF/classes/sufia.properties \n     sufia.home  =  /home/ubuntu/sufia-app   Note  SUFIA can be set to start with DEVEPMENT MODE or PRODUCTION MODE  If file  development.properties  is present, SUFIA will turn-on DEVEPMENT MODE  If file  production.properties  is present, SUFIA will turn-on PRODUCTION MODE     Test run SUFIA:\n     $  export   SUFIA_HOME = /home/pakcu/sufia-app\n$ chmod +x *.sh\n$ ./startup.sh \n    If everything goes well, you should see a tomcat.log file created on home folder.\n    Check the log file and make sure the server is running successfully without any error.  Now the server is running on default port (8080), go to your browser and open: http://localhost:8080 . You should see the default SUFIA login page    Tip  You can now setup web server as proxy to SUFIA server e.g. nginx, apache\nYou also can setup SSL on the web server (offloading SSL from SUFIA server).\nRefer to these excellent articles:   Install Nginx on Ubuntu  Secure Nginx with Let's Encrypt  Nginx Reverse Proxy      Install SUFIA as a service  Depending on your OS, we provide script to install SUFIA as a service and make it auto start when you reboot the OS.\nPlease refer to script details on your platform.    Update License Information  For time login, only  MASTER  user allowed to login. You will be given with default username and password for SUFIA master user. Use that for first time login.  Upon successful login, the page will be directed to settings page. Copy the key and E-Mail it to info@webgeaz.com to request for your license key  As soon as you get your license key, update the license key field with given key and click \" Validate Licene \"    Now your SUFIA application is ready. Proceed to  Administration  section for setting up site information, users, roles and menus.", 
+            "title": "Installation of SUFIA Standalone Package"
+        }, 
+        {
+            "location": "/administrator/intro/", 
+            "text": "SUFIA Administration", 
+            "title": "Administration"
+        }, 
+        {
+            "location": "/administrator/intro/#sufia-administration", 
+            "text": "", 
+            "title": "SUFIA Administration"
+        }, 
+        {
+            "location": "/administrator/settings/", 
+            "text": "Settings\n\n\nSystem Settings\n\n\n\n\n\n\n\n\nField\n\n\nDescription\n\n\nDefault Value\n\n\n\n\n\n\n\n\n\n\nSystem Name\n\n\nName of the system\n\n\nNone\n\n\n\n\n\n\nBase URL\n\n\nURL for E-Mail forgot password and user activation URL\n\n\nNone\n\n\n\n\n\n\nUpload Logo\n\n\nLogo for top banner. Only application if you used default SUFIA UI template. Preferred height is 270px x 10px using svg format\n\n\nNone\n\n\n\n\n\n\n\n\nAdvanced Settings\n\n\n\n\n\n\n\n\nField\n\n\nDescription\n\n\nDefault Value\n\n\n\n\n\n\n\n\n\n\nPassword Expiry\n\n\nTo enable password expiry policy, set value of greater than 0. In days\n\n\n0\n\n\n\n\n\n\nPrevent Use of Same Password\n\n\nPrevent usage of same password. Possible values: true/false\n\n\nfalse\n\n\n\n\n\n\nPassword Strength\n\n\nForce password strength. Possible values: normal / strong\n\n\nnormal\n\n\n\n\n\n\nWrong Password Attempt\n\n\nNumber of tries before locking user account. 0 for unlimited\n\n\n10\n\n\n\n\n\n\nEnable Password Validity\n\n\nEnable password validity feature. Possible values: true/false\n\n\nfalse\n\n\n\n\n\n\n\n\nBackup \n Restore\n\n\nSUFIA comes with build-in backup and restore mechanism. This backup includes all SUFIA databases and administrator \n developer uploaded files (see \nFile Manager\n).\n\n\n\n\nInfo\n\n\nFor mission critical production system, please use an enterprise backup \n restore tools. \nSUFIA backup \n restore is just a basic tools with limited functionality\n\n\n\n\nBackup\n\n\n\n\n\n\n\n\nField\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nBackup Location\n\n\nLocation for backup files. This location must be on the local server and SUFIA process must have read / write access to that folder. If you need to use location outside of the server, you must make it available from local (mount nfs, shared drive etc)\n\n\n\n\n\n\nDB User\n\n\nDatabase user. The user must have access to all three SUFIA databases (sufia_base, sufia_test \n sufia_prod)\n\n\n\n\n\n\nDB Password\n\n\nDatabase user's password\n\n\n\n\n\n\nSchedule Backup\n\n\nIf enabled, SUFIA will periodically run backup process based on next settings\n\n\n\n\n\n\nPeriod\n\n\nSchedule period: either Monthly, Weekly or Daily. For Monthly the backup process will run on every last working day of the month. For Weekly backup process will run every Friday.\n\n\n\n\n\n\nTime\n\n\nTime to start backup process. Normally for production site we set value to after midnight (e.g. 1 AM) to avoid congestion on system.\n\n\n\n\n\n\n\n\nRestore\n\n\nTo restore SUFIA into specific snapshot, select the backup files on the list, then click \"\nRestore\n\".\n\n\n\n\nDanger\n\n\nPlease make sure you backup manually (databases \n sufia-app folder) before trying to restore, just in case anything happen during restoration process.", 
+            "title": "Settings"
+        }, 
+        {
+            "location": "/administrator/settings/#settings", 
+            "text": "", 
+            "title": "Settings"
+        }, 
+        {
+            "location": "/administrator/settings/#system-settings", 
+            "text": "Field  Description  Default Value      System Name  Name of the system  None    Base URL  URL for E-Mail forgot password and user activation URL  None    Upload Logo  Logo for top banner. Only application if you used default SUFIA UI template. Preferred height is 270px x 10px using svg format  None", 
+            "title": "System Settings"
+        }, 
+        {
+            "location": "/administrator/settings/#advanced-settings", 
+            "text": "Field  Description  Default Value      Password Expiry  To enable password expiry policy, set value of greater than 0. In days  0    Prevent Use of Same Password  Prevent usage of same password. Possible values: true/false  false    Password Strength  Force password strength. Possible values: normal / strong  normal    Wrong Password Attempt  Number of tries before locking user account. 0 for unlimited  10    Enable Password Validity  Enable password validity feature. Possible values: true/false  false", 
+            "title": "Advanced Settings"
+        }, 
+        {
+            "location": "/administrator/settings/#backup-restore", 
+            "text": "SUFIA comes with build-in backup and restore mechanism. This backup includes all SUFIA databases and administrator   developer uploaded files (see  File Manager ).   Info  For mission critical production system, please use an enterprise backup   restore tools. \nSUFIA backup   restore is just a basic tools with limited functionality", 
+            "title": "Backup &amp; Restore"
+        }, 
+        {
+            "location": "/administrator/settings/#backup", 
+            "text": "Field  Description      Backup Location  Location for backup files. This location must be on the local server and SUFIA process must have read / write access to that folder. If you need to use location outside of the server, you must make it available from local (mount nfs, shared drive etc)    DB User  Database user. The user must have access to all three SUFIA databases (sufia_base, sufia_test   sufia_prod)    DB Password  Database user's password    Schedule Backup  If enabled, SUFIA will periodically run backup process based on next settings    Period  Schedule period: either Monthly, Weekly or Daily. For Monthly the backup process will run on every last working day of the month. For Weekly backup process will run every Friday.    Time  Time to start backup process. Normally for production site we set value to after midnight (e.g. 1 AM) to avoid congestion on system.", 
+            "title": "Backup"
+        }, 
+        {
+            "location": "/administrator/settings/#restore", 
+            "text": "To restore SUFIA into specific snapshot, select the backup files on the list, then click \" Restore \".   Danger  Please make sure you backup manually (databases   sufia-app folder) before trying to restore, just in case anything happen during restoration process.", 
+            "title": "Restore"
+        }, 
+        {
+            "location": "/administrator/menu/", 
+            "text": "Menu Management\n\n\nSUFIA menu management system is dynamic. You can add new menu, edit or delete existing menu. Every menu can be assigned with a role. By default, menu are accessible by all. If you assigned a role to a menu, only user with the specified role can access it.\n\n\nMenu can be assigned with only one role. If the menu need to be accessed by multiple type of users, each users need to have that particular role (through menu set).\n\n\nMenu Set\n\n\nMenu Set is a collection of Menu Items. It assemble Menu Items into a tree structure for easy navigation. Menu Set supports until 3 level of menus.\n\n\nMenu Set is an important part of SUFIA application. Every user must be assigned with Menu Set. Menu Set will determined what the user will see after successful login (after filtered by \nACL\n).\n\n\nTo create new Menu Set, click on \"\nCreate New Menu Set\n\". You can also click on \"\nCopy Menu Set\n\" to create a Menu Set based on existing.\n\n\n\n\n\n\n\n\nField\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nName\n\n\nMenu Set Name\n\n\n\n\n\n\nDashboard\n\n\nSelect Menu Item that will appear on first page after login (or click on the banner). This Menu Item will become a \"dashboard\" for the user (Optional)\n\n\n\n\n\n\n\n\n\n\nFirst Level Menu must start with a separator. You can click on the \"\nAdd Separator\n\" to add new separator. Separator is like a category of menu. It will act as the parent of groups of Menu Items.\n\n\nSecord Level Menu can be Menu Item or sub-separator. You can click on \"\nAdd Item\n\" to add Menu Item or \"\nAdd Sub-Separator\n\" to create sub-separator. Sub-separator can contains child Menu Items.\n\n\nThird Level Menu is only for Menu Item.\n\n\nSeq No\n\n\nUse Seq No to change the order of menu appearance. Menu will be sorted based on Seq No.\n\n\nMenu Item\n\n\nMenu Item is the actual menu. It contains all the details of menu including name, url and role. To create new Menu, click on the \"\nCreate Menu Item\n\"\n\n\n\n\n\n\n\n\nField\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nMenu ID\n\n\nID for menu. Can accept alphanumeric value.\n\n\n\n\n\n\nMenu Name\n\n\nMenu Name will appear at the menu list\n\n\n\n\n\n\nMenu Type\n\n\nSystem Program\nUser Program\nTransaction\nReport\nQuery\nData Express\n\n\n\n\n\n\nProgram Name\n\n\nOnly applicable if Menu Type is System Program or User Program. This typically a servlet name, jsp or any valid URL\n\n\n\n\n\n\nGroup\n\n\nApplicable to Menu Type Transaction, Report, Query or Data Express\n\n\n\n\n\n\nCode\n\n\nApplicable to Menu Type Transaction, Report, Query or Data Express\n\n\n\n\n\n\nRole\n\n\nRole for this menu\n\n\n\n\n\n\nSecurity Level\n\n\nRole Level (from 1 to 10)\n\n\n\n\n\n\nCheck System Enable\n\n\nIf checked, this menu will run even if system is disabled. See \nOperator Console\n\n\n\n\n\n\n\n\n* All fields are required", 
+            "title": "Menu Management"
+        }, 
+        {
+            "location": "/administrator/menu/#menu-management", 
+            "text": "SUFIA menu management system is dynamic. You can add new menu, edit or delete existing menu. Every menu can be assigned with a role. By default, menu are accessible by all. If you assigned a role to a menu, only user with the specified role can access it.  Menu can be assigned with only one role. If the menu need to be accessed by multiple type of users, each users need to have that particular role (through menu set).", 
+            "title": "Menu Management"
+        }, 
+        {
+            "location": "/administrator/menu/#menu-set", 
+            "text": "Menu Set is a collection of Menu Items. It assemble Menu Items into a tree structure for easy navigation. Menu Set supports until 3 level of menus.  Menu Set is an important part of SUFIA application. Every user must be assigned with Menu Set. Menu Set will determined what the user will see after successful login (after filtered by  ACL ).  To create new Menu Set, click on \" Create New Menu Set \". You can also click on \" Copy Menu Set \" to create a Menu Set based on existing.     Field  Description      Name  Menu Set Name    Dashboard  Select Menu Item that will appear on first page after login (or click on the banner). This Menu Item will become a \"dashboard\" for the user (Optional)      First Level Menu must start with a separator. You can click on the \" Add Separator \" to add new separator. Separator is like a category of menu. It will act as the parent of groups of Menu Items.  Secord Level Menu can be Menu Item or sub-separator. You can click on \" Add Item \" to add Menu Item or \" Add Sub-Separator \" to create sub-separator. Sub-separator can contains child Menu Items.  Third Level Menu is only for Menu Item.", 
+            "title": "Menu Set"
+        }, 
+        {
+            "location": "/administrator/menu/#seq-no", 
+            "text": "Use Seq No to change the order of menu appearance. Menu will be sorted based on Seq No.", 
+            "title": "Seq No"
+        }, 
+        {
+            "location": "/administrator/menu/#menu-item", 
+            "text": "Menu Item is the actual menu. It contains all the details of menu including name, url and role. To create new Menu, click on the \" Create Menu Item \"     Field  Description      Menu ID  ID for menu. Can accept alphanumeric value.    Menu Name  Menu Name will appear at the menu list    Menu Type  System Program User Program Transaction Report Query Data Express    Program Name  Only applicable if Menu Type is System Program or User Program. This typically a servlet name, jsp or any valid URL    Group  Applicable to Menu Type Transaction, Report, Query or Data Express    Code  Applicable to Menu Type Transaction, Report, Query or Data Express    Role  Role for this menu    Security Level  Role Level (from 1 to 10)    Check System Enable  If checked, this menu will run even if system is disabled. See  Operator Console     * All fields are required", 
+            "title": "Menu Item"
+        }, 
+        {
+            "location": "/administrator/user/", 
+            "text": "User Management\n\n\nUser is the core component of SUFIA. SUFIA concept of access control and dual environment depends on settings of User, Menu and Role / Level. These 3 components control how the user access and use SUFIA.\n\n\nEvery user accessing SUFIA must have a User record (except for \nPublic\n Transaction). Application built on top of SUFIA can have its own user table but it must be tie to SUFIA User (see \nCustomize User\n for details). \n\n\nOnly User with active status can login to the system. By default new User status is In-active. Upon clicking the activation link, the User status will be activated.\n\n\nSUFIA administrator can create new user, edit user, delete user, change user password (Reset Password) and activate / deactivate user. \n\n\nCreate New\n\n\n\n\n\n\n\n\nField\n\n\nDescription\n\n\nExtra\n\n\n\n\n\n\n\n\n\n\nLogin ID\n\n\nLogin ID for User\n\n\nMandatory\n\n\n\n\n\n\nE-Mail\n\n\nE-Mail address for user. Must be a valid E-Mail address because SUFIA will E-Mail the auto generated password and activation link\n\n\nMandatory\n\n\n\n\n\n\nName\n\n\nName for User\n\n\nMandatory\n\n\n\n\n\n\nSurname\n\n\nSurname for User\n\n\nOptional\n\n\n\n\n\n\nDate of Birth\n\n\nData of Birth\n\n\nOptional\n\n\n\n\n\n\nPhone\n\n\nPhone number\n\n\nOptional\n\n\n\n\n\n\nCorp Type\n\n\nEither \nINTERNAL\n, \nPARTNER\n or \nCUSTOMER\n\n\nOptional. This value can be used to further categorized users\n\n\n\n\n\n\nCorp Code\n\n\n20 character to further categorized users\n\n\nOptional. This value can be used as Company / Department\n\n\n\n\n\n\nSub Corp Code\n\n\n20 character to further categorized users\n\n\nOptional. This value can be used as Department / Unit\n\n\n\n\n\n\nDesignation\n\n\nUser designation\n\n\nOptional\n\n\n\n\n\n\nAccess Level\n\n\nAccess Level for User from 1-10. Works together with Role. Given the same Role, you can further distinguish the level (e.g. Role Clark with Level 1 for counter and Level 2 for supervisor)\n\n\nMandatory\n\n\n\n\n\n\nCategory\n\n\nSUFIA User Category. This category is tie with User Mode. For category: \n1. SYSTEM MANAGEMENT - Only Mode PRODUCTION \n2. APPLICATION MANAGEMENT - Only Mode TESTING \n3. END USER - Can choose between TESTING and PRODUCTION mode\n\n\nMandatory\n\n\n\n\n\n\nUser Type\n\n\nEither \nHUMAN\n or \nVIRTUAL\n\n\nVIRTUAL user is for integration, batch or remote access. Can't login from SUFIA web application\n\n\n\n\n\n\nUser Mode\n\n\nUser Mode for user, either \n1. TESTING \n2. PRODUCTION\n\n\nDefault database for TESTING is \nsufia_test\n and for PRODUCTION is \nsufia_prod\n\n\n\n\n\n\nRole Set\n\n\nRole Set for User. See \nRole\n for details\n\n\nMandatory\n\n\n\n\n\n\nMenu Set\n\n\nMenu Set for User. See \nManu Management\n for details\n\n\nMandatory\n\n\n\n\n\n\nMobile Menu Set\n\n\nMenu Set for SUFIA mobile apps\n\n\nOptional\n\n\n\n\n\n\nShare Group\n\n\nShare Group for sharing documents. See \nFile Manager\n\n\nOptional\n\n\n\n\n\n\n\n\nClone User\n\n\nCreate New User with same details as selected user.\n\n\nExport User\n\n\nExport selected users as CSV file.\n\n\nImport User\n\n\nImport Users into SUFIA from CSV file. The format must follow Export User CSV file.", 
+            "title": "User Management"
+        }, 
+        {
+            "location": "/administrator/user/#user-management", 
+            "text": "User is the core component of SUFIA. SUFIA concept of access control and dual environment depends on settings of User, Menu and Role / Level. These 3 components control how the user access and use SUFIA.  Every user accessing SUFIA must have a User record (except for  Public  Transaction). Application built on top of SUFIA can have its own user table but it must be tie to SUFIA User (see  Customize User  for details).   Only User with active status can login to the system. By default new User status is In-active. Upon clicking the activation link, the User status will be activated.  SUFIA administrator can create new user, edit user, delete user, change user password (Reset Password) and activate / deactivate user.", 
+            "title": "User Management"
+        }, 
+        {
+            "location": "/administrator/user/#create-new", 
+            "text": "Field  Description  Extra      Login ID  Login ID for User  Mandatory    E-Mail  E-Mail address for user. Must be a valid E-Mail address because SUFIA will E-Mail the auto generated password and activation link  Mandatory    Name  Name for User  Mandatory    Surname  Surname for User  Optional    Date of Birth  Data of Birth  Optional    Phone  Phone number  Optional    Corp Type  Either  INTERNAL ,  PARTNER  or  CUSTOMER  Optional. This value can be used to further categorized users    Corp Code  20 character to further categorized users  Optional. This value can be used as Company / Department    Sub Corp Code  20 character to further categorized users  Optional. This value can be used as Department / Unit    Designation  User designation  Optional    Access Level  Access Level for User from 1-10. Works together with Role. Given the same Role, you can further distinguish the level (e.g. Role Clark with Level 1 for counter and Level 2 for supervisor)  Mandatory    Category  SUFIA User Category. This category is tie with User Mode. For category:  1. SYSTEM MANAGEMENT - Only Mode PRODUCTION  2. APPLICATION MANAGEMENT - Only Mode TESTING  3. END USER - Can choose between TESTING and PRODUCTION mode  Mandatory    User Type  Either  HUMAN  or  VIRTUAL  VIRTUAL user is for integration, batch or remote access. Can't login from SUFIA web application    User Mode  User Mode for user, either  1. TESTING  2. PRODUCTION  Default database for TESTING is  sufia_test  and for PRODUCTION is  sufia_prod    Role Set  Role Set for User. See  Role  for details  Mandatory    Menu Set  Menu Set for User. See  Manu Management  for details  Mandatory    Mobile Menu Set  Menu Set for SUFIA mobile apps  Optional    Share Group  Share Group for sharing documents. See  File Manager  Optional", 
+            "title": "Create New"
+        }, 
+        {
+            "location": "/administrator/user/#clone-user", 
+            "text": "Create New User with same details as selected user.", 
+            "title": "Clone User"
+        }, 
+        {
+            "location": "/administrator/user/#export-user", 
+            "text": "Export selected users as CSV file.", 
+            "title": "Export User"
+        }, 
+        {
+            "location": "/administrator/user/#import-user", 
+            "text": "Import Users into SUFIA from CSV file. The format must follow Export User CSV file.", 
+            "title": "Import User"
+        }, 
+        {
+            "location": "/administrator/role/", 
+            "text": "Role Management\n\n\nRole is an important part of any web application. SUFIA comes build-in with Role Management system. Application built on top of SUFIA can just use the existing Role Management. SUFIA Roles is an independent solution, it is not integrated with JEE Security Roles.\n\n\nRole Set\n\n\nSimilar to Menu Set concept, Role Set is a collection of role(s). Every users will be assigned with one Role Set. If one user having more that one Role, we can group all the roles inside one Role Set and assign the Role Set to the user.\n\n\nTo create new Role Set click on \"\nCreate New Role Set\n\".\n\n\nRole\n\n\nSUFIA comes with predefined roles. Some of the functionality of SUFIA embedded with particular role. For example, only user with role \nPROD\n able to push Transaction into Production mode. These roles cannot be deleted.\n\n\n\n\nAPPADMIN\n        \n\n\nCODE\n\n\nDBADMIN\n\n\nDEVELOPER\n\n\nDTEST\n\n\nMASTER\n\n\nPROD\n\n\nSECADMIN\n\n\nSPEC\n\n\nSYSADMIN\n\n\nUTEST\n\n\n\n\nTo add new Role, click on \"\nCreate Role\n\"", 
+            "title": "Role Management"
+        }, 
+        {
+            "location": "/administrator/role/#role-management", 
+            "text": "Role is an important part of any web application. SUFIA comes build-in with Role Management system. Application built on top of SUFIA can just use the existing Role Management. SUFIA Roles is an independent solution, it is not integrated with JEE Security Roles.", 
+            "title": "Role Management"
+        }, 
+        {
+            "location": "/administrator/role/#role-set", 
+            "text": "Similar to Menu Set concept, Role Set is a collection of role(s). Every users will be assigned with one Role Set. If one user having more that one Role, we can group all the roles inside one Role Set and assign the Role Set to the user.  To create new Role Set click on \" Create New Role Set \".", 
+            "title": "Role Set"
+        }, 
+        {
+            "location": "/administrator/role/#role", 
+            "text": "SUFIA comes with predefined roles. Some of the functionality of SUFIA embedded with particular role. For example, only user with role  PROD  able to push Transaction into Production mode. These roles cannot be deleted.   APPADMIN           CODE  DBADMIN  DEVELOPER  DTEST  MASTER  PROD  SECADMIN  SPEC  SYSADMIN  UTEST   To add new Role, click on \" Create Role \"", 
+            "title": "Role"
+        }, 
+        {
+            "location": "/administrator/acl/", 
+            "text": "Access Control List (ACL)\n\n\nACL List\n\n\nFor more fine-grained access control, apart from control mechanism from Menu's role and level, you can set specific Role and Level for every Transaction, Query and Data (TQD). This will make sure that only user with specified Role and Level are able to access it.\n\n\nThis configuration is optional but for certain circumstances it's a must (especially for critical \n confidential TQD). \n\n\nThe rules for checking is first it will compare the role of the User with with role of the TQD. If matches, it will check the Level of User with the Level of TQD. If its equal or greater than the Level of TQD access will be granted.\n\n\nTo create new ACL click on \"\nAdd New\n\" and select the Transaction, Role and Level.\n\n\nThis function sometimes can be assign to Developer since it highly depending on application design.\n\n\nPublic Access\n\n\nTransaction can be set as public. If enabled, SUFIA acl filter won't check for user authentication \n authorization for the particular Transaction.\n\n\nThis is useful for homepage, enquiry page \n general info.", 
+            "title": "Access Control"
+        }, 
+        {
+            "location": "/administrator/acl/#access-control-list-acl", 
+            "text": "", 
+            "title": "Access Control List (ACL)"
+        }, 
+        {
+            "location": "/administrator/acl/#acl-list", 
+            "text": "For more fine-grained access control, apart from control mechanism from Menu's role and level, you can set specific Role and Level for every Transaction, Query and Data (TQD). This will make sure that only user with specified Role and Level are able to access it.  This configuration is optional but for certain circumstances it's a must (especially for critical   confidential TQD).   The rules for checking is first it will compare the role of the User with with role of the TQD. If matches, it will check the Level of User with the Level of TQD. If its equal or greater than the Level of TQD access will be granted.  To create new ACL click on \" Add New \" and select the Transaction, Role and Level.  This function sometimes can be assign to Developer since it highly depending on application design.", 
+            "title": "ACL List"
+        }, 
+        {
+            "location": "/administrator/acl/#public-access", 
+            "text": "Transaction can be set as public. If enabled, SUFIA acl filter won't check for user authentication   authorization for the particular Transaction.  This is useful for homepage, enquiry page   general info.", 
+            "title": "Public Access"
+        }, 
+        {
+            "location": "/administrator/file-manager/", 
+            "text": "File Manager\n\n\nFile Manager is an utility tools to extend the functionality of SUFIA, add additional asset files and a simple file storage \n collaboration.\n\n\nSUFIA Administrator and Developer can upload, delete files based on File Type. \n\n\n\n\nPYTHON\n\n\n\n\nUse this File Type to upload python files (Jython). By using this, Developer has the flexibility to add customize codes. To execute the python file, just create new Menu Item with type \nUser Program\n and put the file name at the Program Name field.\n\n\nRefer to \nUser Program\n for more details.\n\n\nFile uploaded location: \nsufia-app/webapp/WEB-INF/python\n\n\n\n\nGROOVY\n\n\n\n\nUse this File Type to upload groovy files. By using this, Developer has the flexibility to add customize codes. To execute the groovy file, just create new Menu Item with type \nUser Program\n and put the file name at the Program Name field.\n\n\nThe difference between groovy file and python file is that groovy is using GroovyServlet. Refer to \nUser Program\n for more details.\n\n\nFile uploaded location: \nsufia-app/webapp/WEB-INF/groovy\n\n\n\n\nPAGE\n\n\n\n\nUse this File Type to upload static HTML files. HTML file name must be in the form of \n.html or \n.htm.\n\n\nBy convention, if you upload file named \nindex.html\n it will become the main page. This is useful if you want to override default login page.\n\n\nFile uploaded location: \nsufia-app/webapp/WEB-INF/usr_pgm/PAGE\n\n\n\n\nLIBRARY\n\n\n\n\nUse this File Type to add new library (\nJAR\n file) to SUFIA. This is useful if you want to add or extends any functionality to SUFIA.\n\n\nSUFIA comes with a number of JAR files, some of which are utility library which may be useful for your application development. Developer are free to use all these libraries. However, if certain functionality that you wanted are not available, you can add your own Java code (package it as JAR) - or any other 3rd party library - and add it to SUFIA.\n\n\nJAR file uploaded will be prefixes with \nusr__\n.\n\n\nFile uploaded location: \nsufia-app/webapp/WEB-INF/lib\n\n\n\n\nIMAGES\n\n\n\n\nUse this File Type to add image files. This file can be linked directly on Transaction's Form or Output.\n\n\nFile uploaded location: \nsufia-app/webapp/usr_img\n\n\n\n\nCSS\n\n\n\n\nUse this File Type to add asset files (CSS or Javascript). This file can be linked directly on Transaction's Form or Output.\n\n\nCurrently, there are two ways to add an asset files to your application. You can either linked directly from CDN, or uploaded it here and linked locally from SUFIA server.\n\n\nFile uploaded location: \nsufia-app/webapp/usr_css\n\n\n\n\nDATA_LOADER\n\n\n\n\nThis is the location for Data Loader files. Refer to \nData Loader\n for more details.", 
+            "title": "File Manager"
+        }, 
+        {
+            "location": "/administrator/file-manager/#file-manager", 
+            "text": "File Manager is an utility tools to extend the functionality of SUFIA, add additional asset files and a simple file storage   collaboration.  SUFIA Administrator and Developer can upload, delete files based on File Type.    PYTHON   Use this File Type to upload python files (Jython). By using this, Developer has the flexibility to add customize codes. To execute the python file, just create new Menu Item with type  User Program  and put the file name at the Program Name field.  Refer to  User Program  for more details.  File uploaded location:  sufia-app/webapp/WEB-INF/python   GROOVY   Use this File Type to upload groovy files. By using this, Developer has the flexibility to add customize codes. To execute the groovy file, just create new Menu Item with type  User Program  and put the file name at the Program Name field.  The difference between groovy file and python file is that groovy is using GroovyServlet. Refer to  User Program  for more details.  File uploaded location:  sufia-app/webapp/WEB-INF/groovy   PAGE   Use this File Type to upload static HTML files. HTML file name must be in the form of  .html or  .htm.  By convention, if you upload file named  index.html  it will become the main page. This is useful if you want to override default login page.  File uploaded location:  sufia-app/webapp/WEB-INF/usr_pgm/PAGE   LIBRARY   Use this File Type to add new library ( JAR  file) to SUFIA. This is useful if you want to add or extends any functionality to SUFIA.  SUFIA comes with a number of JAR files, some of which are utility library which may be useful for your application development. Developer are free to use all these libraries. However, if certain functionality that you wanted are not available, you can add your own Java code (package it as JAR) - or any other 3rd party library - and add it to SUFIA.  JAR file uploaded will be prefixes with  usr__ .  File uploaded location:  sufia-app/webapp/WEB-INF/lib   IMAGES   Use this File Type to add image files. This file can be linked directly on Transaction's Form or Output.  File uploaded location:  sufia-app/webapp/usr_img   CSS   Use this File Type to add asset files (CSS or Javascript). This file can be linked directly on Transaction's Form or Output.  Currently, there are two ways to add an asset files to your application. You can either linked directly from CDN, or uploaded it here and linked locally from SUFIA server.  File uploaded location:  sufia-app/webapp/usr_css   DATA_LOADER   This is the location for Data Loader files. Refer to  Data Loader  for more details.", 
+            "title": "File Manager"
+        }, 
+        {
+            "location": "/developer/intro/", 
+            "text": "Introduction to Development\n\n\nSUFIA was build as a framework to ease the web application development process. \n\n\nSoftware Development Lifecycle (SDLC)\n\n\n\n\nSUFIA support traditional and \n\"agile-like\"\n software development methodology. Transaction provides functionality from writing specification, coding, testing until deployment.", 
+            "title": "Development"
+        }, 
+        {
+            "location": "/developer/intro/#introduction-to-development", 
+            "text": "SUFIA was build as a framework to ease the web application development process.", 
+            "title": "Introduction to Development"
+        }, 
+        {
+            "location": "/developer/intro/#software-development-lifecycle-sdlc", 
+            "text": "SUFIA support traditional and  \"agile-like\"  software development methodology. Transaction provides functionality from writing specification, coding, testing until deployment.", 
+            "title": "Software Development Lifecycle (SDLC)"
+        }, 
+        {
+            "location": "/developer/database/", 
+            "text": "Database Management\n\n\nAd-hoc query\n\n\nModel", 
+            "title": "Database"
+        }, 
+        {
+            "location": "/developer/database/#database-management", 
+            "text": "", 
+            "title": "Database Management"
+        }, 
+        {
+            "location": "/developer/database/#ad-hoc-query", 
+            "text": "", 
+            "title": "Ad-hoc query"
+        }, 
+        {
+            "location": "/developer/database/#model", 
+            "text": "", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/developer/data/", 
+            "text": "", 
+            "title": "Data"
+        }, 
+        {
+            "location": "/developer/query/", 
+            "text": "", 
+            "title": "Query"
+        }, 
+        {
+            "location": "/developer/transaction/", 
+            "text": "Transaction\n\n\nIntroduction\n\n\nComponents\n\n\nSpecification\n\n\nPre-Transaction\n\n\nForm Template\n\n\nForm Builder\n\n\nPost-Processor\n\n\nOutput\n\n\nTransaction Deployment\n\n\nTransaction Editor\n\n\nCommand-line client", 
+            "title": "Transaction"
+        }, 
+        {
+            "location": "/developer/transaction/#transaction", 
+            "text": "", 
+            "title": "Transaction"
+        }, 
+        {
+            "location": "/developer/transaction/#introduction", 
+            "text": "", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/developer/transaction/#components", 
+            "text": "", 
+            "title": "Components"
+        }, 
+        {
+            "location": "/developer/transaction/#specification", 
+            "text": "", 
+            "title": "Specification"
+        }, 
+        {
+            "location": "/developer/transaction/#pre-transaction", 
+            "text": "", 
+            "title": "Pre-Transaction"
+        }, 
+        {
+            "location": "/developer/transaction/#form-template", 
+            "text": "", 
+            "title": "Form Template"
+        }, 
+        {
+            "location": "/developer/transaction/#form-builder", 
+            "text": "", 
+            "title": "Form Builder"
+        }, 
+        {
+            "location": "/developer/transaction/#post-processor", 
+            "text": "", 
+            "title": "Post-Processor"
+        }, 
+        {
+            "location": "/developer/transaction/#output", 
+            "text": "", 
+            "title": "Output"
+        }, 
+        {
+            "location": "/developer/transaction/#transaction-deployment", 
+            "text": "", 
+            "title": "Transaction Deployment"
+        }, 
+        {
+            "location": "/developer/transaction/#transaction-editor", 
+            "text": "", 
+            "title": "Transaction Editor"
+        }, 
+        {
+            "location": "/developer/transaction/#command-line-client", 
+            "text": "", 
+            "title": "Command-line client"
+        }, 
+        {
+            "location": "/developer/services/", 
+            "text": "SUFIA Core API\n\n\nSUFIA provides API in order to access the internal classes of SUFIA. This is useful if you need to use or override the default behavior of certain aspect of SUFIA e.g. login process, user creation etc.\nSUFIA API can be invoked using the \n: \nservice\n\n\nUserServices", 
+            "title": "Services"
+        }, 
+        {
+            "location": "/developer/services/#sufia-core-api", 
+            "text": "SUFIA provides API in order to access the internal classes of SUFIA. This is useful if you need to use or override the default behavior of certain aspect of SUFIA e.g. login process, user creation etc.\nSUFIA API can be invoked using the  :  service", 
+            "title": "SUFIA Core API"
+        }, 
+        {
+            "location": "/developer/services/#userservices", 
+            "text": "", 
+            "title": "UserServices"
+        }, 
+        {
+            "location": "/developer/variables/", 
+            "text": "SUFIA pre-defined variables\n\n\nSUFIA provides a number of pre-defined variables (\nReserved Words\n) inside the transaction codes.\nThis variables includes the core classes of SUFIA, utility and helper classes.\n\n\n\n\nWarning\n\n\nBe careful not to override the variables! If you define a variable inside\nthe codes using the same name, it will override the original variable.\nThis applies to pre-defined variables, keyword and built-in functions\nused by Jython also (e.g. \nmap\n)\n\n\n\n\nList of SUFIA pre-defined variables\n\n\n\n\n\n\n\n\nVariable\n\n\nDescription\n\n\nScope\n\n\nUsage Example\n\n\n\n\n\n\n\n\n\n\nservice\n\n\nHelper class to get SUFIA services. Refer to \nServices\n for more details\n\n\nPre,Backend\n\n\nuserService = service.get(\"UserService\")\n\n\n\n\n\n\ndataSource\n\n\nInstance of \njavax.sql.DataSource\n to get connection from database\n\n\nPre,Backend\n\n\n\n\n\n\n\n\noutput\n\n\nOutput context based on \njava.util.Map\n. All the attributes set in this context will be available to UI\n\n\nPre,Backend\n\n\noutput[\"name\"] = user.getFullName()\n\n\n\n\n\n\nkey\n\n\nid\n value of the current table (model)\n\n\nPre,Backend, Output\n\n\nperson = Person.findById(key)\n\n\n\n\n\n\nuser\n\n\nSUFIA User object. Refer to SUFIA API for details.\n\n\nPre,Backend, Output\n\n\nuser.getId()\n\n\n\n\n\n\nrequest\n\n\nHTTP request parameter object based on \njava.util.Map\n. A wrapper for \nrequest.getParameterMap()\n\n\nPre,Backend\n\n\nrequest.getParameter(\"input\")\n\n\n\n\n\n\nwebCtx\n\n\nStripes \nActionBeanContext\n. This can be used to get the internals of Servlet API (e.g. request, response)\n\n\nPre,Backend, Output\n\n\nwebCtx.getRequest()\n\n\n\n\n\n\nctxPath\n\n\nContext path for SUFIA application. Value of \nrequest.getContextPath()\n\n\nPre,Backend, Output\n\n\na href=\"{{ctxPath}}\"\n\n\n\n\n\n\ngo_to\n\n\nTo redirect into particular page. It accept URL and \nResolution\n object\n\n\nPre,Backend\n\n\ngo_to = \"%s/t/my/app\" % ctxPath\n\n\n\n\n\n\nerrors\n\n\nErrors object of type \njava.util.List\n. The attribute will be available to UI\n\n\nPre\n\n\n\n\n\n\n\n\n\n\nIn addition to the pre-defined variables, all parameter from request also being exposed to backend as variables.", 
+            "title": "Variable"
+        }, 
+        {
+            "location": "/developer/variables/#sufia-pre-defined-variables", 
+            "text": "SUFIA provides a number of pre-defined variables ( Reserved Words ) inside the transaction codes.\nThis variables includes the core classes of SUFIA, utility and helper classes.   Warning  Be careful not to override the variables! If you define a variable inside\nthe codes using the same name, it will override the original variable.\nThis applies to pre-defined variables, keyword and built-in functions\nused by Jython also (e.g.  map )", 
+            "title": "SUFIA pre-defined variables"
+        }, 
+        {
+            "location": "/developer/variables/#list-of-sufia-pre-defined-variables", 
+            "text": "Variable  Description  Scope  Usage Example      service  Helper class to get SUFIA services. Refer to  Services  for more details  Pre,Backend  userService = service.get(\"UserService\")    dataSource  Instance of  javax.sql.DataSource  to get connection from database  Pre,Backend     output  Output context based on  java.util.Map . All the attributes set in this context will be available to UI  Pre,Backend  output[\"name\"] = user.getFullName()    key  id  value of the current table (model)  Pre,Backend, Output  person = Person.findById(key)    user  SUFIA User object. Refer to SUFIA API for details.  Pre,Backend, Output  user.getId()    request  HTTP request parameter object based on  java.util.Map . A wrapper for  request.getParameterMap()  Pre,Backend  request.getParameter(\"input\")    webCtx  Stripes  ActionBeanContext . This can be used to get the internals of Servlet API (e.g. request, response)  Pre,Backend, Output  webCtx.getRequest()    ctxPath  Context path for SUFIA application. Value of  request.getContextPath()  Pre,Backend, Output  a href=\"{{ctxPath}}\"    go_to  To redirect into particular page. It accept URL and  Resolution  object  Pre,Backend  go_to = \"%s/t/my/app\" % ctxPath    errors  Errors object of type  java.util.List . The attribute will be available to UI  Pre      In addition to the pre-defined variables, all parameter from request also being exposed to backend as variables.", 
+            "title": "List of SUFIA pre-defined variables"
+        }, 
+        {
+            "location": "/developer/page-layout/", 
+            "text": "", 
+            "title": "Page Layout"
+        }, 
+        {
+            "location": "/developer/utility-class/", 
+            "text": "Utility\n\n\nData Loader\n\n\nOne-step Data Loader\n\n\nUtility classes\n\n\nApplication Log", 
+            "title": "Utility"
+        }, 
+        {
+            "location": "/developer/utility-class/#utility", 
+            "text": "", 
+            "title": "Utility"
+        }, 
+        {
+            "location": "/developer/utility-class/#data-loader", 
+            "text": "", 
+            "title": "Data Loader"
+        }, 
+        {
+            "location": "/developer/utility-class/#one-step-data-loader", 
+            "text": "", 
+            "title": "One-step Data Loader"
+        }, 
+        {
+            "location": "/developer/utility-class/#utility-classes", 
+            "text": "", 
+            "title": "Utility classes"
+        }, 
+        {
+            "location": "/developer/utility-class/#application-log", 
+            "text": "", 
+            "title": "Application Log"
+        }, 
+        {
+            "location": "/developer/batch/", 
+            "text": "", 
+            "title": "Scheduler"
+        }, 
+        {
+            "location": "/developer/how-to/action-pattern/", 
+            "text": "", 
+            "title": "Action Pattern"
+        }, 
+        {
+            "location": "/developer/how-to/ajax/", 
+            "text": "", 
+            "title": "AJAX"
+        }, 
+        {
+            "location": "/developer/how-to/generate-pdf/", 
+            "text": "", 
+            "title": "Generate PDF"
+        }, 
+        {
+            "location": "/developer/how-to/upload-file/", 
+            "text": "", 
+            "title": "Upload / Download"
+        }, 
+        {
+            "location": "/developer/how-to/send-mail/", 
+            "text": "", 
+            "title": "Send E-Mail"
+        }, 
+        {
+            "location": "/developer/how-to/customize-user/", 
+            "text": "Customization of User Management and Login Process\n\n\nCustom User\n\n\nSometimes, there is a need to have your own implementation of user profiles. Especially if there is a need for\nmore details which default SUFIA User did not provide.\n\n\nThere is two approach to achieve this, one is by implementing the whole set of User lifecycle. This means you\nneed to create your own user, menu, role etc. based on the requirement. This is quite straight forward.\n\n\nHowever, if you still want to make use of SUFIA built-in User, Role, Menu functions you need to interact with \nSUFIA API\n.\nIn order to linked it back to SUFIA User table, you need to use \nUserService\n.\n\n\nExample:\n\n\nConsider we created our own user table like below:\n\nmy_user\n\n\n-------\n\nid\nlogin_id\nuser_id\nname\nemail\ncreated_date\n\n\n\nBackend Code:\n\nimport\n \nMy_user\n\n\nfrom\n \njava.util\n \nimport\n \nDate\n\n\nfrom\n \nsufia\n \nimport\n \nUser\n\n\n\ntoday\n \n=\n \nDate\n()\n\n\n\nuserService\n \n=\n \nservice\n.\nget\n(\nUserService\n)\n\n\nroleService\n \n=\n \nservice\n.\nget\n(\nRoleService\n)\n\n\nmenuService\n \n=\n \nservice\n.\nget\n(\nMenuService\n)\n\n\nmy_role\n \n=\n \nroleService\n.\nfindByName\n(\nMy Role\n)\n\n\nmy_menu\n \n=\n \nmenuService\n.\nfindByName\n(\nMy Menu\n)\n\n\n\nif\n \nd_action\n \n==\n \nsave_user\n:\n\n    \nmy_user\n \n=\n \nMy_user\n.\nfirst\n(\nlogin_id=?\n,\n \nlogin_id\n)\n\n    \nif\n \nmy_user\n:\n\n        \nerr\n \n=\n \nUser already exists\n\n    \nelse\n:\n\n        \nsufia_user\n \n=\n \nuserService\n.\nfindByLoginId\n(\nlogin_id\n)\n\n        \nif\n \nsufia_user\n:\n\n            \nerr\n \n=\n \nUser already exists\n\n        \nelse\n:\n\n            \nsufia_user\n \n=\n \nUser\n()\n\n            \nsufia_user\n.\nset\n(\nloginId\n,\n \nlogin_id\n)\n\n            \nsufia_user\n.\nset\n(\nname\n,\n \nname\n)\n\n            \nsufia_user\n.\nset\n(\npassword\n,\n \npassword\n)\n\n            \nsufia_user\n.\nset\n(\nemail\n,\n \nemail\n)\n\n            \nsufia_user\n \n=\n \nuserService\n.\nregister\n(\nsufia_user\n,\n \n[\nint\n(\nmy_role\n.\nget\n(\nid\n))],\n \nint\n(\nmy_menu\n.\nget\n(\nid\n)),\n \nwebCtx\n.\ngetCurrentScope\n())\n\n            \nif\n \nsufia_user\n:\n\n                \n# only create My_user if SUFIA User creation successful\n\n                \nmy_user\n \n=\n \nMy_user\n()\n\n                \nmy_user\n.\nset\n(\nlogin_id\n,\n \nlogin_id\n)\n\n                \nmy_user\n.\nset\n(\nuser_id\n,\n \nsufia_user\n.\nget\n(\nid\n))\n \n# link with SUFIA User\ns id\n\n                \nmy_user\n.\nset\n(\nname\n,\n \nname\n)\n\n                \nmy_user\n.\nset\n(\nemail\n,\n \nemail\n)\n\n                \nmy_user\n.\nset\n(\ncreated_date\n,\n \ntoday\n)\n\n                \nmy_user\n.\nsaveIt\n()\n\n                \ngo_to\n \n=\n \n%s\n/t/list/user\n \n%\n \n(\nctxPath\n)\n\n\n\n\nCustom Login\n\n\nThere is two ways available to implement your own login process based on your requirement.\n\n\n(Option 1) Using Transaction with LoginService\n\n\n(Option 2) Override Login process\n\n\nSUFIA provides a way to override default login process. You can create your own Java class which implement \nLoginService\n.\nAfter that you need to set your custome class using properties \nlogin.service\n on \nsufia.properties\n configuration file.\n\n\nThis is useful if you want to implement different logic such as login using Single Sign-On (SSO), Active Directory / LDAP\nor other external database / login provider.\n\n\nExample (Login without using password):\n\n\npackage\n \nwebgeaz.sufia.service\n;\n\n\n\nimport\n \ncom.google.inject.Inject\n;\n\n\nimport\n \nwebgeaz.sufia.model.UserProfile\n;\n\n\nimport\n \nwebgeaz.sufia.web.mgr.UserManager\n;\n\n\nimport\n \nwebgeaz.sufia.web.service.LoginService\n;\n\n\n\npublic\n \nclass\n \nLoginWithoutPassword\n \nimplements\n \nLoginService\n \n{\n\n\n    \nprivate\n \nfinal\n \nUserManager\n \nuserManager\n;\n\n\n    \n@Inject\n\n    \npublic\n \nLoginWithoutPassword\n(\nUserManager\n \nuserManager\n)\n \n{\n\n        \nthis\n.\nuserManager\n \n=\n \nuserManager\n;\n\n    \n}\n\n\n    \n@Override\n\n    \npublic\n \nUserProfile\n \nlogin\n(\nString\n \nloginId\n,\n \nString\n \npassword\n)\n \n{\n\n        \nif\n \n(\nloginId\n \n!=\n \nnull\n \n \nloginId\n.\nstartsWith\n(\nVALID-\n))\n \n{\n\n            \nreturn\n \nuserManager\n.\nfindByLoginId\n(\nloginId\n);\n\n        \n}\n \nelse\n \n{\n\n            \nreturn\n \nuserManager\n.\nlogin\n(\nloginId\n,\n \npassword\n);\n\n        \n}\n\n    \n}\n\n\n\n}", 
+            "title": "Customize User"
+        }, 
+        {
+            "location": "/developer/how-to/customize-user/#customization-of-user-management-and-login-process", 
+            "text": "", 
+            "title": "Customization of User Management and Login Process"
+        }, 
+        {
+            "location": "/developer/how-to/customize-user/#custom-user", 
+            "text": "Sometimes, there is a need to have your own implementation of user profiles. Especially if there is a need for\nmore details which default SUFIA User did not provide.  There is two approach to achieve this, one is by implementing the whole set of User lifecycle. This means you\nneed to create your own user, menu, role etc. based on the requirement. This is quite straight forward.  However, if you still want to make use of SUFIA built-in User, Role, Menu functions you need to interact with  SUFIA API .\nIn order to linked it back to SUFIA User table, you need to use  UserService .  Example:  Consider we created our own user table like below: my_user  ------- \nid\nlogin_id\nuser_id\nname\nemail\ncreated_date  Backend Code: import   My_user  from   java.util   import   Date  from   sufia   import   User  today   =   Date ()  userService   =   service . get ( UserService )  roleService   =   service . get ( RoleService )  menuService   =   service . get ( MenuService )  my_role   =   roleService . findByName ( My Role )  my_menu   =   menuService . findByName ( My Menu )  if   d_action   ==   save_user : \n     my_user   =   My_user . first ( login_id=? ,   login_id ) \n     if   my_user : \n         err   =   User already exists \n     else : \n         sufia_user   =   userService . findByLoginId ( login_id ) \n         if   sufia_user : \n             err   =   User already exists \n         else : \n             sufia_user   =   User () \n             sufia_user . set ( loginId ,   login_id ) \n             sufia_user . set ( name ,   name ) \n             sufia_user . set ( password ,   password ) \n             sufia_user . set ( email ,   email ) \n             sufia_user   =   userService . register ( sufia_user ,   [ int ( my_role . get ( id ))],   int ( my_menu . get ( id )),   webCtx . getCurrentScope ()) \n             if   sufia_user : \n                 # only create My_user if SUFIA User creation successful \n                 my_user   =   My_user () \n                 my_user . set ( login_id ,   login_id ) \n                 my_user . set ( user_id ,   sufia_user . get ( id ))   # link with SUFIA User s id \n                 my_user . set ( name ,   name ) \n                 my_user . set ( email ,   email ) \n                 my_user . set ( created_date ,   today ) \n                 my_user . saveIt () \n                 go_to   =   %s /t/list/user   %   ( ctxPath )", 
+            "title": "Custom User"
+        }, 
+        {
+            "location": "/developer/how-to/customize-user/#custom-login", 
+            "text": "There is two ways available to implement your own login process based on your requirement.", 
+            "title": "Custom Login"
+        }, 
+        {
+            "location": "/developer/how-to/customize-user/#option-1-using-transaction-with-loginservice", 
+            "text": "", 
+            "title": "(Option 1) Using Transaction with LoginService"
+        }, 
+        {
+            "location": "/developer/how-to/customize-user/#option-2-override-login-process", 
+            "text": "SUFIA provides a way to override default login process. You can create your own Java class which implement  LoginService .\nAfter that you need to set your custome class using properties  login.service  on  sufia.properties  configuration file.  This is useful if you want to implement different logic such as login using Single Sign-On (SSO), Active Directory / LDAP\nor other external database / login provider.  Example (Login without using password):  package   webgeaz.sufia.service ;  import   com.google.inject.Inject ;  import   webgeaz.sufia.model.UserProfile ;  import   webgeaz.sufia.web.mgr.UserManager ;  import   webgeaz.sufia.web.service.LoginService ;  public   class   LoginWithoutPassword   implements   LoginService   { \n\n     private   final   UserManager   userManager ; \n\n     @Inject \n     public   LoginWithoutPassword ( UserManager   userManager )   { \n         this . userManager   =   userManager ; \n     } \n\n     @Override \n     public   UserProfile   login ( String   loginId ,   String   password )   { \n         if   ( loginId   !=   null     loginId . startsWith ( VALID- ))   { \n             return   userManager . findByLoginId ( loginId ); \n         }   else   { \n             return   userManager . login ( loginId ,   password ); \n         } \n     }  }", 
+            "title": "(Option 2) Override Login process"
+        }, 
+        {
+            "location": "/developer/how-to/user-program/", 
+            "text": "", 
+            "title": "Free Format Program"
+        }, 
+        {
+            "location": "/operator/console/", 
+            "text": "", 
+            "title": "Operator Console"
+        }
+    ]
+}
