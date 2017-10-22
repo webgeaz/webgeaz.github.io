@@ -342,6 +342,40 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#create-table" title="Create Table" class="md-nav__link">
+    Create Table
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sufia-build-in-data-type-conversion-table" title="SUFIA build-in Data Type Conversion Table" class="md-nav__link">
+    SUFIA build-in Data Type Conversion Table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-view" title="Create View" class="md-nav__link">
+    Create View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-crud" title="Generate CRUD" class="md-nav__link">
+    Generate CRUD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ad-hoc-query" title="Ad-hoc query" class="md-nav__link">
     Ad-hoc query
   </a>
@@ -418,8 +452,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../variables/" title="Variable" class="md-nav__link">
-      Variable
+    <a href="../variables/" title="Variables" class="md-nav__link">
+      Variables
     </a>
   </li>
 
@@ -432,6 +466,18 @@
   <li class="md-nav__item">
     <a href="../page-layout/" title="Page Layout" class="md-nav__link">
       Page Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../helper/" title="Helper" class="md-nav__link">
+      Helper
     </a>
   </li>
 
@@ -467,13 +513,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11" type="checkbox" id="nav-4-11">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-12" type="checkbox" id="nav-4-12">
     
-    <label class="md-nav__link" for="nav-4-11">
+    <label class="md-nav__link" for="nav-4-12">
       How-To
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-11">
+      <label class="md-nav__title" for="nav-4-12">
         How-To
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -630,6 +676,40 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#create-table" title="Create Table" class="md-nav__link">
+    Create Table
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sufia-build-in-data-type-conversion-table" title="SUFIA build-in Data Type Conversion Table" class="md-nav__link">
+    SUFIA build-in Data Type Conversion Table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-view" title="Create View" class="md-nav__link">
+    Create View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-crud" title="Generate CRUD" class="md-nav__link">
+    Generate CRUD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ad-hoc-query" title="Ad-hoc query" class="md-nav__link">
     Ad-hoc query
   </a>
@@ -659,8 +739,170 @@
                 
                 
                 <h1 id="database-management">Database Management<a class="headerlink" href="#database-management" title="Permanent link">&para;</a></h1>
+<p>Database Management provides functions to manipulate the database. You can view table structure, table data, create new table, modify existing table and delete tables. You can also generate CRUD functions (Data &amp; Query) for table.</p>
+<h2 id="create-table">Create Table<a class="headerlink" href="#create-table" title="Permanent link">&para;</a></h2>
+<p>SUFIA provides a utility to create table similar to any Database Manager tools. The setup is quite standard and straight forward, however certain aspect has been customize to suit SUFIA usage. </p>
+<ol>
+<li>
+<p>Data Type - This is as standard SUFIA data type that is used in Transaction, Data and Query. Refer the <a href="#sufia-build-in-data-type">conversion table</a>.</p>
+</li>
+<li>
+<p>BLOB - This is a type for storage of file, images, etc. uploaded. It will create 3 columns:​</p>
+<ol>
+<li>Column to store the bytes</li>
+<li>Column to store file name</li>
+<li>Column to store file type</li>
+</ol>
+<p><strong>Example:</strong> If column name is "resume", 3 column will be created:  <code>resume</code>, <code>resume_fn</code> and <code>resume_ft</code> </p>
+</li>
+</ol>
+<p><img alt="Create Table" src="../../img/demo.sufia.online_dbedev_newTable.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">SUFIA Convention</p>
+<p>Every table must have a primary key column named <code>id</code>. A Model class representing
+the table will be generated with class name same with table name (ORM)
+e.g. table <code>person</code> will have a correspondent class <code>Person</code></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Table Name</td>
+<td>Name of the table (max 64 characters)</td>
+<td><code>hr_employee</code></td>
+</tr>
+<tr>
+<td>Comment (Table)</td>
+<td>Useful description for table</td>
+<td>Employee Personal Record</td>
+</tr>
+<tr>
+<td>Field</td>
+<td>Column Name (max 64 characters)</td>
+<td><code>staff_no</code></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Data Type (Refer Below for type conversion)</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Length of data in integer (only applicable to type TEXT)</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Null</td>
+<td>Column can accept NULL value or not</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>Default value (if NULL value inserted)</td>
+<td></td>
+</tr>
+<tr>
+<td>Auto Inc</td>
+<td>Column is auto increment or not (only applicable to type NUMBER and key PRIMARY)</td>
+<td></td>
+</tr>
+<tr>
+<td>Key</td>
+<td>Column is either PRIMARY (primary key), UNIQUE (unique index), INDEX (normal index) or NONE (normal column)</td>
+<td></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td>Useful description of column</td>
+<td>Staff No</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Best Practice</p>
+<p>Use prefix for table name for easy maintenance. Normally the group name is a good
+candidate for prefix name e.g. prefix HR Group's table with <code>hr_</code></p>
+</div>
+<h4 id="sufia-build-in-data-type-conversion-table">SUFIA build-in Data Type Conversion Table<a class="headerlink" href="#sufia-build-in-data-type-conversion-table" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>SUFIA Type</th>
+<th>MySQL Type</th>
+<th>Java Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TEXT</td>
+<td><code>VARCHAR(length)</code><br/><em> </em>length as defined<em><br/></em> <em>if length &gt; 9999 Type <code>TEXT</code> will be used</em></td>
+<td>String</td>
+</tr>
+<tr>
+<td>NUMBER</td>
+<td><code>INTEGER</code></td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>DECIMAL</td>
+<td><code>DECIMAL(18,5)</code></td>
+<td>BigDecimal</td>
+</tr>
+<tr>
+<td>DATETIME</td>
+<td><code>DATETIME</code></td>
+<td>Date</td>
+</tr>
+<tr>
+<td>DATE</td>
+<td><code>DATE</code></td>
+<td>Date</td>
+</tr>
+<tr>
+<td>TIME</td>
+<td><code>TIME</code></td>
+<td>Date</td>
+</tr>
+<tr>
+<td>CURRENCY</td>
+<td><code>DECIMAL(18,2)</code></td>
+<td>BigDecimal</td>
+</tr>
+<tr>
+<td>TRUE_FALSE</td>
+<td><code>BIT</code></td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>BLOB</td>
+<td><code>MEDIUMBLOB</code></td>
+<td>byte[]</td>
+</tr>
+<tr>
+<td>LONGTEXT</td>
+<td><code>MEDIUMTEXT</code></td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<h2 id="create-view">Create View<a class="headerlink" href="#create-view" title="Permanent link">&para;</a></h2>
+<p>To create view select table and column for view. If you select more than one tables, SUFIA will figure out how to join the tables based on the foreign key relationship. So make sure the foreign key is defined properly before joining two tables on view.</p>
+<p>You can also verify the sql code generated to create the view. If needed you can modify it to suit your requirement.</p>
+<h2 id="generate-crud">Generate CRUD<a class="headerlink" href="#generate-crud" title="Permanent link">&para;</a></h2>
+<p>To Generate CRUD functions, click on the "Generate CRUD" link as below:</p>
+<p><img alt="" src="../../img/table-gen-crud.jpg" /></p>
+<p>After fills in the Title, Group and Page Template (Optional), it will generate a Query, Create Data, Edit Data and Delete Data functions.</p>
+<p><img alt="" src="../../img/demo.sufia.online_queryViewer_HR_1001_executeQuery=.png" /></p>
 <h2 id="ad-hoc-query">Ad-hoc query<a class="headerlink" href="#ad-hoc-query" title="Permanent link">&para;</a></h2>
+<p>For ad-hoc query, click on "Database Query" and you can use any valid sql queries. This function only works at DEVELOPMENT database.</p>
 <h2 id="model">Model<a class="headerlink" href="#model" title="Permanent link">&para;</a></h2>
+<p>Every tables and views will be generated to Model classes. These classes can be used on Transaction and Data. More details and examples on Model will be covered on Transaction section.</p>
                 
                   
                 

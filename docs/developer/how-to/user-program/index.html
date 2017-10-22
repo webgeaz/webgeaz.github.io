@@ -379,8 +379,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../variables/" title="Variable" class="md-nav__link">
-      Variable
+    <a href="../../variables/" title="Variables" class="md-nav__link">
+      Variables
     </a>
   </li>
 
@@ -393,6 +393,18 @@
   <li class="md-nav__item">
     <a href="../../page-layout/" title="Page Layout" class="md-nav__link">
       Page Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../helper/" title="Helper" class="md-nav__link">
+      Helper
     </a>
   </li>
 
@@ -430,13 +442,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11" type="checkbox" id="nav-4-11" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-12" type="checkbox" id="nav-4-12" checked>
     
-    <label class="md-nav__link" for="nav-4-11">
+    <label class="md-nav__link" for="nav-4-12">
       How-To
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-11">
+      <label class="md-nav__title" for="nav-4-12">
         How-To
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -525,10 +537,46 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Free Format Program
+      </label>
     
     <a href="./" title="Free Format Program" class="md-nav__link md-nav__link--active">
       Free Format Program
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-example" title="Python Example" class="md-nav__link">
+    Python Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groovy-example" title="Groovy Example" class="md-nav__link">
+    Groovy Example
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -593,6 +641,29 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-example" title="Python Example" class="md-nav__link">
+    Python Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groovy-example" title="Groovy Example" class="md-nav__link">
+    Groovy Example
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -605,9 +676,28 @@
               
                 
                 
-                  <h1>Free Format Program</h1>
-                
-                
+                <h1 id="user-program">User Program<a class="headerlink" href="#user-program" title="Permanent link">&para;</a></h1>
+<p>Apart from SUFIA's own Transaction, Query and Data, there is another mechanism to write your codes called "User Program". </p>
+<p>Basically its a free format codes that you can write using either Python or Groovy. It is similar to a Servlet itself where you can do more things that maybe impossible with Transaction. This feature is intended for more advanced developer who are familiar with Servlet itself.</p>
+<p>You can write your own program file outside of SUFIA and upload it using <a href="../../../administrator/file-manager/">File Manager</a>. After that you can create a menu for it and have it side-by-side with other Transactions.</p>
+<h3 id="python-example">Python Example<a class="headerlink" href="#python-example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1">#simple program to check your IP address</span>
+<span class="n">your_ip</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getRemoteAddr</span><span class="p">()</span>
+<span class="k">print</span> <span class="s2">&quot;&lt;h1&gt;&quot;</span>
+<span class="k">print</span> <span class="s2">&quot;Your IP address is : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">your_ip</span>
+<span class="k">print</span> <span class="s2">&quot;&lt;/h1&gt;&quot;</span>
+</pre></div>
+
+<p>Save the file as <code>user_program1.py</code> and upload using File Manager.</p>
+<p><strong>Sample Output</strong></p>
+<p><img alt="" src="../../../img/user-program-py-output.jpg" /></p>
+<p>Variables passed by SUFIA: </p>
+<ol>
+<li><code>dataSource</code> - local database <code>javax.sql.DataSource</code></li>
+<li><code>request</code> - current request <code>javax.servlet.http.HttpServletRequest</code></li>
+</ol>
+<h3 id="groovy-example">Groovy Example<a class="headerlink" href="#groovy-example" title="Permanent link">&para;</a></h3>
+<p>TBD</p>
                 
                   
                 

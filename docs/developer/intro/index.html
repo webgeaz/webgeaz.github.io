@@ -330,8 +330,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#group-and-code" title="Group and Code" class="md-nav__link">
+    Group and Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#software-development-lifecycle-sdlc" title="Software Development Lifecycle (SDLC)" class="md-nav__link">
     Software Development Lifecycle (SDLC)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-methodology" title="Development Methodology" class="md-nav__link">
+    Development Methodology
   </a>
   
 </li>
@@ -411,8 +425,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../variables/" title="Variable" class="md-nav__link">
-      Variable
+    <a href="../variables/" title="Variables" class="md-nav__link">
+      Variables
     </a>
   </li>
 
@@ -425,6 +439,18 @@
   <li class="md-nav__item">
     <a href="../page-layout/" title="Page Layout" class="md-nav__link">
       Page Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../helper/" title="Helper" class="md-nav__link">
+      Helper
     </a>
   </li>
 
@@ -460,13 +486,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11" type="checkbox" id="nav-4-11">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-12" type="checkbox" id="nav-4-12">
     
-    <label class="md-nav__link" for="nav-4-11">
+    <label class="md-nav__link" for="nav-4-12">
       How-To
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-11">
+      <label class="md-nav__title" for="nav-4-12">
         How-To
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -623,8 +649,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#group-and-code" title="Group and Code" class="md-nav__link">
+    Group and Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#software-development-lifecycle-sdlc" title="Software Development Lifecycle (SDLC)" class="md-nav__link">
     Software Development Lifecycle (SDLC)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-methodology" title="Development Methodology" class="md-nav__link">
+    Development Methodology
   </a>
   
 </li>
@@ -645,10 +685,32 @@
                 
                 
                 <h1 id="introduction-to-development">Introduction to Development<a class="headerlink" href="#introduction-to-development" title="Permanent link">&para;</a></h1>
-<p>SUFIA was build as a framework to ease the web application development process. </p>
+<p>SUFIA was build as a framework to ease the web application development process. There is three main component for application development:</p>
+<ol>
+<li><strong>Data</strong> - a CRUD (Create, Retrieve, Update, Delete) generator</li>
+<li><strong>Query</strong> - a record listing generator</li>
+<li><strong>Transaction</strong> - full-scale application creator</li>
+</ol>
+<p>For quick and simple "record management" application, using Data and Query is sufficient. Since all the codes are generated, basically zero coding is required.</p>
+<p>However, for most of the application, the requirement are not simple, thus requiring Developer to have more control on the preparation of the view, validation, back end processing and the flow of the program. For this, Transaction is the answer.</p>
+<p>So most of the time, Development time is spent on Transaction, and Data and Query act as a useful quick addition, especially when dealing with simple CRUD operation like for reference tables.</p>
+<p>There is two approach in application development using SUFIA. First to use everything SUFIA has to offer, including user, role, menu, access control etc. and extends it with application specific requirement. Second is to build everything and just use SUFIA as a platform. SUFIA support both approach as well as a hybrid approach between the two. Note that sometimes we use the term "<em>application</em>" interchangeably because SUFIA itself <em>is</em> an application.</p>
+<h2 id="group-and-code">Group and Code<a class="headerlink" href="#group-and-code" title="Permanent link">&para;</a></h2>
+<p>Before you start developing an application, you must establish a Group. Group is like a module, where you can put together a Transactions, Datas, Queries. This will make your application structured and modular for easy maintenance.</p>
+<p>Application can be categorized into logical groups, based on user requirements or nature of business. As an example, a HR application can have a group of HR Admin, Employee and Supervisor.</p>
+<p>Every Transaction, Query or Data must have a code. A combination of group and code will form as a unique ID and URL for it. Everything inside SUFIA will work according to this Group and Code.</p>
 <h2 id="software-development-lifecycle-sdlc">Software Development Lifecycle (SDLC)<a class="headerlink" href="#software-development-lifecycle-sdlc" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../../img/sdlc.png" /></p>
-<p>SUFIA support traditional and <em>"agile-like"</em> software development methodology. Transaction provides functionality from writing specification, coding, testing until deployment.</p>
+<p>SUFIA support traditional and <em>"agile-like"</em> software development methodology. Transaction Deployment Module provides functionality from writing specification, coding, testing until deployment. This feature works together with SUFIA's pre-defined Role.</p>
+<h2 id="development-methodology">Development Methodology<a class="headerlink" href="#development-methodology" title="Permanent link">&para;</a></h2>
+<p>SUFIA works best with bottom-up approach. It means we start with database design (ER Diagram). While we are creating
+our tables, SUFIA at the same time will auto-generate Model class for every tables.</p>
+<p>Then we start designing our application based on the functionality and how the functions linked logically to complete
+a process flow.</p>
+<p>After that, we can implement every function using the best suited tools, either Transaction, Data or Query.</p>
+<p>SUFIA's Transaction is discrete by design, which means we can implement the functions in parallel and sufficient by itself.
+This is in line with "Single Responsibility Principle" where the Transaction can be tested in isolation and anything happen to it
+will not effect another Transaction.</p>
                 
                   
                 

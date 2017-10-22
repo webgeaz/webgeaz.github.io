@@ -16,7 +16,7 @@
     
     
       
-        <title>Utility - SUFIA Installation & Usage Guide</title>
+        <title>Helper - SUFIA Installation & Usage Guide</title>
       
     
     
@@ -84,7 +84,7 @@
                 </span>
               
             
-            Utility
+            Helper
           
         </span>
       </div>
@@ -397,18 +397,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../helper/" title="Helper" class="md-nav__link">
-      Helper
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -416,38 +404,90 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
-      
-    
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Utility
+        Helper
       </label>
     
-    <a href="./" title="Utility" class="md-nav__link md-nav__link--active">
-      Utility
+    <a href="./" title="Helper" class="md-nav__link md-nav__link--active">
+      Helper
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-loader" title="Data Loader" class="md-nav__link">
-    Data Loader
+  <a href="#handlebars-helper" title="Handlebars Helper" class="md-nav__link">
+    Handlebars Helper
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#one-step-data-loader" title="One-step Data Loader" class="md-nav__link">
-    One-step Data Loader
+  <a href="#value-lookup" title="Value Lookup" class="md-nav__link">
+    Value Lookup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-format" title="HTML format" class="md-nav__link">
+    HTML format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-html-select-tag" title="Generate HTML &lt;select&gt; tag" class="md-nav__link">
+    Generate HTML &lt;select&gt; tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-html-inputtextarea-tag" title="Generate HTML &lt;input&gt;,&lt;textarea&gt; tag" class="md-nav__link">
+    Generate HTML &lt;input&gt;,&lt;textarea&gt; tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-formatting" title="Date Formatting" class="md-nav__link">
+    Date Formatting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contains-helper" title="Contains Helper" class="md-nav__link">
+    Contains Helper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equals-not-helper" title="Equals &amp; Not Helper" class="md-nav__link">
+    Equals &amp; Not Helper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#length-size" title="Length, Size" class="md-nav__link">
+    Length, Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checked-value" title="Checked value" class="md-nav__link">
+    Checked value
   </a>
   
 </li>
@@ -457,47 +497,24 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#utility-classes" title="Utility classes" class="md-nav__link">
-    Utility classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#application-log" title="Application Log" class="md-nav__link">
-    Application Log
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference-manager" title="Reference Manager" class="md-nav__link">
-    Reference Manager
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manage-language-i18n" title="Manage Language (i18n)" class="md-nav__link">
-    Manage Language (i18n)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#system-variables" title="System Variables" class="md-nav__link">
-    System Variables
-  </a>
-  
-</li>
-      
       
       
     </ul>
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utility-class/" title="Utility" class="md-nav__link">
+      Utility
+    </a>
   </li>
 
         
@@ -676,64 +693,83 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-loader" title="Data Loader" class="md-nav__link">
-    Data Loader
+  <a href="#handlebars-helper" title="Handlebars Helper" class="md-nav__link">
+    Handlebars Helper
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#one-step-data-loader" title="One-step Data Loader" class="md-nav__link">
-    One-step Data Loader
+  <a href="#value-lookup" title="Value Lookup" class="md-nav__link">
+    Value Lookup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-format" title="HTML format" class="md-nav__link">
+    HTML format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-html-select-tag" title="Generate HTML &lt;select&gt; tag" class="md-nav__link">
+    Generate HTML &lt;select&gt; tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-html-inputtextarea-tag" title="Generate HTML &lt;input&gt;,&lt;textarea&gt; tag" class="md-nav__link">
+    Generate HTML &lt;input&gt;,&lt;textarea&gt; tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-formatting" title="Date Formatting" class="md-nav__link">
+    Date Formatting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contains-helper" title="Contains Helper" class="md-nav__link">
+    Contains Helper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equals-not-helper" title="Equals &amp; Not Helper" class="md-nav__link">
+    Equals &amp; Not Helper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#length-size" title="Length, Size" class="md-nav__link">
+    Length, Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checked-value" title="Checked value" class="md-nav__link">
+    Checked value
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utility-classes" title="Utility classes" class="md-nav__link">
-    Utility classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#application-log" title="Application Log" class="md-nav__link">
-    Application Log
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference-manager" title="Reference Manager" class="md-nav__link">
-    Reference Manager
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manage-language-i18n" title="Manage Language (i18n)" class="md-nav__link">
-    Manage Language (i18n)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#system-variables" title="System Variables" class="md-nav__link">
-    System Variables
-  </a>
   
 </li>
       
@@ -752,14 +788,106 @@
               
                 
                 
-                <h1 id="utility">Utility<a class="headerlink" href="#utility" title="Permanent link">&para;</a></h1>
-<h2 id="data-loader">Data Loader<a class="headerlink" href="#data-loader" title="Permanent link">&para;</a></h2>
-<h3 id="one-step-data-loader">One-step Data Loader<a class="headerlink" href="#one-step-data-loader" title="Permanent link">&para;</a></h3>
-<h2 id="utility-classes">Utility classes<a class="headerlink" href="#utility-classes" title="Permanent link">&para;</a></h2>
-<h2 id="application-log">Application Log<a class="headerlink" href="#application-log" title="Permanent link">&para;</a></h2>
-<h2 id="reference-manager">Reference Manager<a class="headerlink" href="#reference-manager" title="Permanent link">&para;</a></h2>
-<h2 id="manage-language-i18n">Manage Language (i18n)<a class="headerlink" href="#manage-language-i18n" title="Permanent link">&para;</a></h2>
-<h2 id="system-variables">System Variables<a class="headerlink" href="#system-variables" title="Permanent link">&para;</a></h2>
+                  <h1>Helper</h1>
+                
+                <h2 id="handlebars-helper">Handlebars Helper<a class="headerlink" href="#handlebars-helper" title="Permanent link">&para;</a></h2>
+<p>SUFIA additional helper for Handlebars. You may need to refer to Handlebars <a href="https://jknack.github.io/handlebars.java/helpers.html">documentation</a> to understand the concept.</p>
+<h3 id="value-lookup">Value Lookup<a class="headerlink" href="#value-lookup" title="Permanent link">&para;</a></h3>
+<p>Sometime you want to display the name / description of a particular id. For instance, consider
+you have table <code>hr_department_staff</code> with column <code>staff_id</code>, which is a foreign key to table <code>hr_staff</code>.
+While iterating the <code>hr_department_staff</code> records, you may want to display the staff name instead of the staff_id.</p>
+<div class="codehilite"><pre><span></span><span class="x">Usage:</span>
+<span class="cp">{{</span><span class="nv">ref_lookup</span> <span class="nv">ref_id</span> <span class="na">table</span><span class="o">=</span><span class="s2">&quot;tableName&quot;</span> <span class="na">label</span><span class="o">=</span><span class="s2">&quot;name&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="cp">}}</span><span class="x"></span>
+</pre></div>
+
+<p><strong>Example:</strong>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="cp">{{</span><span class="k">#each</span> <span class="nv">staffs</span><span class="cp">}}</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span><span class="cp">{{</span><span class="nv">ref_lookup</span> <span class="nv">staff_id</span> <span class="na">table</span><span class="o">=</span><span class="s2">&quot;hr_staff&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s2">&quot;id&quot;</span> <span class="na">label</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="cp">{{</span><span class="k">/each</span><span class="cp">}}</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div></p>
+<h3 id="html-format">HTML format<a class="headerlink" href="#html-format" title="Permanent link">&para;</a></h3>
+<p>Transform newline to <code>&lt;br&gt;</code> and make valid URL clickable.</p>
+<div class="codehilite"><pre><span></span><span class="x">Usage:</span>
+<span class="cp">{{</span><span class="nv">html</span> <span class="nv">context</span><span class="cp">}}</span><span class="x"></span>
+</pre></div>
+
+<p><strong>Example:</strong>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">{{</span><span class="nv">html</span> <span class="nv">content</span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div></p>
+<h3 id="generate-html-select-tag">Generate HTML <code>&lt;select&gt;</code> tag<a class="headerlink" href="#generate-html-select-tag" title="Permanent link">&para;</a></h3>
+<p>Generate HTML <code>&lt;select&gt;</code> tag with data from database table. This helper support parent-child selector
+(e.g. Country &amp; State)</p>
+<div class="codehilite"><pre><span></span><span class="x">Usage:</span>
+<span class="cp">{{</span><span class="nv">select</span> <span class="nv">models</span><span class="err">?</span> <span class="na">selected</span><span class="o">=</span><span class="nv">context</span><span class="err">?</span> <span class="na">table</span><span class="o">=</span><span class="s2">&quot;tableName&quot;</span><span class="err">?</span> <span class="na">filter</span><span class="o">=</span><span class="s2">&quot;type=1&quot;</span><span class="err">?</span> <span class="na">id</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="err">?</span> <span class="na">name</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="err">?</span> <span class="na">class</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="err">?</span> <span class="na">childIds</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="err">?</span> <span class="na">parent</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="err">?</span> <span class="na">label</span><span class="o">=</span><span class="s2">&quot;name&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="cp">}}</span><span class="x"></span>
+</pre></div>
+
+<p><strong>Example:</strong>
+<div class="codehilite"><pre><span></span><span class="cp">{{</span><span class="nv">select</span> <span class="na">table</span><span class="o">=</span><span class="s2">&quot;hr_staff&quot;</span><span class="cp">}}</span>
+</pre></div></p>
+<h3 id="generate-html-inputtextarea-tag">Generate HTML <code>&lt;input&gt;</code>,<code>&lt;textarea&gt;</code> tag<a class="headerlink" href="#generate-html-inputtextarea-tag" title="Permanent link">&para;</a></h3>
+<p>Input tag helper to cater for read-only value. If <code>view</code> is <code>true</code> input is automatically disabled.</p>
+<div class="codehilite"><pre><span></span><span class="x">Usage:</span>
+<span class="cp">{{</span><span class="k">in</span><span class="nv">put</span> <span class="nv">value</span><span class="err">?</span> <span class="err">...</span><span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span><span class="nv">textarea</span> <span class="nv">value</span><span class="err">?</span> <span class="err">...</span><span class="cp">}}</span><span class="x"></span>
+</pre></div>
+
+<p><strong>Example:</strong>
+<div class="codehilite"><pre><span></span><span class="cp">{{</span><span class="k">in</span><span class="nv">put</span> <span class="nv">staff.name</span> <span class="na">class</span><span class="o">=</span><span class="s2">&quot;form-control&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s2">&quot;name&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s2">&quot;150&quot;</span> <span class="na">view</span><span class="o">=</span><span class="nv">view_only</span><span class="cp">}}</span>
+</pre></div></p>
+<h3 id="date-formatting">Date Formatting<a class="headerlink" href="#date-formatting" title="Permanent link">&para;</a></h3>
+<p>Default formatting of date to <strong>dd/MM/yyyy</strong></p>
+<div class="codehilite"><pre><span></span><span class="x">Usage:</span>
+<span class="cp">{{</span><span class="nv">dateFormat</span> <span class="nv">context</span> <span class="s2">&quot;pattern&quot;</span><span class="err">?</span><span class="cp">}}</span><span class="x"></span>
+</pre></div>
+
+<p><strong>Example:</strong>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">{{</span><span class="nv">dateFormat</span> <span class="nv">today</span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div></p>
+<h3 id="contains-helper">Contains Helper<a class="headerlink" href="#contains-helper" title="Permanent link">&para;</a></h3>
+<p>Check if the value exists in the given context. Works with array or list</p>
+<div class="codehilite"><pre><span></span><span class="x">Usage:</span>
+<span class="cp">{{</span><span class="k">#in</span> <span class="nv">context</span> <span class="nv">value</span><span class="cp">}}</span><span class="x">...</span><span class="cp">{{</span><span class="k">/in</span><span class="cp">}}</span><span class="x"></span>
+</pre></div>
+
+<p><strong>Example:</strong>
+<div class="codehilite"><pre><span></span><span class="cp">{{</span><span class="k">#in</span> <span class="nv">admins</span> <span class="nv">staff_id</span><span class="cp">}}</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This user is an Administrator<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="cp">{{</span><span class="k">/in</span><span class="cp">}}</span>
+</pre></div></p>
+<h3 id="equals-not-helper">Equals &amp; Not Helper<a class="headerlink" href="#equals-not-helper" title="Permanent link">&para;</a></h3>
+<p>Check if the value if equals or not equals.</p>
+<div class="codehilite"><pre><span></span><span class="x">Usage:</span>
+<span class="cp">{{</span><span class="nf">#eq</span> <span class="nv">value1</span> <span class="nv">value2</span><span class="cp">}}</span><span class="x">..</span><span class="cp">{{</span><span class="nf">/eq</span><span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span><span class="nf">#not</span> <span class="nv">value1</span> <span class="nv">value2</span><span class="cp">}}</span><span class="x">..</span><span class="cp">{{</span><span class="nf">/not</span><span class="cp">}}</span><span class="x"></span>
+</pre></div>
+
+<p><strong>Example:</strong>
+<div class="codehilite"><pre><span></span><span class="cp">{{</span><span class="nf">#eq</span> <span class="nv">staff.sex</span> <span class="s2">&quot;1&quot;</span><span class="cp">}}</span>
+    Male
+<span class="cp">{{</span><span class="k">else</span><span class="cp">}}</span>
+    Female
+<span class="cp">{{</span><span class="nf">/eq</span><span class="cp">}}</span>
+</pre></div></p>
+<h3 id="length-size">Length, Size<a class="headerlink" href="#length-size" title="Permanent link">&para;</a></h3>
+<p>Get the length of list, arrays</p>
+<div class="codehilite"><pre><span></span><span class="x">Usage:</span>
+<span class="cp">{{</span><span class="nv">length</span> <span class="nv">context</span><span class="cp">}}</span><span class="x"></span>
+</pre></div>
+
+<p><strong>Example:</strong>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Total users: <span class="cp">{{</span><span class="nv">length</span> <span class="nv">users</span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div></p>
+<h3 id="checked-value">Checked value<a class="headerlink" href="#checked-value" title="Permanent link">&para;</a></h3>
+<p>Helper to output <code>checked</code> based on context (can be list or string) and value.</p>
+<div class="codehilite"><pre><span></span><span class="x">Usage:</span>
+<span class="cp">{{</span><span class="nv">checked</span> <span class="nv">context</span> <span class="na">value</span><span class="o">=</span><span class="s2">&quot;value&quot;</span> <span class="na">checked</span><span class="o">=</span><span class="s2">&quot;selected&quot;</span><span class="err">?</span><span class="cp">}}</span><span class="x"></span>
+</pre></div>
+
+<p><strong>Example:</strong>
+<div class="codehilite"><pre><span></span>TBD
+</pre></div></p>
                 
                   
                 
@@ -778,7 +906,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../helper/" title="Helper" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../page-layout/" title="Page Layout" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -787,19 +915,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Helper
+                Page Layout
               </span>
             </div>
           </a>
         
         
-          <a href="../batch/" title="Scheduler" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../utility-class/" title="Utility" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Scheduler
+                Utility
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
