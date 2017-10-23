@@ -332,10 +332,39 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Data
+      </label>
     
     <a href="./" title="Data" class="md-nav__link md-nav__link--active">
       Data
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-feature" title="Advanced Feature" class="md-nav__link">
+    Advanced Feature
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -599,6 +628,22 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-feature" title="Advanced Feature" class="md-nav__link">
+    Advanced Feature
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -611,9 +656,115 @@
               
                 
                 
-                  <h1>Data</h1>
-                
-                
+                <h1 id="data-maintenance-a-crud-generator">Data Maintenance - A CRUD Generator<a class="headerlink" href="#data-maintenance-a-crud-generator" title="Permanent link">&para;</a></h1>
+<p>Data Maintenance is a Create, Retrieve, Update, and Delete (CRUD) Generator. Data works on database table only. You just need to select a table, the operation for that table and define columns required.</p>
+<p>Only one action is allowed for one Data Maintenance . Therefore, if you want the whole CRUD functionality, you have to create four Data Maintenances. The reason for this is to make you able to segregate the permission for different Role. For instance, maybe certain Role can <code>CREATE</code> or <code>DELETE</code> the record.</p>
+<p>To create new Data Maintenance click on <strong>Create New Data Maintenance</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Group</td>
+<td>Group</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Code</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Name for the Data Maintenance. Used as menu and page title.</td>
+</tr>
+<tr>
+<td>Page Layout</td>
+<td><a href="../page-layout/">Page Layout</a> for Data Maintenance (Optional)</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>Action for the Data Maintenance. Possible action is <code>CREATE</code>, <code>UPDATE</code>, <code>DELETE</code>, and <code>INQUIRY</code></td>
+</tr>
+<tr>
+<td>Select table</td>
+<td>Select the table</td>
+</tr>
+</tbody>
+</table>
+<p>After selecting the table, click on button <img alt="" src="../../img/demo.sufia.online_data_createNew_btn.png" /></p>
+<p>For every columns, tick the checkbox if you want to include the column in the action (default all column selected).</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Extra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Label</td>
+<td>Label for column</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>R</td>
+<td>Read-Only. If selected, the column is not editable</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>U</td>
+<td>Update. If selected, the column is editable</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Size of the input. Refer to Bootstrap column. [1-12]</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Newline?</td>
+<td>If clicked (default), the row starts on new line</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>Lookup from <a href="../utility-class/#reference-manager">Reference Manager</a>. If selected the field is a <code>select</code> box populated with labels and values from Reference Manager</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Table</td>
+<td>Lookup from database table. If selected the tag is <code>select</code> box populated with data from the table</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>The lookup table column whose record becoming a <code>option</code>'s label</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>The lookup table column whose record becoming a <code>option</code>'s value</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>CSS Class</td>
+<td>Additional CSS class</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>Provide default value for column</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<h2 id="advanced-feature">Advanced Feature<a class="headerlink" href="#advanced-feature" title="Permanent link">&para;</a></h2>
+<p>TBD</p>
+<p><img alt="" src="../../img/demo.sufia.online_data_createNew.png" /></p>
                 
                   
                 

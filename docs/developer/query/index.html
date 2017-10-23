@@ -344,10 +344,60 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Query
+      </label>
     
     <a href="./" title="Query" class="md-nav__link md-nav__link--active">
       Query
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#record-action" title="Record Action" class="md-nav__link">
+    Record Action
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-action" title="Common Action" class="md-nav__link">
+    Common Action
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" title="Links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-feature" title="Advanced Feature" class="md-nav__link">
+    Advanced Feature
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -599,6 +649,43 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#record-action" title="Record Action" class="md-nav__link">
+    Record Action
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-action" title="Common Action" class="md-nav__link">
+    Common Action
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" title="Links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-feature" title="Advanced Feature" class="md-nav__link">
+    Advanced Feature
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -611,9 +698,124 @@
               
                 
                 
-                  <h1>Query</h1>
-                
-                
+                <h1 id="query-maker">Query Maker<a class="headerlink" href="#query-maker" title="Permanent link">&para;</a></h1>
+<p>Query Maker is a tools to generate record listing page. Record listing page is a common use case in application development. Normally before user performing any action, application lists the records. User then can search, and filter the record required. From there, User can select any action that they want to perform.</p>
+<p>Query Maker works on database table as well as view. If you have any specific listing from multiple tables, you can create a table view first and use it with Query Maker.</p>
+<p>To create new Query click on <strong>Create New Query</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Group</td>
+<td>Group</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Code</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Name for the Query. Used as menu and page title.</td>
+</tr>
+<tr>
+<td>Page Layout</td>
+<td><a href="../page-layout/">Page Layout</a> for Data Maintenance (Optional)</td>
+</tr>
+<tr>
+<td>Table / View</td>
+<td>Select the table or view</td>
+</tr>
+<tr>
+<td>Selectable Output List</td>
+<td>If clicked, a checkbox will appear for every rows for selection</td>
+</tr>
+<tr>
+<td>Show Select Criteria</td>
+<td>If clicked, the selection criteria (search box), will always appear</td>
+</tr>
+</tbody>
+</table>
+<p>After selecting the table, click on button <img alt="" src="../../img/demo.sufia.online_data_createNew_btn.png" /></p>
+<p>For every columns, tick the checkbox if you want to include the column in the action (default all column selected).</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Extra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Label</td>
+<td>Label for the column</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Filter?</td>
+<td>If clicked, column appear on selection criteria</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Range?</td>
+<td>If clicked, column is a range. Works with <code>INTEGER</code> and <code>DATE</code> column only</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Show?</td>
+<td>Show or hide the column</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>Default value for column. Must include symbol. Only works with <strong>Filter?</strong> enabled. <br>For example if you want to list records for staff with salary more than 5,000.00, you can use <code>&gt; 5000</code> at salary column</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>Lookup value from <a href="../utility-class/#reference-manager">Reference Manager</a></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Table</td>
+<td>Lookup value from database table</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>The lookup table column whose record becoming a label</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>The lookup table column whose record becoming a value</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>CSS Class</td>
+<td>Additional CSS class</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<h2 id="record-action">Record Action<a class="headerlink" href="#record-action" title="Permanent link">&para;</a></h2>
+<p>You can add action (Transaction, Data, or Query) for every record (row). For example, you may want to add a <strong>View Details</strong> button which link to a Transaction that display more details of the record.</p>
+<p><img alt="" src="../../img/demo.sufia.online_query_createNew-ra.png" /></p>
+<h2 id="common-action">Common Action<a class="headerlink" href="#common-action" title="Permanent link">&para;</a></h2>
+<p>Common Action works with selected records (rows). If you click the "Selectable Output List" above, you can select each row(s) that you want and send it to selected Transaction for processing.</p>
+<p><img alt="" src="../../img/demo.sufia.online_query_createNew-ca.png" /></p>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<p>You can add links at the bottom of the page. This is useful if you have an action (Transaction, Query of another Page) that is related with the records but not at individual (row) level. Links works with Menu.</p>
+<p>For example, in a listing of Staff, you may want to add a link to Add New Staff.</p>
+<p><img alt="" src="../../img/demo.sufia.online_query_createNew-li.png" /></p>
+<h2 id="advanced-feature">Advanced Feature<a class="headerlink" href="#advanced-feature" title="Permanent link">&para;</a></h2>
+<p>TBD</p>
+<p><img alt="" src="../../img/demo.sufia.online_query_createNew-adv.png" /></p>
                 
                   
                 
