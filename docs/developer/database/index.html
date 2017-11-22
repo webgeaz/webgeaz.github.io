@@ -10,9 +10,24 @@
       
       
       
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.languages" content="">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      
         <link rel="shortcut icon" href="../../img/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.3">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
     
     
       
@@ -23,7 +38,7 @@
       <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-9011e2d3f8.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-04ea671600.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
       
@@ -102,8 +117,8 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -132,13 +147,13 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <div class="md-nav__button md-logo">
+    <span class="md-nav__button md-logo">
       
         
           <img src="../../img/webgeaz_logo_sm.png">
         
       
-    </div>
+    </span>
     SUFIA Installation & Usage Guide
   </label>
   
@@ -753,15 +768,15 @@
 <li>Column to store file name</li>
 <li>Column to store file type</li>
 </ol>
-<p><strong>Example:</strong> If column name is "resume", 3 column will be created:  <code>resume</code>, <code>resume_fn</code> and <code>resume_ft</code> </p>
+<p><strong>Example:</strong> If column name is "resume", 3 column will be created:  <code class="codehilite">resume</code>, <code class="codehilite">resume_fn</code> and <code class="codehilite">resume_ft</code> </p>
 </li>
 </ol>
 <p><img alt="Create Table" src="../../img/demo.sufia.online_dbedev_newTable.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">SUFIA Convention</p>
-<p>Every table must have a primary key column named <code>id</code>. A Model class representing
+<p>Every table must have a primary key column named <code class="codehilite">id</code>. A Model class representing
 the table will be generated with class name same with table name (ORM)
-e.g. table <code>person</code> will have a correspondent class <code>Person</code></p>
+e.g. table <code class="codehilite">person</code> will have a correspondent class <code class="codehilite">Person</code></p>
 </div>
 <table>
 <thead>
@@ -775,7 +790,7 @@ e.g. table <code>person</code> will have a correspondent class <code>Person</cod
 <tr>
 <td>Table Name</td>
 <td>Name of the table (max 64 characters)</td>
-<td><code>hr_employee</code></td>
+<td><code class="codehilite">hr_employee</code></td>
 </tr>
 <tr>
 <td>Comment (Table)</td>
@@ -785,7 +800,7 @@ e.g. table <code>person</code> will have a correspondent class <code>Person</cod
 <tr>
 <td>Field</td>
 <td>Column Name (max 64 characters)</td>
-<td><code>staff_no</code></td>
+<td><code class="codehilite">staff_no</code></td>
 </tr>
 <tr>
 <td>Type</td>
@@ -827,7 +842,7 @@ e.g. table <code>person</code> will have a correspondent class <code>Person</cod
 <div class="admonition tip">
 <p class="admonition-title">Best Practice</p>
 <p>Use prefix for table name for easy maintenance. Normally the group name is a good
-candidate for prefix name e.g. prefix HR Group's table with <code>hr_</code></p>
+candidate for prefix name e.g. prefix HR Group's table with <code class="codehilite">hr_</code></p>
 </div>
 <h4 id="sufia-build-in-data-type-conversion-table">SUFIA build-in Data Type Conversion Table<a class="headerlink" href="#sufia-build-in-data-type-conversion-table" title="Permanent link">&para;</a></h4>
 <table>
@@ -841,52 +856,52 @@ candidate for prefix name e.g. prefix HR Group's table with <code>hr_</code></p>
 <tbody>
 <tr>
 <td>TEXT</td>
-<td><code>VARCHAR(length)</code><br/><em> </em>length as defined<em><br/></em> <em>if length &gt; 9999 Type <code>TEXT</code> will be used</em></td>
+<td><code class="codehilite">VARCHAR(length)</code><br/><em> </em>length as defined<em><br/></em> <em>if length &gt; 9999 Type <code class="codehilite">TEXT</code> will be used</em></td>
 <td>String</td>
 </tr>
 <tr>
 <td>NUMBER</td>
-<td><code>INTEGER</code></td>
+<td><code class="codehilite">INTEGER</code></td>
 <td>Integer</td>
 </tr>
 <tr>
 <td>DECIMAL</td>
-<td><code>DECIMAL(18,5)</code></td>
+<td><code class="codehilite">DECIMAL(18,5)</code></td>
 <td>BigDecimal</td>
 </tr>
 <tr>
 <td>DATETIME</td>
-<td><code>DATETIME</code></td>
+<td><code class="codehilite">DATETIME</code></td>
 <td>Date</td>
 </tr>
 <tr>
 <td>DATE</td>
-<td><code>DATE</code></td>
+<td><code class="codehilite">DATE</code></td>
 <td>Date</td>
 </tr>
 <tr>
 <td>TIME</td>
-<td><code>TIME</code></td>
+<td><code class="codehilite">TIME</code></td>
 <td>Date</td>
 </tr>
 <tr>
 <td>CURRENCY</td>
-<td><code>DECIMAL(18,2)</code></td>
+<td><code class="codehilite">DECIMAL(18,2)</code></td>
 <td>BigDecimal</td>
 </tr>
 <tr>
 <td>TRUE_FALSE</td>
-<td><code>BIT</code></td>
+<td><code class="codehilite">BIT</code></td>
 <td>Boolean</td>
 </tr>
 <tr>
 <td>BLOB</td>
-<td><code>MEDIUMBLOB</code></td>
+<td><code class="codehilite">MEDIUMBLOB</code></td>
 <td>byte[]</td>
 </tr>
 <tr>
 <td>LONGTEXT</td>
-<td><code>MEDIUMTEXT</code></td>
+<td><code class="codehilite">MEDIUMTEXT</code></td>
 <td>String</td>
 </tr>
 </tbody>
@@ -976,10 +991,10 @@ candidate for prefix name e.g. prefix HR Group's table with <code>hr_</code></p>
       
     </div>
     
-      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      <script src="../../assets/javascripts/application-946997f430.js"></script>
       
       
-      <script>app.initialize({url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.16.3",url:{base:"../.."}})</script>
       
     
     

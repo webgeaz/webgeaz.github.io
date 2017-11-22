@@ -10,9 +10,24 @@
       
       
       
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.languages" content="">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      
         <link rel="shortcut icon" href="../../img/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.3">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
     
     
       
@@ -23,7 +38,7 @@
       <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-9011e2d3f8.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-04ea671600.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
       
@@ -102,8 +117,8 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -132,13 +147,13 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <div class="md-nav__button md-logo">
+    <span class="md-nav__button md-logo">
       
         
           <img src="../../img/webgeaz_logo_sm.png">
         
       
-    </div>
+    </span>
     SUFIA Installation & Usage Guide
   </label>
   
@@ -664,7 +679,7 @@ This variables includes the core classes of SUFIA, utility and helper classes.</
 <p>Be careful not to override the variables! If you define a variable inside
 the codes using the same name, it will override the original variable.
 This applies to pre-defined variables, keyword and built-in functions
-used by Jython also (e.g. <code>map</code>)</p>
+used by Jython also (e.g. <code class="codehilite">map</code>)</p>
 </div>
 <h2 id="list-of-sufia-pre-defined-variables">List of SUFIA pre-defined variables<a class="headerlink" href="#list-of-sufia-pre-defined-variables" title="Permanent link">&para;</a></h2>
 <table>
@@ -678,62 +693,62 @@ used by Jython also (e.g. <code>map</code>)</p>
 </thead>
 <tbody>
 <tr>
-<td><code>service</code></td>
+<td><code class="codehilite">service</code></td>
 <td>Helper class to get SUFIA services. Refer to <a href="../services/">Services</a> for more details</td>
 <td>Pre,Backend</td>
-<td><code>userService = service.get("UserService")</code></td>
+<td><code class="codehilite">userService = service.get(&quot;UserService&quot;)</code></td>
 </tr>
 <tr>
-<td><code>dataSource</code></td>
-<td>Instance of <code>javax.sql.DataSource</code> to get connection from database</td>
+<td><code class="codehilite">dataSource</code></td>
+<td>Instance of <code class="codehilite">javax.sql.DataSource</code> to get connection from database</td>
 <td>Pre,Backend</td>
 <td></td>
 </tr>
 <tr>
-<td><code>output</code></td>
-<td>Output context based on <code>java.util.Map</code>. All the attributes set in this context will be available to UI</td>
+<td><code class="codehilite">output</code></td>
+<td>Output context based on <code class="codehilite">java.util.Map</code>. All the attributes set in this context will be available to UI</td>
 <td>Pre,Backend</td>
-<td><code>output["name"] = user.getFullName()</code></td>
+<td><code class="codehilite">output[&quot;name&quot;] = user.getFullName()</code></td>
 </tr>
 <tr>
-<td><code>key</code></td>
-<td><code>id</code> value of the current table (model)</td>
+<td><code class="codehilite">key</code></td>
+<td><code class="codehilite">id</code> value of the current table (model)</td>
 <td>Pre,Backend, Output</td>
-<td><code>person = Person.findById(key)</code></td>
+<td><code class="codehilite">person = Person.findById(key)</code></td>
 </tr>
 <tr>
-<td><code>user</code></td>
+<td><code class="codehilite">user</code></td>
 <td>SUFIA User object. Refer to SUFIA API for details.</td>
 <td>Pre,Backend, Output</td>
-<td><code>user.getId()</code></td>
+<td><code class="codehilite">user.getId()</code></td>
 </tr>
 <tr>
-<td><code>request</code></td>
-<td>HTTP request parameter object based on <code>java.util.Map</code>. A wrapper for <code>request.getParameterMap()</code></td>
+<td><code class="codehilite">request</code></td>
+<td>HTTP request parameter object based on <code class="codehilite">java.util.Map</code>. A wrapper for <code class="codehilite">request.getParameterMap()</code></td>
 <td>Pre,Backend</td>
-<td><code>request.getParameter("input")</code></td>
+<td><code class="codehilite">request.getParameter(&quot;input&quot;)</code></td>
 </tr>
 <tr>
-<td><code>webCtx</code></td>
-<td>Stripes <code>ActionBeanContext</code>. This can be used to get the internals of Servlet API (e.g. request, response)</td>
+<td><code class="codehilite">webCtx</code></td>
+<td>Stripes <code class="codehilite">ActionBeanContext</code>. This can be used to get the internals of Servlet API (e.g. request, response)</td>
 <td>Pre,Backend, Output</td>
-<td><code>webCtx.getRequest()</code></td>
+<td><code class="codehilite">webCtx.getRequest()</code></td>
 </tr>
 <tr>
-<td><code>ctxPath</code></td>
-<td>Context path for SUFIA application. Value of <code>request.getContextPath()</code></td>
+<td><code class="codehilite">ctxPath</code></td>
+<td>Context path for SUFIA application. Value of <code class="codehilite">request.getContextPath()</code></td>
 <td>Pre,Backend, Output</td>
-<td><code>&lt;a href="{{ctxPath}}"&gt;</code></td>
+<td><code class="codehilite"><span class="x">&lt;a href=&quot;</span><span class="cp">{{</span><span class="nv">ctxPath</span><span class="cp">}}</span><span class="x">&quot;&gt;</span></code></td>
 </tr>
 <tr>
-<td><code>go_to</code></td>
-<td>To redirect into particular page. It accept URL and <code>Resolution</code> object</td>
+<td><code class="codehilite">go_to</code></td>
+<td>To redirect into particular page. It accept URL and <code class="codehilite">Resolution</code> object</td>
 <td>Pre,Backend</td>
-<td><code>go_to = "%s/t/my/app" % ctxPath</code></td>
+<td><code class="codehilite">go_to = &quot;%s/t/my/app&quot; % ctxPath</code></td>
 </tr>
 <tr>
-<td><code>errors</code></td>
-<td>Errors object of type <code>java.util.List</code>. The attribute will be available to UI</td>
+<td><code class="codehilite">errors</code></td>
+<td>Errors object of type <code class="codehilite">java.util.List</code>. The attribute will be available to UI</td>
 <td>Pre</td>
 <td></td>
 </tr>
@@ -813,10 +828,10 @@ used by Jython also (e.g. <code>map</code>)</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      <script src="../../assets/javascripts/application-946997f430.js"></script>
       
       
-      <script>app.initialize({url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.16.3",url:{base:"../.."}})</script>
       
     
     

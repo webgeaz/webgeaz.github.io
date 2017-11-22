@@ -10,9 +10,24 @@
       
       
       
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.languages" content="">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      
         <link rel="shortcut icon" href="../../img/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.3">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
     
     
       
@@ -23,7 +38,7 @@
       <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-9011e2d3f8.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-04ea671600.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
       
@@ -102,8 +117,8 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -132,13 +147,13 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <div class="md-nav__button md-logo">
+    <span class="md-nav__button md-logo">
       
         
           <img src="../../img/webgeaz_logo_sm.png">
         
       
-    </div>
+    </span>
     SUFIA Installation & Usage Guide
   </label>
   
@@ -390,8 +405,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#userservices" title="UserServices" class="md-nav__link">
-    UserServices
+  <a href="#userservice" title="UserService" class="md-nav__link">
+    UserService
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user" title="User" class="md-nav__link">
+    User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailservice" title="MailService" class="md-nav__link">
+    MailService
   </a>
   
 </li>
@@ -635,8 +664,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#userservices" title="UserServices" class="md-nav__link">
-    UserServices
+  <a href="#userservice" title="UserService" class="md-nav__link">
+    UserService
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user" title="User" class="md-nav__link">
+    User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailservice" title="MailService" class="md-nav__link">
+    MailService
   </a>
   
 </li>
@@ -658,9 +701,66 @@
                 
                 <h1 id="services-sufia-api">Services - SUFIA API<a class="headerlink" href="#services-sufia-api" title="Permanent link">&para;</a></h1>
 <p>SUFIA provides API in order to access the internal classes of SUFIA. This is useful if you
-need to use or override the default behavior of certain aspect of SUFIA e.g. login process, user creation etc.
-SUFIA API can be invoked using the <a href="../variables/">SUFIA pre-defined variables</a>: <code>service</code></p>
-<h2 id="userservices">UserServices<a class="headerlink" href="#userservices" title="Permanent link">&para;</a></h2>
+need to use or override the default behavior of certain aspect of SUFIA e.g. login process, user creation etc. </p>
+<p>SUFIA API can be invoked using the <a href="../variables/">SUFIA pre-defined variables</a>: <code class="codehilite">service</code></p>
+<h2 id="userservice">UserService<a class="headerlink" href="#userservice" title="Permanent link">&para;</a></h2>
+<p>package sufia</p>
+<p><strong>Class UserService</strong></p>
+<p><em>This class provides methods to access SUFIA's User Profile information. You can search for user profile, create or update user information.</em></p>
+<p>Method Summary</p>
+<ul>
+<li><code class="codehilite"><span class="kd">public</span> <span class="n">User</span> <span class="nf">findById</span><span class="o">(</span><span class="n">Integer</span> <span class="n">id</span><span class="o">)</span></code></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code class="codehilite">id</code> - Id of user</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>
+<p><a href="#user">User</a> class</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="kd">public</span> <span class="n">User</span> <span class="nf">findByLoginId</span><span class="o">(</span><span class="n">String</span> <span class="n">loginId</span><span class="o">)</span></code></p>
+</li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="n">User</span> <span class="nf">findByEmail</span><span class="o">(</span><span class="n">String</span> <span class="n">email</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="nf">findByRole</span><span class="o">(</span><span class="n">Integer</span> <span class="n">roleId</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">()</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="n">User</span> <span class="nf">register</span><span class="o">(</span><span class="n">User</span> <span class="n">user</span><span class="o">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">roleIds</span><span class="o">,</span> <span class="n">Integer</span> <span class="n">menuSetId</span><span class="o">,</span> <span class="n">String</span> <span class="n">scope</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">sendEmail</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="n">User</span> <span class="nf">update</span><span class="o">(</span><span class="n">User</span> <span class="n">user</span><span class="o">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">roleIds</span><span class="o">,</span> <span class="n">Integer</span> <span class="n">menuSetId</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">delete</span><span class="o">(</span><span class="n">User</span> <span class="n">user</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">activate</span><span class="o">(</span><span class="n">User</span> <span class="n">user</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">changePassword</span><span class="o">(</span><span class="n">User</span> <span class="n">user</span><span class="o">,</span> <span class="n">String</span> <span class="n">password</span><span class="o">)</span></code></li>
+</ul>
+<h2 id="user">User<a class="headerlink" href="#user" title="Permanent link">&para;</a></h2>
+<p>package sufia</p>
+<p><strong>Class User</strong></p>
+<p><em>SUFIA User class for use in Transaction</em></p>
+<p>Method Summary</p>
+<ul>
+<li><code class="codehilite"><span class="kd">public</span> <span class="n">Integer</span> <span class="nf">getId</span><span class="o">()</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">set</span><span class="o">(</span><span class="n">String</span> <span class="n">field</span><span class="o">,</span> <span class="n">Object</span> <span class="n">value</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="n">Object</span> <span class="nf">get</span><span class="o">(</span><span class="n">String</span> <span class="n">field</span><span class="o">)</span></code></li>
+</ul>
+<h2 id="mailservice">MailService<a class="headerlink" href="#mailservice" title="Permanent link">&para;</a></h2>
+<p>package sufia</p>
+<p><strong>Class MailService</strong></p>
+<p><em>This class provides access to mail services.</em></p>
+<p>Method Summary</p>
+<ul>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="n">String</span> <span class="n">from</span><span class="o">,</span> <span class="n">String</span><span class="o">[]</span> <span class="n">to</span><span class="o">,</span> <span class="n">String</span><span class="o">[]</span> <span class="n">cc</span><span class="o">,</span> <span class="n">String</span><span class="o">[]</span> <span class="n">bcc</span><span class="o">,</span> <span class="n">String</span> <span class="n">title</span><span class="o">,</span> <span class="n">String</span> <span class="n">message</span><span class="o">,</span> <span class="n">String</span><span class="o">[]</span> <span class="n">attachments</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">isHtml</span><span class="o">)</span></code></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code class="codehilite">from</code> - email address of the sender</li>
+<li><code class="codehilite">to</code> - array of email addresses for recipient</li>
+<li><code class="codehilite">cc</code> - array of email addresses for cc</li>
+<li><code class="codehilite">bcc</code> - array of email addresses for bcc</li>
+<li><code class="codehilite">title</code> - subject for email</li>
+<li><code class="codehilite">message</code> - content of email</li>
+<li><code class="codehilite">attachments</code> - array of attachments file path</li>
+<li><code class="codehilite">isHtml</code> - true if content is in HTML format or false (plain text)</li>
+</ul>
                 
                   
                 
@@ -734,10 +834,10 @@ SUFIA API can be invoked using the <a href="../variables/">SUFIA pre-defined var
       
     </div>
     
-      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      <script src="../../assets/javascripts/application-946997f430.js"></script>
       
       
-      <script>app.initialize({url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.16.3",url:{base:"../.."}})</script>
       
     
     

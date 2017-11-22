@@ -10,9 +10,24 @@
       
       
       
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.languages" content="">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      
         <link rel="shortcut icon" href="../../../img/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.3">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
     
     
       
@@ -23,7 +38,7 @@
       <script src="../../../assets/javascripts/modernizr-e826f8942a.js"></script>
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application-9011e2d3f8.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-04ea671600.css">
       
         <link rel="stylesheet" href="../../../assets/stylesheets/application-23f75ab9c7.palette.css">
       
@@ -106,8 +121,8 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -136,13 +151,13 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <div class="md-nav__button md-logo">
+    <span class="md-nav__button md-logo">
       
         
           <img src="../../../img/webgeaz_logo_sm.png">
         
       
-    </div>
+    </span>
     SUFIA Installation & Usage Guide
   </label>
   
@@ -723,7 +738,7 @@ more details which default SUFIA User did not provide.</p>
 <p>There is two approach to achieve this, one is by implementing the whole set of User lifecycle. This means you
 need to create your own user, menu, role etc. based on the requirement. This is quite straight forward.</p>
 <p>However, if you still want to make use of SUFIA built-in User, Role, Menu functions you need to interact with <a href="../../services/">SUFIA API</a>.
-In order to linked it back to SUFIA User table, you need to use <code>UserService</code>.</p>
+In order to linked it back to SUFIA User table, you need to use <code class="codehilite">UserService</code>.</p>
 <p>Example:</p>
 <p>Consider we created our own user table like below:
 <div class="codehilite"><pre><span></span><span class="gh">my_user</span>
@@ -778,8 +793,8 @@ created_date
 <p>There is two ways available to implement your own login process based on your requirement.</p>
 <h3 id="option-1-using-transaction-with-loginservice">(Option 1) Using Transaction with LoginService<a class="headerlink" href="#option-1-using-transaction-with-loginservice" title="Permanent link">&para;</a></h3>
 <h3 id="option-2-override-login-process">(Option 2) Override Login process<a class="headerlink" href="#option-2-override-login-process" title="Permanent link">&para;</a></h3>
-<p>SUFIA provides a way to override default login process. You can create your own Java class which implement <code>LoginService</code>.
-After that you need to set your custome class using properties <code>login.service</code> on <code>sufia.properties</code> configuration file.</p>
+<p>SUFIA provides a way to override default login process. You can create your own Java class which implement <code class="codehilite">LoginService</code>.
+After that you need to set your custome class using properties <code class="codehilite">login.service</code> on <code class="codehilite">sufia.properties</code> configuration file.</p>
 <p>This is useful if you want to implement different logic such as login using Single Sign-On (SSO), Active Directory / LDAP
 or other external database / login provider.</p>
 <p>Example (Login without using password):</p>
@@ -883,10 +898,10 @@ or other external database / login provider.</p>
       
     </div>
     
-      <script src="../../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      <script src="../../../assets/javascripts/application-946997f430.js"></script>
       
       
-      <script>app.initialize({url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"0.16.3",url:{base:"../../.."}})</script>
       
     
     

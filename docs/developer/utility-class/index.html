@@ -10,9 +10,24 @@
       
       
       
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.languages" content="">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      
         <link rel="shortcut icon" href="../../img/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.3">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
     
     
       
@@ -23,7 +38,7 @@
       <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-9011e2d3f8.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-04ea671600.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
       
@@ -102,8 +117,8 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -132,13 +147,13 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <div class="md-nav__button md-logo">
+    <span class="md-nav__button md-logo">
       
         
           <img src="../../img/webgeaz_logo_sm.png">
         
       
-    </div>
+    </span>
     SUFIA Installation & Usage Guide
   </label>
   
@@ -462,6 +477,19 @@
     Utility classes
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utils" title="Utils" class="md-nav__link">
+    Utils
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -707,6 +735,19 @@
     Utility classes
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utils" title="Utils" class="md-nav__link">
+    Utils
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -754,12 +795,62 @@
                 
                 <h1 id="utility">Utility<a class="headerlink" href="#utility" title="Permanent link">&para;</a></h1>
 <h2 id="data-loader">Data Loader<a class="headerlink" href="#data-loader" title="Permanent link">&para;</a></h2>
+<p>Data Loader is a utility for loading data into your existing database's table. Source for data must be in CSV format.</p>
+<p>To load data you need to upload the CSV file. Then you need to map the data into target table and match the source column into the target column. Click "Submit" after you have satisfy with the mapping and the loading process will start on the background. You will be notified when the process completed.</p>
 <h3 id="one-step-data-loader">One-step Data Loader<a class="headerlink" href="#one-step-data-loader" title="Permanent link">&para;</a></h3>
+<p>One-step Data Loader (OSDL) is similar to Data Loader with additional feature like auto creation of database table. For a source CSV that having a column header, everything will be generated for you based on the source. OSDL also allow you to generate CRUD (Data with Query) for the newly generated table.</p>
+<p>Overall OSDL is more convenient compared to Data Loader. Always prefer OSDL whenever possible.</p>
 <h2 id="utility-classes">Utility classes<a class="headerlink" href="#utility-classes" title="Permanent link">&para;</a></h2>
+<p>SUFIA is having utility classes (JAVA) that you can utilize to help on your application development. On top of that SUFIA also pre-installed with well know JAVA utility library such as Apache Commons, Google Guava and others. All this is available at your disposal.</p>
+<h3 id="utils">Utils<a class="headerlink" href="#utils" title="Permanent link">&para;</a></h3>
+<p>package sufia</p>
+<p><strong>Class Utils</strong></p>
+<p>Method Summary</p>
+<ul>
+<li><code class="codehilite"><span class="kd">public</span> <span class="n">Date</span> <span class="nf">parseDate</span><span class="o">(</span><span class="n">String</span> <span class="n">date</span><span class="o">)</span></code></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code class="codehilite">date</code> - date String with default format "dd/MM/yyyy"</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>
+<p><code class="codehilite">java.util.Date</code> class</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="kd">public</span> <span class="n">String</span> <span class="nf">formatDate</span><span class="o">(</span><span class="n">Date</span> <span class="n">date</span><span class="o">)</span></code></p>
+</li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kd">static</span> <span class="n">Date</span> <span class="nf">parseDateTime</span><span class="o">(</span><span class="n">String</span> <span class="n">dateStr</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">formatDateTime</span><span class="o">(</span><span class="n">Date</span> <span class="n">date</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kd">static</span> <span class="n">Date</span> <span class="nf">parseTime</span><span class="o">(</span><span class="n">String</span> <span class="n">dateStr</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">formatTime</span><span class="o">(</span><span class="n">Date</span> <span class="n">date</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kd">static</span> <span class="n">Number</span> <span class="nf">parseDecimal</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">formatDecimal</span><span class="o">(</span><span class="kt">double</span> <span class="n">decimal</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">parseDouble</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">capitalize</span><span class="o">(</span><span class="n">String</span> <span class="n">column</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">decapitalize</span><span class="o">(</span><span class="n">String</span> <span class="n">column</span><span class="o">)</span></code></li>
+<li><code class="codehilite"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">countFileLines</span><span class="o">(</span><span class="n">File</span> <span class="n">file</span><span class="o">)</span></code></li>
+</ul>
+<p>Refer to How-To section for more examples.</p>
 <h2 id="application-log">Application Log<a class="headerlink" href="#application-log" title="Permanent link">&para;</a></h2>
+<p>You can view server's log using menu "System Log Viewer".</p>
+<p><img alt="" src="../../img/log-viewer.png" /></p>
+<p>To debug your Transaction, you can use the <code class="codehilite">print</code> statement. It will appear on the system log. You can specify how many lines from the log that you want to view and you can filter the words to mark your own debugging statement.</p>
 <h2 id="reference-manager">Reference Manager<a class="headerlink" href="#reference-manager" title="Permanent link">&para;</a></h2>
+<p>Reference Manager is a simple utility for key-value records. It is useful to reduce the number of reference tables. For example, the common reference like sex, race, religion can be stored using Reference Manager.</p>
+<p>SUFIA Transaction, Data and Query recognizes Reference Manager and can link to it automatically.</p>
+<p>The drawback of Reference Manager is you can't use it with your SQL query (normally for joins). You need to keep this in mind when you designing your application. </p>
 <h2 id="manage-language-i18n">Manage Language (i18n)<a class="headerlink" href="#manage-language-i18n" title="Permanent link">&para;</a></h2>
+<p>SUFIA provides support for Internationalization (i18n) out of the box. This feature is using Java Internationalization feature (through <code class="codehilite">ResourceBundle</code>). You can add language that your application supports and provide translations for the language.</p>
+<p><img alt="" src="../../img/manage-language.png" /></p>
+<p>To refer to the key from your Transaction, you can use i18n helper:</p>
+<p><code class="codehilite"><span class="cp">{{</span><span class="nv">i18n</span> <span class="nv">app.address</span><span class="cp">}}</span><span class="x"></span></code></p>
+<p>For Data and Query, you can use key to replace the label.</p>
 <h2 id="system-variables">System Variables<a class="headerlink" href="#system-variables" title="Permanent link">&para;</a></h2>
+<p>System Variables is a general placeholder for system-wide variables (<em>Constants</em>). It is a convenient way to declare variables that can be referred from Transaction. </p>
+<p>You can reduce the repetitive work of changing variables should the application change. This is useful for example if you develop an application that for multiple clients (3<sup>rd</sup> party provider).</p>
+<p><img alt="" src="../../img/sysvar.png" /></p>
                 
                   
                 
@@ -833,10 +924,10 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      <script src="../../assets/javascripts/application-946997f430.js"></script>
       
       
-      <script>app.initialize({url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.16.3",url:{base:"../.."}})</script>
       
     
     
