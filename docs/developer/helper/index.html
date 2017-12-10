@@ -839,8 +839,16 @@ While iterating the <code class="codehilite">hr_department_staff</code> records,
 </pre></div>
 
 <p><strong>Example:</strong>
-<div class="codehilite"><pre><span></span><span class="cp">{{</span><span class="nv">select</span> <span class="na">table</span><span class="o">=</span><span class="s2">&quot;hr_staff&quot;</span><span class="cp">}}</span>
+<div class="codehilite"><pre><span></span><span class="cp">{{</span><span class="nv">select</span> <span class="na">table</span><span class="o">=</span><span class="s2">&quot;hr_staff&quot;</span><span class="cp">}}</span><span class="x"></span>
 </pre></div></p>
+<p><strong>Example for parent-child:</strong></p>
+<div class="codehilite"><pre><span></span><span class="x">Parent:</span>
+<span class="cp">{{</span><span class="nv">select</span> <span class="na">table</span><span class="o">=</span><span class="s2">&quot;ref_country&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s2">&quot;country&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s2">&quot;s_country_id&quot;</span> <span class="na">childIds</span><span class="o">=</span><span class="s2">&quot;s_state_id&quot;</span><span class="cp">}}</span><span class="x"></span>
+
+<span class="x">Child:</span>
+<span class="cp">{{</span><span class="nv">select</span> <span class="na">table</span><span class="o">=</span><span class="s2">&quot;ref_state&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s2">&quot;state&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s2">&quot;s_state_id&quot;</span> <span class="na">parent</span><span class="o">=</span><span class="s2">&quot;country_id&quot;</span> <span class="na">parentId</span><span class="o">=</span><span class="s2">&quot;s_country_id&quot;</span><span class="cp">}}</span><span class="x"></span>
+</pre></div>
+
 <h3 id="generate-html-inputtextarea-tag">Generate HTML <code class="codehilite">&lt;input&gt;</code>,<code class="codehilite">&lt;textarea&gt;</code> tag<a class="headerlink" href="#generate-html-inputtextarea-tag" title="Permanent link">&para;</a></h3>
 <p>Input tag helper to cater for read-only value. If <code class="codehilite">view</code> is <code class="codehilite">true</code> input is automatically disabled.</p>
 <div class="codehilite"><pre><span></span><span class="x">Usage:</span>
