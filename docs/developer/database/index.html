@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -14,7 +17,7 @@
       
         <meta name="lang:clipboard.copied" content="Copied to clipboard">
       
-        <meta name="lang:search.languages" content="">
+        <meta name="lang:search.language" content="en">
       
         <meta name="lang:search.result.none" content="No matching documents">
       
@@ -24,10 +27,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      
-        <link rel="shortcut icon" href="../../img/favicon.png">
-      
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
     
     
       
@@ -35,19 +36,14 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-04ea671600.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.6525f7f6.css">
       
     
     
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -59,10 +55,7 @@
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+    <body>
   
     <svg class="md-svg">
       <defs>
@@ -80,9 +73,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../.." title="SUFIA Installation & Usage Guide" class="md-header-nav__button md-logo">
           
-            
-              <img src="../../img/webgeaz_logo_sm.png" width="24" height="24">
-            
+            <i class="md-icon"></i>
           
         </a>
       </div>
@@ -90,23 +81,24 @@
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  Developer
-                </span>
-              
+              <span class="md-header-nav__topic">
+                SUFIA Installation & Usage Guide
+              </span>
+              <span class="md-header-nav__topic">
+                Database
+              </span>
             
-            Database
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
@@ -127,6 +119,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -136,6 +129,7 @@
     
     <div class="md-container">
       
+        
       
       
       <main class="md-main">
@@ -149,9 +143,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        
-          <img src="../../img/webgeaz_logo_sm.png">
-        
+        <i class="md-icon"></i>
       
     </span>
     SUFIA Installation & Usage Guide
@@ -756,7 +748,7 @@
                 <h1 id="database-management">Database Management<a class="headerlink" href="#database-management" title="Permanent link">&para;</a></h1>
 <p>Database Management provides functions to manipulate the database. You can view table structure, table data, create new table, modify existing table and delete tables. You can also generate CRUD functions (Data &amp; Query) for table.</p>
 <h2 id="create-table">Create Table<a class="headerlink" href="#create-table" title="Permanent link">&para;</a></h2>
-<p>SUFIA provides a utility to create table similar to any Database Manager tools. The setup is quite standard and straight forward, however certain aspect has been customize to suit SUFIA usage. </p>
+<p>SUFIA provides a utility to create tables similar to any Database Manager tools. The setup is quite standard and straight forward, however certain aspects have been customized to suit SUFIA usage. </p>
 <ol>
 <li>
 <p>Data Type - This is as standard SUFIA data type that is used in Transaction, Data and Query. Refer the <a href="#sufia-build-in-data-type">conversion table</a>.</p>
@@ -768,7 +760,7 @@
 <li>Column to store file name</li>
 <li>Column to store file type</li>
 </ol>
-<p><strong>Example:</strong> If column name is "resume", 3 column will be created:  <code class="codehilite">resume</code>, <code class="codehilite">resume_fn</code> and <code class="codehilite">resume_ft</code> </p>
+<p><strong>Example:</strong> If column name is "resume", 3 columns will be created:  <code class="codehilite">resume</code>, <code class="codehilite">resume_fn</code> and <code class="codehilite">resume_ft</code> </p>
 </li>
 </ol>
 <p><img alt="Create Table" src="../../img/demo.sufia.online_dbedev_newTable.png" /></p>
@@ -907,17 +899,17 @@ candidate for prefix name e.g. prefix HR Group's table with <code class="codehil
 </tbody>
 </table>
 <h2 id="create-view">Create View<a class="headerlink" href="#create-view" title="Permanent link">&para;</a></h2>
-<p>To create view select table and column for view. If you select more than one tables, SUFIA will figure out how to join the tables based on the foreign key relationship. So make sure the foreign key is defined properly before joining two tables on view.</p>
+<p>To create view select table and column for view. If you select more than one table, SUFIA will figure out how to join the tables based on the foreign key relationship. So, make sure the foreign key is defined properly before joining two tables on view.</p>
 <p>You can also verify the sql code generated to create the view. If needed you can modify it to suit your requirement.</p>
 <h2 id="generate-crud">Generate CRUD<a class="headerlink" href="#generate-crud" title="Permanent link">&para;</a></h2>
 <p>To Generate CRUD functions, click on the "Generate CRUD" link as below:</p>
 <p><img alt="" src="../../img/table-gen-crud.jpg" /></p>
-<p>After fills in the Title, Group and Page Template (Optional), it will generate a Query, Create Data, Edit Data and Delete Data functions.</p>
+<p>After filling in the Title, Group and Page Template (Optional), it will generate a Query, Create Data, Edit Data and Delete Data functions.</p>
 <p><img alt="" src="../../img/demo.sufia.online_queryViewer_HR_1001_executeQuery=.png" /></p>
 <h2 id="ad-hoc-query">Ad-hoc query<a class="headerlink" href="#ad-hoc-query" title="Permanent link">&para;</a></h2>
 <p>For ad-hoc query, click on "Database Query" and you can use any valid sql queries. This function only works at DEVELOPMENT database.</p>
 <h2 id="model">Model<a class="headerlink" href="#model" title="Permanent link">&para;</a></h2>
-<p>Every tables and views will be generated to Model classes. These classes can be used on Transaction and Data. More details and examples on Model will be covered on Transaction section.</p>
+<p>Every table and view will be generated to Model classes. These classes can be used on Transaction and Data. More details and examples on Model will be covered in Transaction section.</p>
                 
                   
                 
@@ -977,9 +969,9 @@ candidate for prefix name e.g. prefix HR Group's table with <code class="codehil
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -991,10 +983,9 @@ candidate for prefix name e.g. prefix HR Group's table with <code class="codehil
       
     </div>
     
-      <script src="../../assets/javascripts/application-946997f430.js"></script>
+      <script src="../../assets/javascripts/application.cae2244d.js"></script>
       
-      
-      <script>app.initialize({version:"0.16.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
       
     
     

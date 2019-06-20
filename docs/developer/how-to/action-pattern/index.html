@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -14,7 +17,7 @@
       
         <meta name="lang:clipboard.copied" content="Copied to clipboard">
       
-        <meta name="lang:search.languages" content="">
+        <meta name="lang:search.language" content="en">
       
         <meta name="lang:search.result.none" content="No matching documents">
       
@@ -24,10 +27,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      
-        <link rel="shortcut icon" href="../../../img/favicon.png">
-      
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
     
     
       
@@ -35,19 +36,14 @@
       
     
     
-      <script src="../../../assets/javascripts/modernizr-e826f8942a.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/application-04ea671600.css">
-      
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.6525f7f6.css">
       
     
     
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -59,10 +55,7 @@
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+    <body>
   
     <svg class="md-svg">
       <defs>
@@ -80,9 +73,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../../.." title="SUFIA Installation & Usage Guide" class="md-header-nav__button md-logo">
           
-            
-              <img src="../../../img/webgeaz_logo_sm.png" width="24" height="24">
-            
+            <i class="md-icon"></i>
           
         </a>
       </div>
@@ -90,27 +81,24 @@
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  Developer
-                </span>
-              
-                <span class="md-header-nav__parent">
-                  How-To
-                </span>
-              
+              <span class="md-header-nav__topic">
+                SUFIA Installation & Usage Guide
+              </span>
+              <span class="md-header-nav__topic">
+                Action Pattern
+              </span>
             
-            Action Pattern
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
@@ -131,6 +119,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -140,6 +129,7 @@
     
     <div class="md-container">
       
+        
       
       
       <main class="md-main">
@@ -153,9 +143,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        
-          <img src="../../../img/webgeaz_logo_sm.png">
-        
+        <i class="md-icon"></i>
       
     </span>
     SUFIA Installation & Usage Guide
@@ -637,9 +625,9 @@
                 
                 
                 <h1 id="action-pattern">Action Pattern<a class="headerlink" href="#action-pattern" title="Permanent link">&para;</a></h1>
-<p>SUFIA is a flexible framework that allow you to build your application in your own styles. SUFIA only dictates certain convention and the rest is open for you to design your application.</p>
-<p>Despite the flexibilities, sometimes it can become quite challenging for developer who are relatively new in web application development to adapt with SUFIA methodologies.</p>
-<p>For JAVA developers who familiar with action based framework (i.e. Struts, Stripes, Spring MVC, etc), one common pattern that is available in the "method based action". Using this approach, you will design the application based on the Action classes and separate the process based on methods inside the Action class.</p>
+<p>SUFIA is a flexible framework that allows you to build your application in your own style. SUFIA only dictates certain conventions and the rest is open for you to design your application.</p>
+<p>Despite the flexibilities, sometimes it can become quite challenging for developers who are relatively new in web application development to adapt to SUFIA methodologies.</p>
+<p>For JAVA developers who are familiar with action based frameworks (i.e. Struts, Stripes, Spring MVC, etc), one common pattern that is available in the "method based action". Using this approach, you will design the application based on the Action classes and separate the process based on methods inside the Action class.</p>
 <p>To implement the same pattern in SUFIA is quite simple, you need to design your Transaction using these styles:</p>
 <p><strong>Form Template</strong></p>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-horizontal&quot;</span> 
@@ -746,9 +734,9 @@
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -760,10 +748,9 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application-946997f430.js"></script>
+      <script src="../../../assets/javascripts/application.cae2244d.js"></script>
       
-      
-      <script>app.initialize({version:"0.16.3",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"../../.."}})</script>
       
     
     

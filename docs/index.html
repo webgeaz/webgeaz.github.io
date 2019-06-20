@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -14,7 +17,7 @@
       
         <meta name="lang:clipboard.copied" content="Copied to clipboard">
       
-        <meta name="lang:search.languages" content="">
+        <meta name="lang:search.language" content="en">
       
         <meta name="lang:search.result.none" content="No matching documents">
       
@@ -24,10 +27,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      
-        <link rel="shortcut icon" href="./img/favicon.png">
-      
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
+      <link rel="shortcut icon" href="./assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
     
     
       
@@ -35,19 +36,14 @@
       
     
     
-      <script src="./assets/javascripts/modernizr-e826f8942a.js"></script>
-    
-    
-      <link rel="stylesheet" href="./assets/stylesheets/application-04ea671600.css">
-      
-        <link rel="stylesheet" href="./assets/stylesheets/application-23f75ab9c7.palette.css">
+      <link rel="stylesheet" href="./assets/stylesheets/application.6525f7f6.css">
       
     
     
+      <script src="./assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -59,10 +55,7 @@
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+    <body>
   
     <svg class="md-svg">
       <defs>
@@ -80,9 +73,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="." title="SUFIA Installation & Usage Guide" class="md-header-nav__button md-logo">
           
-            
-              <img src="./img/webgeaz_logo_sm.png" width="24" height="24">
-            
+            <i class="md-icon"></i>
           
         </a>
       </div>
@@ -90,19 +81,24 @@
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
+              <span class="md-header-nav__topic">
+                SUFIA Installation & Usage Guide
+              </span>
+              <span class="md-header-nav__topic">
+                Introduction
+              </span>
             
-            Introduction
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
@@ -123,6 +119,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -132,6 +129,7 @@
     
     <div class="md-container">
       
+        
       
       
       <main class="md-main">
@@ -145,9 +143,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        
-          <img src="./img/webgeaz_logo_sm.png">
-        
+        <i class="md-icon"></i>
       
     </span>
     SUFIA Installation & Usage Guide
@@ -736,51 +732,51 @@
                 <h1 id="sufia-single-unified-framework-for-internet-application">SUFIA - Single Unified Framework for Internet Application<a class="headerlink" href="#sufia-single-unified-framework-for-internet-application" title="Permanent link">&para;</a></h1>
 <p><img alt="SUFIA" src="./img/sufia_logo_red.png" /></p>
 <p>SUFIA is a framework combining the best open source libraries, tools, application development best-practices and utilities
-in an unified and integrated environment. By using SUFIA you can develop from small to large enterprise application.</p>
-<p>Your focus should be on developing your application <strong>business logic</strong>. Other commons components (such as user management, roles, menus etc.),
-commons functions (database access, connection pools, scheduler) is already build-in for your utilization.</p>
+in a unified and integrated environment. By using SUFIA you can develop applications for small to large enterprises.</p>
+<p>Your focus should be on developing your application's <strong>business logic</strong>. Other common components (such as user management, roles, menus etc.),
+common functions (database access, connection pools, scheduler) are already built-in for your utilization.</p>
 <h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
-<p>SUFIA web application framework is a Java<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> based application which run on JVM. It uses MySQL database by default, but able to support
-major database. SUFIA follows standard web MVC architecture which is similar to most of the Java based web application.</p>
+<p>SUFIA web application framework is a Java<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> based application which run on JVM. It uses MySQL database by default, but is able to support
+major databases. SUFIA follows standard web MVC architecture which is similar to most of the Java based web applications.</p>
 <p><img alt="SUFIA Architecture" src="./img/architecture.jpg" /></p>
 <h2 id="basic-concept">Basic Concept<a class="headerlink" href="#basic-concept" title="Permanent link">&para;</a></h2>
-<p>Application build on SUFIA will follows SUFIA conventions. These includes access control, users, roles, menu and transaction. <a href="developer/transaction/">Transaction</a>
-is the crux of the application. You're likely to spend most of the development time on building Transactions.</p>
-<p>As a holistic platform, SUFIA includes all the tools and mechanism needed to build an application. Starting from database management tools
-to create tables, writing a specification for use-cases, generating CRUD (Create, Retrieve, Update, Delete) code, generating queries (data listing),
+<p>Applications built on SUFIA will follow SUFIA conventions. These include access control, users, roles, menu and transaction. <a href="developer/transaction/">Transaction</a>
+is the crux of the application. You are likely to spend most of the development time on building Transactions.</p>
+<p>As a holistic platform, SUFIA includes all the tools and mechanisms needed to build an application. Starting from database management tools
+to creating tables, writing a specification for use-cases, generating CRUD (Create, Retrieve, Update, Delete) code, generating queries (data listing),
 writing business logic (using scripting language), writing UI frontend (form builder, custom template) up to testing and deployment of
-application to production.</p>
-<p>Users of SUFIA are divided into three exclusive categories. Each category has its own build-in roles and functions.</p>
+the application to production.</p>
+<p>Users of SUFIA are divided into three exclusive categories. Each category has its own built-in roles and functions.</p>
 <h3 id="user-category">User Category<a class="headerlink" href="#user-category" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>System Management</p>
-<p>User under this category are SUFIA administrator.</p>
+<p>Users under this category are SUFIA administrators.</p>
 </li>
 <li>
 <p>Application Management</p>
-<p>User under this category are application developer. It includes business analyst, programmer, tester and DBA.</p>
+<p>Users under this category are application developers. They include business analysts, programmers, testers and DBAs.</p>
 </li>
 <li>
 <p>End User</p>
-<p>User under this category are actual user of the application. They can have their own menus, roles, functions (based on either transaction, data or query).
-End user will be assigned to specific environment based on user mode.</p>
+<p>Users under this category are actual users of the application. They can have their own menus, roles, functions (based on either transaction, data or query).
+End users will be assigned to specific environments based on user mode.</p>
 </li>
 </ol>
 <h3 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h3>
-<p>SUFIA is built-in with two environment i.e. Development &amp; Production. You can start SUFIA
-with both environment (default) or with either development or production.</p>
+<p>SUFIA is built-in with two environments i.e. Development and Production. You can start SUFIA
+with both environments (default) or with either development or production.</p>
 <p>SUFIA environment rely heavily on user category. SUFIA user will be assigned to the environment depending on
 the user category.</p>
-<p>Each environment is having its own database. With this, it's safe to run both environment side-by-side
-and you can have the production user using the application while at the same time testing user
+<p>Each environment has its own database. With this, it is safe to run both environments side-by-side
+and you can have the production user using the application while at the same time the testing user
 can test the application without the data being shared. The databases can be on the same server, or you
-can have dedicated server for every environment.</p>
+can have a dedicated server for every environment.</p>
 <h2 id="where-to-go-next">Where to go next?<a class="headerlink" href="#where-to-go-next" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="installation/">Installation</a> - Once you've purchased SUFIA, you can follow this guideline to install and configure SUFIA</li>
+<li><a href="installation/">Installation</a> - Once you have purchased SUFIA, you can follow this guideline to install and configure SUFIA</li>
 </ul>
-<p>After successful installation, you can proceed with below usage guideline:</p>
+<p>After successful installation, you can proceed with the usage guideline below:</p>
 <ul>
 <li><a href="administrator/intro/">Administration</a> - SUFIA administration guide for system administrator</li>
 <li><a href="developer/intro/">Development</a> - SUFIA development guide for developer</li>
@@ -839,9 +835,9 @@ can have dedicated server for every environment.</p>
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -853,10 +849,9 @@ can have dedicated server for every environment.</p>
       
     </div>
     
-      <script src="./assets/javascripts/application-946997f430.js"></script>
+      <script src="./assets/javascripts/application.cae2244d.js"></script>
       
-      
-      <script>app.initialize({version:"0.16.3",url:{base:"."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"."}})</script>
       
     
     

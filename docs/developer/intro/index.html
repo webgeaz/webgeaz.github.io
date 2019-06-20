@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -14,7 +17,7 @@
       
         <meta name="lang:clipboard.copied" content="Copied to clipboard">
       
-        <meta name="lang:search.languages" content="">
+        <meta name="lang:search.language" content="en">
       
         <meta name="lang:search.result.none" content="No matching documents">
       
@@ -24,10 +27,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      
-        <link rel="shortcut icon" href="../../img/favicon.png">
-      
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
     
     
       
@@ -35,19 +36,14 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-04ea671600.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.6525f7f6.css">
       
     
     
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -59,10 +55,7 @@
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+    <body>
   
     <svg class="md-svg">
       <defs>
@@ -80,9 +73,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../.." title="SUFIA Installation & Usage Guide" class="md-header-nav__button md-logo">
           
-            
-              <img src="../../img/webgeaz_logo_sm.png" width="24" height="24">
-            
+            <i class="md-icon"></i>
           
         </a>
       </div>
@@ -90,23 +81,24 @@
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  Developer
-                </span>
-              
+              <span class="md-header-nav__topic">
+                SUFIA Installation & Usage Guide
+              </span>
+              <span class="md-header-nav__topic">
+                Development
+              </span>
             
-            Development
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
@@ -127,6 +119,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -136,6 +129,7 @@
     
     <div class="md-container">
       
+        
       
       
       <main class="md-main">
@@ -149,9 +143,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        
-          <img src="../../img/webgeaz_logo_sm.png">
-        
+        <i class="md-icon"></i>
       
     </span>
     SUFIA Installation & Usage Guide
@@ -700,32 +692,31 @@
                 
                 
                 <h1 id="introduction-to-development">Introduction to Development<a class="headerlink" href="#introduction-to-development" title="Permanent link">&para;</a></h1>
-<p>SUFIA was build as a framework to ease the web application development process. There is three main component for application development:</p>
+<p>SUFIA was built as a framework to ease the web application development process. There are three main components for application development:</p>
 <ol>
 <li><strong>Data</strong> - a CRUD (Create, Retrieve, Update, Delete) generator</li>
 <li><strong>Query</strong> - a record listing generator</li>
 <li><strong>Transaction</strong> - full-scale application creator</li>
 </ol>
-<p>For quick and simple "record management" application, using Data and Query is sufficient. Since all the codes are generated, basically zero coding is required.</p>
-<p>However, for most of the application, the requirement are not simple, thus requiring Developer to have more control on the preparation of the view, validation, back end processing and the flow of the program. For this, Transaction is the answer.</p>
-<p>So most of the time, Development time is spent on Transaction, and Data and Query act as a useful quick addition, especially when dealing with simple CRUD operation like for reference tables.</p>
-<p>There is two approach in application development using SUFIA. First to use everything SUFIA has to offer, including user, role, menu, access control etc. and extends it with application specific requirement. Second is to build everything and just use SUFIA as a platform. SUFIA support both approach as well as a hybrid approach between the two. Note that sometimes we use the term "<em>application</em>" interchangeably because SUFIA itself <em>is</em> an application.</p>
+<p>For a quick and simple "record management" application, using Data and Query are sufficient. Since all the codes are generated, basically zero coding is required.</p>
+<p>However, for most applications, the requirements are not simple, thus requiring the Developer to have more control on the preparation of the view, validation, back end processing and the flow of the program. For this, Transaction is the answer.</p>
+<p>So most of the time, Development time is spent on Transaction, and Data and Query act as useful quick additions, especially when dealing with simple CRUD operation like for reference tables.</p>
+<p>There are two approaches in application development using SUFIA. First to use everything SUFIA has to offer, including user, role, menu, access control etc. and extends it with application specific requirement. Second, is to build everything and just use SUFIA as a platform. SUFIA supports both approaches as well as a hybrid approach between the two. Note that sometimes we use the term "<em>application</em>" interchangeably because SUFIA itself <em>is</em> an application.</p>
 <h2 id="group-and-code">Group and Code<a class="headerlink" href="#group-and-code" title="Permanent link">&para;</a></h2>
-<p>Before you start developing an application, you must establish a Group. Group is like a module, where you can put together a Transactions, Datas, Queries. This will make your application structured and modular for easy maintenance.</p>
-<p>Application can be categorized into logical groups, based on user requirements or nature of business. As an example, a HR application can have a group of HR Admin, Employee and Supervisor.</p>
-<p>Every Transaction, Query or Data must have a code. A combination of group and code will form as a unique ID and URL for it. Everything inside SUFIA will work according to this Group and Code.</p>
+<p>Before you start developing an application, you must establish a Group. A Group is like a module, where you can put together Transactions, Data, Queries. This will make your application structured and modular for easy maintenance.</p>
+<p>Applications can be categorized into logical groups, based on user requirements or nature of business. As an example, a HR application can have a group of HR Admin, Employee and Supervisor.</p>
+<p>Every Transaction, Query or Data must have a code. A combination of group and code will be formed as a unique ID and URL. Everything inside SUFIA will work according to this Group and Code.</p>
 <h2 id="software-development-lifecycle-sdlc">Software Development Lifecycle (SDLC)<a class="headerlink" href="#software-development-lifecycle-sdlc" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../../img/sdlc.png" /></p>
 <p>SUFIA support traditional and <em>"agile-like"</em> software development methodology. Transaction Deployment Module provides functionality from writing specification, coding, testing until deployment. This feature works together with SUFIA's pre-defined Role.</p>
 <h2 id="development-methodology">Development Methodology<a class="headerlink" href="#development-methodology" title="Permanent link">&para;</a></h2>
 <p>SUFIA works best with bottom-up approach. It means we start with database design (ER Diagram). While we are creating
-our tables, SUFIA at the same time will auto-generate Model class for every tables.</p>
+our tables, SUFIA at the same time will auto-generate Model class for every table.</p>
 <p>Then we start designing our application based on the functionality and how the functions linked logically to complete
 a process flow.</p>
 <p>After that, we can implement every function using the best suited tools, either Transaction, Data or Query.</p>
-<p>SUFIA's Transaction is discrete by design, which means we can implement the functions in parallel and sufficient by itself.
-This is in line with "Single Responsibility Principle" where the Transaction can be tested in isolation and anything happen to it
-will not effect another Transaction.</p>
+<p>SUFIA's Transaction is discrete by design, which means we can implement the functions in parallel and each is sufficient by itself.
+This is in line with "Single Responsibility Principle" where the Transaction can be tested in isolation and if anything happens to it, it will not affect another Transaction.</p>
                 
                   
                 
@@ -785,9 +776,9 @@ will not effect another Transaction.</p>
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -799,10 +790,9 @@ will not effect another Transaction.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application-946997f430.js"></script>
+      <script src="../../assets/javascripts/application.cae2244d.js"></script>
       
-      
-      <script>app.initialize({version:"0.16.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
       
     
     

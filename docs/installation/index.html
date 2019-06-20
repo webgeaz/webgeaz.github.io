@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -14,7 +17,7 @@
       
         <meta name="lang:clipboard.copied" content="Copied to clipboard">
       
-        <meta name="lang:search.languages" content="">
+        <meta name="lang:search.language" content="en">
       
         <meta name="lang:search.result.none" content="No matching documents">
       
@@ -24,10 +27,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      
-        <link rel="shortcut icon" href="../img/favicon.png">
-      
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
     
     
       
@@ -35,19 +36,14 @@
       
     
     
-      <script src="../assets/javascripts/modernizr-e826f8942a.js"></script>
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/application-04ea671600.css">
-      
-        <link rel="stylesheet" href="../assets/stylesheets/application-23f75ab9c7.palette.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.6525f7f6.css">
       
     
     
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -59,10 +55,7 @@
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+    <body>
   
     <svg class="md-svg">
       <defs>
@@ -80,9 +73,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href=".." title="SUFIA Installation & Usage Guide" class="md-header-nav__button md-logo">
           
-            
-              <img src="../img/webgeaz_logo_sm.png" width="24" height="24">
-            
+            <i class="md-icon"></i>
           
         </a>
       </div>
@@ -90,19 +81,24 @@
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
+              <span class="md-header-nav__topic">
+                SUFIA Installation & Usage Guide
+              </span>
+              <span class="md-header-nav__topic">
+                Installation
+              </span>
             
-            Installation
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
@@ -123,6 +119,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -132,6 +129,7 @@
     
     <div class="md-container">
       
+        
       
       
       <main class="md-main">
@@ -145,9 +143,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        
-          <img src="../img/webgeaz_logo_sm.png">
-        
+        <i class="md-icon"></i>
       
     </span>
     SUFIA Installation & Usage Guide
@@ -666,11 +662,11 @@
                 
                 
                 <h1 id="installation-guide">Installation Guide<a class="headerlink" href="#installation-guide" title="Permanent link">&para;</a></h1>
-<p>There is two type is packaging for SUFIA, standalone (default package) and WAR file. Depending on your
+<p>There are two types of packaging for SUFIA, a standalone (default package) and a WAR file. Depending on your
 requirement, you have to choose what suits you best.</p>
 <p>SUFIA Standalone package includes everything needed to run it as a server application, except the database.
 You have to manually install your database (default supported database is MySQL / MariaDB).</p>
-<p>SUFIA can run on any OS that support JVM, however currently the supported platform is Linux and Windows only.</p>
+<p>SUFIA can run on any OS that supports JVM, however currently the supported platforms are Linux and Windows only.</p>
 <h2 id="installation-of-sufia-standalone-package">Installation of SUFIA Standalone Package<a class="headerlink" href="#installation-of-sufia-standalone-package" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
@@ -682,7 +678,7 @@ You have to manually install your database (default supported database is MySQL 
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>If you're using Ubuntu, you can refer to this excellent guides:</p>
+<p>If you're using Ubuntu, you can refer to these excellent guides:</p>
 <ol>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04">Install Java with Apt-Get on Ubuntu</a></li>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04">Install MySQL on Ubuntu</a></li>
@@ -699,7 +695,7 @@ $ <span class="nb">cd</span> sufia-app
 $ <span class="nb">pwd</span>
 /home/ubuntu/sufia-app
 </pre></div>
-   For example as above, our <code class="codehilite">SUFIA_HOME</code> value will be <code class="codehilite">/home/ubuntu/sufia-app</code></p>
+   As the example above, our <code class="codehilite">SUFIA_HOME</code> value will be <code class="codehilite">/home/ubuntu/sufia-app</code></p>
 </li>
 <li>
 <p>Setup MySQL database for SUFIA</p>
@@ -710,7 +706,7 @@ $ <span class="nb">pwd</span>
 <span class="n">mysql</span><span class="o">&gt;</span> <span class="k">create</span> <span class="n">user</span> <span class="n">sufia_test_user</span> <span class="n">identified</span> <span class="k">by</span> <span class="s1">&#39;password&#39;</span><span class="p">;</span>
 <span class="n">mysql</span><span class="o">&gt;</span> <span class="k">create</span> <span class="n">user</span> <span class="n">sufia_prod_user</span> <span class="n">identified</span> <span class="k">by</span> <span class="s1">&#39;password&#39;</span><span class="p">;</span>
 </pre></div>
-<em>Change the password to more secured phrase. You can use any name or password that you want, we're going
+<em>Change the password to more secured phrase. You can use any name or password that you want, we are going
 to need these on the configuration file.</em></p>
 </li>
 <li>
@@ -774,8 +770,8 @@ using previously created user.
 </pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>SUFIA can be set to start with DEVEPMENT MODE or PRODUCTION MODE</p>
-<p>If file <strong>development.properties</strong> is present, SUFIA will turn-on DEVEPMENT MODE</p>
+<p>SUFIA can be set to start with DEVELOPMENT MODE or PRODUCTION MODE</p>
+<p>If file <strong>development.properties</strong> is present, SUFIA will turn-on DEVELOPMENT MODE</p>
 <p>If file <strong>production.properties</strong> is present, SUFIA will turn-on PRODUCTION MODE</p>
 </div>
 </li>
@@ -785,7 +781,7 @@ using previously created user.
 $ chmod +x *.sh
 $ ./startup.sh
 </pre></div>
-    If everything goes well, you should see a tomcat.log file created on home folder.
+    If everything goes well, you should see a tomcat.log file created in the home folder.
     Check the log file and make sure the server is running successfully without any error.</p>
 <p>Now the server is running on default port (8080), go to your browser and open:
 <code class="codehilite">http://localhost:8080</code>. You should see the default SUFIA login page</p>
@@ -809,10 +805,10 @@ Refer to script details on your platform.</p>
 </li>
 <li>
 <p>Update License Information</p>
-<p>For time login, only <code class="codehilite">MASTER</code> user allowed to login. You will be given with default username and password for SUFIA master user. Use that for first time login.</p>
+<p>For first time login, only <code class="codehilite">MASTER</code> user is allowed to login. You will be given a default username and password for SUFIA master user. Use that for first time login.</p>
 <p>Upon successful login, the page will be directed to settings page. Copy the key and E-Mail it to info@webgeaz.com to request for your license key
 <img alt="" src="../img/license2.jpg" /></p>
-<p>As soon as you get your license key, update the license key field with given key and click "<strong>Validate Licene</strong>"</p>
+<p>As soon as you get your license key, update the license key field with given key and click "<strong>Validate License</strong>"</p>
 </li>
 </ol>
 <p>Now your SUFIA application is ready. Proceed to <a href="../administrator/intro/">Administration</a> section for setting up site information, users, roles and menus.</p>
@@ -875,9 +871,9 @@ Refer to script details on your platform.</p>
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -889,10 +885,9 @@ Refer to script details on your platform.</p>
       
     </div>
     
-      <script src="../assets/javascripts/application-946997f430.js"></script>
+      <script src="../assets/javascripts/application.cae2244d.js"></script>
       
-      
-      <script>app.initialize({version:"0.16.3",url:{base:".."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:".."}})</script>
       
     
     

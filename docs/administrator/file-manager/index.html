@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -14,7 +17,7 @@
       
         <meta name="lang:clipboard.copied" content="Copied to clipboard">
       
-        <meta name="lang:search.languages" content="">
+        <meta name="lang:search.language" content="en">
       
         <meta name="lang:search.result.none" content="No matching documents">
       
@@ -24,10 +27,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      
-        <link rel="shortcut icon" href="../../img/favicon.png">
-      
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
     
     
       
@@ -35,19 +36,14 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-04ea671600.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.6525f7f6.css">
       
     
     
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -59,10 +55,7 @@
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+    <body>
   
     <svg class="md-svg">
       <defs>
@@ -80,9 +73,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../.." title="SUFIA Installation & Usage Guide" class="md-header-nav__button md-logo">
           
-            
-              <img src="../../img/webgeaz_logo_sm.png" width="24" height="24">
-            
+            <i class="md-icon"></i>
           
         </a>
       </div>
@@ -90,23 +81,24 @@
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  Administrator
-                </span>
-              
+              <span class="md-header-nav__topic">
+                SUFIA Installation & Usage Guide
+              </span>
+              <span class="md-header-nav__topic">
+                File Manager
+              </span>
             
-            File Manager
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
@@ -127,6 +119,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -136,6 +129,7 @@
     
     <div class="md-container">
       
+        
       
       
       <main class="md-main">
@@ -149,9 +143,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        
-          <img src="../../img/webgeaz_logo_sm.png">
-        
+        <i class="md-icon"></i>
       
     </span>
     SUFIA Installation & Usage Guide
@@ -631,18 +623,18 @@
                 
                 
                 <h1 id="file-manager">File Manager<a class="headerlink" href="#file-manager" title="Permanent link">&para;</a></h1>
-<p>File Manager is an utility tools to extend the functionality of SUFIA, add additional asset files and a simple file storage &amp; collaboration.</p>
+<p>File Manager is a utility tool to extend the functionality of SUFIA, add additional asset files and a simple file storage &amp; collaboration.</p>
 <p>SUFIA Administrator and Developer can upload, delete files based on File Type. </p>
 <ul>
 <li><code class="codehilite">PYTHON</code></li>
 </ul>
-<p>Use this File Type to upload python files (Jython). By using this, Developer has the flexibility to add customize codes. To execute the python file, just create new Menu Item with type <strong>User Program</strong> and put the file name at the Program Name field.</p>
+<p>Use this File Type to upload python files (Jython). By using this, Developer has the flexibility to add customized codes. To execute the python file, just create a new Menu Item with type <strong>User Program</strong> and put the file name at the Program Name field.</p>
 <p>Refer to <a href="../../developer/how-to/user-program/">User Program</a> for more details.</p>
 <p>File uploaded location: <code class="codehilite">sufia-app/webapp/WEB-INF/python</code></p>
 <ul>
 <li><code class="codehilite">GROOVY</code></li>
 </ul>
-<p>Use this File Type to upload groovy files. By using this, Developer has the flexibility to add customize codes. To execute the groovy file, just create new Menu Item with type <strong>User Program</strong> and put the file name at the Program Name field.</p>
+<p>Use this File Type to upload groovy files. By using this, Developer has the flexibility to add customized codes. To execute the groovy file, just create a new Menu Item with type <strong>User Program</strong> and put the file name at the Program Name field.</p>
 <p>The difference between groovy file and python file is that groovy is using GroovyServlet. Refer to <a href="../../developer/how-to/user-program/">User Program</a> for more details.</p>
 <p>File uploaded location: <code class="codehilite">sufia-app/webapp/WEB-INF/groovy</code></p>
 <ul>
@@ -655,7 +647,7 @@
 <li><code class="codehilite">LIBRARY</code></li>
 </ul>
 <p>Use this File Type to add new library (<strong>JAR</strong> file) to SUFIA. This is useful if you want to add or extends any functionality to SUFIA.</p>
-<p>SUFIA comes with a number of JAR files, some of which are utility library which may be useful for your application development. Developer are free to use all these libraries. However, if certain functionality that you wanted are not available, you can add your own Java code (package it as JAR) - or any other 3<sup>rd</sup> party library - and add it to SUFIA.</p>
+<p>SUFIA comes with a number of JAR files, some of which are utility libraries which may be useful for your application development. Developer are free to use all these libraries. However, if certain functionalities that you want are not available, you can add your own Java code (package it as JAR) - or any other 3<sup>rd</sup> party library - and add it to SUFIA.</p>
 <p>JAR file uploaded will be prefixes with <strong><code class="codehilite">usr__</code></strong>.</p>
 <p>File uploaded location: <code class="codehilite">sufia-app/webapp/WEB-INF/lib</code></p>
 <ul>
@@ -667,7 +659,7 @@
 <li><code class="codehilite">CSS</code></li>
 </ul>
 <p>Use this File Type to add asset files (CSS or Javascript). This file can be linked directly on Transaction's Form or Output.</p>
-<p>Currently, there are two ways to add an asset files to your application. You can either linked directly from CDN, or uploaded it here and linked locally from SUFIA server.</p>
+<p>Currently, there are two ways to add an asset file to your application. You can either link directly from CDN, or upload it here and link locally from SUFIA server.</p>
 <p>File uploaded location: <code class="codehilite">sufia-app/webapp/usr_css</code></p>
 <ul>
 <li><code class="codehilite">DATA_LOADER</code></li>
@@ -732,9 +724,9 @@
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -746,10 +738,9 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-946997f430.js"></script>
+      <script src="../../assets/javascripts/application.cae2244d.js"></script>
       
-      
-      <script>app.initialize({version:"0.16.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
       
     
     

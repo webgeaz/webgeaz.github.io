@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -14,7 +17,7 @@
       
         <meta name="lang:clipboard.copied" content="Copied to clipboard">
       
-        <meta name="lang:search.languages" content="">
+        <meta name="lang:search.language" content="en">
       
         <meta name="lang:search.result.none" content="No matching documents">
       
@@ -24,10 +27,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      
-        <link rel="shortcut icon" href="../../img/favicon.png">
-      
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
     
     
       
@@ -35,19 +36,14 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-04ea671600.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.6525f7f6.css">
       
     
     
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -59,10 +55,7 @@
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+    <body>
   
     <svg class="md-svg">
       <defs>
@@ -80,9 +73,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../.." title="SUFIA Installation & Usage Guide" class="md-header-nav__button md-logo">
           
-            
-              <img src="../../img/webgeaz_logo_sm.png" width="24" height="24">
-            
+            <i class="md-icon"></i>
           
         </a>
       </div>
@@ -90,23 +81,24 @@
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  Developer
-                </span>
-              
+              <span class="md-header-nav__topic">
+                SUFIA Installation & Usage Guide
+              </span>
+              <span class="md-header-nav__topic">
+                Utility
+              </span>
             
-            Utility
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
@@ -127,6 +119,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -136,6 +129,7 @@
     
     <div class="md-container">
       
+        
       
       
       <main class="md-main">
@@ -149,9 +143,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        
-          <img src="../../img/webgeaz_logo_sm.png">
-        
+        <i class="md-icon"></i>
       
     </span>
     SUFIA Installation & Usage Guide
@@ -796,12 +788,12 @@
                 <h1 id="utility">Utility<a class="headerlink" href="#utility" title="Permanent link">&para;</a></h1>
 <h2 id="data-loader">Data Loader<a class="headerlink" href="#data-loader" title="Permanent link">&para;</a></h2>
 <p>Data Loader is a utility for loading data into your existing database's table. Source for data must be in CSV format.</p>
-<p>To load data you need to upload the CSV file. Then you need to map the data into target table and match the source column into the target column. Click "Submit" after you have satisfy with the mapping and the loading process will start on the background. You will be notified when the process completed.</p>
+<p>To load data you need to upload the CSV file. Then you need to map the data into the target table and match the source column into the target column. Click "Submit" after you are satisfied with the mapping and the loading process will start on the background. You will be notified when the process is completed.</p>
 <h3 id="one-step-data-loader">One-step Data Loader<a class="headerlink" href="#one-step-data-loader" title="Permanent link">&para;</a></h3>
-<p>One-step Data Loader (OSDL) is similar to Data Loader with additional feature like auto creation of database table. For a source CSV that having a column header, everything will be generated for you based on the source. OSDL also allow you to generate CRUD (Data with Query) for the newly generated table.</p>
+<p>One-step Data Loader (OSDL) is similar to Data Loader with additional features like auto creation of database table. For a source CSV that has a column header, everything will be generated for you based on the source. OSDL also allows you to generate CRUD (Data with Query) for the newly generated table.</p>
 <p>Overall OSDL is more convenient compared to Data Loader. Always prefer OSDL whenever possible.</p>
 <h2 id="utility-classes">Utility classes<a class="headerlink" href="#utility-classes" title="Permanent link">&para;</a></h2>
-<p>SUFIA is having utility classes (JAVA) that you can utilize to help on your application development. On top of that SUFIA also pre-installed with well know JAVA utility library such as Apache Commons, Google Guava and others. All this is available at your disposal.</p>
+<p>SUFIA has utility classes (JAVA) that you can utilize to help on your application development. On top of that SUFIA is also pre-installed with well known JAVA utility libraries such as Apache Commons, Google Guava and others. All these are available at your disposal.</p>
 <h3 id="utils">Utils<a class="headerlink" href="#utils" title="Permanent link">&para;</a></h3>
 <p>package sufia</p>
 <p><strong>Class Utils</strong></p>
@@ -840,13 +832,13 @@
 <h2 id="reference-manager">Reference Manager<a class="headerlink" href="#reference-manager" title="Permanent link">&para;</a></h2>
 <p>Reference Manager is a simple utility for key-value records. It is useful to reduce the number of reference tables. For example, the common reference like sex, race, religion can be stored using Reference Manager.</p>
 <p>SUFIA Transaction, Data and Query recognizes Reference Manager and can link to it automatically.</p>
-<p>The drawback of Reference Manager is you can't use it with your SQL query (normally for joins). You need to keep this in mind when you designing your application. </p>
+<p>The drawback of Reference Manager is that you cannot use it with your SQL query (normally for joins). You need to keep this in mind when you are designing your application. </p>
 <h2 id="manage-language-i18n">Manage Language (i18n)<a class="headerlink" href="#manage-language-i18n" title="Permanent link">&para;</a></h2>
-<p>SUFIA provides support for Internationalization (i18n) out of the box. This feature is using Java Internationalization feature (through <code class="codehilite">ResourceBundle</code>). You can add language that your application supports and provide translations for the language.</p>
+<p>SUFIA provides support for Internationalization (i18n) out of the box. This feature uses Java Internationalization feature (through <code class="codehilite">ResourceBundle</code>). You can add language that your application supports and provide translations for the language.</p>
 <p><img alt="" src="../../img/manage-language.png" /></p>
 <p>To refer to the key from your Transaction, you can use i18n helper:</p>
 <p><code class="codehilite"><span class="cp">{{</span><span class="nv">i18n</span> <span class="nv">app.address</span><span class="cp">}}</span><span class="x"></span></code></p>
-<p>For Data and Query, you can use key to replace the label.</p>
+<p>For Data and Query, you can use the key to replace the label.</p>
 <h2 id="system-variables">System Variables<a class="headerlink" href="#system-variables" title="Permanent link">&para;</a></h2>
 <p>System Variables is a general placeholder for system-wide variables (<em>Constants</em>). It is a convenient way to declare variables that can be referred from Transaction. </p>
 <p>You can reduce the repetitive work of changing variables should the application change. This is useful for example if you develop an application that for multiple clients (3<sup>rd</sup> party provider).</p>
@@ -957,9 +949,9 @@
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -971,10 +963,9 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-946997f430.js"></script>
+      <script src="../../assets/javascripts/application.cae2244d.js"></script>
       
-      
-      <script>app.initialize({version:"0.16.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
       
     
     

@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -14,7 +17,7 @@
       
         <meta name="lang:clipboard.copied" content="Copied to clipboard">
       
-        <meta name="lang:search.languages" content="">
+        <meta name="lang:search.language" content="en">
       
         <meta name="lang:search.result.none" content="No matching documents">
       
@@ -24,10 +27,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      
-        <link rel="shortcut icon" href="../../img/favicon.png">
-      
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
     
     
       
@@ -35,19 +36,14 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-04ea671600.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.6525f7f6.css">
       
     
     
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -59,10 +55,7 @@
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+    <body>
   
     <svg class="md-svg">
       <defs>
@@ -80,9 +73,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../.." title="SUFIA Installation & Usage Guide" class="md-header-nav__button md-logo">
           
-            
-              <img src="../../img/webgeaz_logo_sm.png" width="24" height="24">
-            
+            <i class="md-icon"></i>
           
         </a>
       </div>
@@ -90,23 +81,24 @@
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  Administrator
-                </span>
-              
+              <span class="md-header-nav__topic">
+                SUFIA Installation & Usage Guide
+              </span>
+              <span class="md-header-nav__topic">
+                Access Control
+              </span>
             
-            Access Control
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
@@ -127,6 +119,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -136,6 +129,7 @@
     
     <div class="md-container">
       
+        
       
       
       <main class="md-main">
@@ -149,9 +143,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        
-          <img src="../../img/webgeaz_logo_sm.png">
-        
+        <i class="md-icon"></i>
       
     </span>
     SUFIA Installation & Usage Guide
@@ -687,13 +679,13 @@
                 
                 <h1 id="access-control-list-acl">Access Control List (ACL)<a class="headerlink" href="#access-control-list-acl" title="Permanent link">&para;</a></h1>
 <h2 id="acl-list">ACL List<a class="headerlink" href="#acl-list" title="Permanent link">&para;</a></h2>
-<p>For more fine-grained access control, apart from control mechanism from Menu's role and level, you can set specific Role and Level for every Transaction, Query and Data (TQD). This will make sure that only user with specified Role and Level are able to access it.</p>
-<p>This configuration is optional but for certain circumstances it's a must (especially for critical &amp; confidential TQD). </p>
-<p>The rules for checking is first it will compare the role of the User with with role of the TQD. If matches, it will check the Level of User with the Level of TQD. If its equal or greater than the Level of TQD access will be granted.</p>
-<p>To create new ACL click on "<strong>Add New</strong>" and select the Transaction, Role and Level.</p>
-<p>This function sometimes can be assign to Developer since it highly depending on application design.</p>
+<p>For a more fine-grained access control, apart from the control mechanism from Menu's role and level, you can set a specific Role and Level for every Transaction, Query and Data (TQD). This will make sure that only users with specified Role and Level are able to access it.</p>
+<p>This configuration is optional but for certain circumstances it is a must (especially for critical &amp; confidential TQD). </p>
+<p>The rules for checking are first it will compare the role of the User with role of the TQD. If they match, it will check the Level of User with the Level of TQD. If it is equal or greater than the Level of TQD, access will be granted.</p>
+<p>To create a new ACL click on "<strong>Add New</strong>" and select the Transaction, Role and Level.</p>
+<p>This function sometimes can be assigned to Developer since it is highly dependent on application design.</p>
 <h2 id="public-access">Public Access<a class="headerlink" href="#public-access" title="Permanent link">&para;</a></h2>
-<p>Transaction can be set as public. If enabled, SUFIA acl filter won't check for user authentication &amp; authorization for the particular Transaction.</p>
+<p>Transaction can be set as public. If enabled, SUFIA ACL filter will not check for user authentication &amp; authorization for the particular Transaction.</p>
 <p>This is useful for homepage, enquiry page &amp; general info.</p>
                 
                   
@@ -754,9 +746,9 @@
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -768,10 +760,9 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-946997f430.js"></script>
+      <script src="../../assets/javascripts/application.cae2244d.js"></script>
       
-      
-      <script>app.initialize({version:"0.16.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
       
     
     

@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -14,7 +17,7 @@
       
         <meta name="lang:clipboard.copied" content="Copied to clipboard">
       
-        <meta name="lang:search.languages" content="">
+        <meta name="lang:search.language" content="en">
       
         <meta name="lang:search.result.none" content="No matching documents">
       
@@ -24,10 +27,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      
-        <link rel="shortcut icon" href="../../../img/favicon.png">
-      
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
     
     
       
@@ -35,19 +36,14 @@
       
     
     
-      <script src="../../../assets/javascripts/modernizr-e826f8942a.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/application-04ea671600.css">
-      
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.6525f7f6.css">
       
     
     
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -59,10 +55,7 @@
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+    <body>
   
     <svg class="md-svg">
       <defs>
@@ -80,9 +73,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../../.." title="SUFIA Installation & Usage Guide" class="md-header-nav__button md-logo">
           
-            
-              <img src="../../../img/webgeaz_logo_sm.png" width="24" height="24">
-            
+            <i class="md-icon"></i>
           
         </a>
       </div>
@@ -90,27 +81,24 @@
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  Developer
-                </span>
-              
-                <span class="md-header-nav__parent">
-                  How-To
-                </span>
-              
+              <span class="md-header-nav__topic">
+                SUFIA Installation & Usage Guide
+              </span>
+              <span class="md-header-nav__topic">
+                Customize User
+              </span>
             
-            Customize User
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
@@ -131,6 +119,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -140,6 +129,7 @@
     
     <div class="md-container">
       
+        
       
       
       <main class="md-main">
@@ -153,9 +143,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        
-          <img src="../../../img/webgeaz_logo_sm.png">
-        
+        <i class="md-icon"></i>
       
     </span>
     SUFIA Installation & Usage Guide
@@ -734,13 +722,13 @@
                 <h1 id="customization-of-user-management-and-login-process">Customization of User Management and Login Process<a class="headerlink" href="#customization-of-user-management-and-login-process" title="Permanent link">&para;</a></h1>
 <h2 id="custom-user">Custom User<a class="headerlink" href="#custom-user" title="Permanent link">&para;</a></h2>
 <p>Sometimes, there is a need to have your own implementation of user profiles. Especially if there is a need for
-more details which default SUFIA User did not provide.</p>
-<p>There is two approach to achieve this, one is by implementing the whole set of User lifecycle. This means you
+more details which default SUFIA User does not provide.</p>
+<p>There are two approaches to achieve this, one is by implementing the whole set of User lifecycle. This means you
 need to create your own user, menu, role etc. based on the requirement. This is quite straight forward.</p>
 <p>However, if you still want to make use of SUFIA built-in User, Role, Menu functions you need to interact with <a href="../../services/">SUFIA API</a>.
-In order to linked it back to SUFIA User table, you need to use <code class="codehilite">UserService</code>.</p>
+In order to link it back to SUFIA User table, you need to use <code class="codehilite">UserService</code>.</p>
 <p>Example:</p>
-<p>Consider we created our own user table like below:
+<p>Consider we created our own user table like the one below:
 <div class="codehilite"><pre><span></span><span class="gh">my_user</span>
 <span class="gh">-------</span>
 id
@@ -790,12 +778,12 @@ created_date
                 <span class="n">go_to</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">/t/list/user&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ctxPath</span><span class="p">)</span>
 </pre></div></p>
 <h2 id="custom-login">Custom Login<a class="headerlink" href="#custom-login" title="Permanent link">&para;</a></h2>
-<p>There is two ways available to implement your own login process based on your requirement.</p>
+<p>There are two ways available to implement your own login process based on your requirement.</p>
 <h3 id="option-1-using-transaction-with-loginservice">(Option 1) Using Transaction with LoginService<a class="headerlink" href="#option-1-using-transaction-with-loginservice" title="Permanent link">&para;</a></h3>
 <h3 id="option-2-override-login-process">(Option 2) Override Login process<a class="headerlink" href="#option-2-override-login-process" title="Permanent link">&para;</a></h3>
 <p>SUFIA provides a way to override default login process. You can create your own Java class which implement <code class="codehilite">LoginService</code>.
-After that you need to set your custome class using properties <code class="codehilite">login.service</code> on <code class="codehilite">sufia.properties</code> configuration file.</p>
-<p>This is useful if you want to implement different logic such as login using Single Sign-On (SSO), Active Directory / LDAP
+After that you need to set your customized class using properties <code class="codehilite">login.service</code> on <code class="codehilite">sufia.properties</code> configuration file.</p>
+<p>This is useful if you want to implement a different logic such as login using Single Sign-On (SSO), Active Directory / LDAP
 or other external database / login provider.</p>
 <p>Example (Login without using password):</p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">webgeaz.sufia.service</span><span class="o">;</span>
@@ -884,9 +872,9 @@ or other external database / login provider.</p>
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -898,10 +886,9 @@ or other external database / login provider.</p>
       
     </div>
     
-      <script src="../../../assets/javascripts/application-946997f430.js"></script>
+      <script src="../../../assets/javascripts/application.cae2244d.js"></script>
       
-      
-      <script>app.initialize({version:"0.16.3",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"../../.."}})</script>
       
     
     

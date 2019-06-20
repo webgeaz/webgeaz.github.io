@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -14,7 +17,7 @@
       
         <meta name="lang:clipboard.copied" content="Copied to clipboard">
       
-        <meta name="lang:search.languages" content="">
+        <meta name="lang:search.language" content="en">
       
         <meta name="lang:search.result.none" content="No matching documents">
       
@@ -24,10 +27,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      
-        <link rel="shortcut icon" href="../../img/favicon.png">
-      
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
     
     
       
@@ -35,19 +36,14 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-04ea671600.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.6525f7f6.css">
       
     
     
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -59,10 +55,7 @@
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+    <body>
   
     <svg class="md-svg">
       <defs>
@@ -80,9 +73,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../.." title="SUFIA Installation & Usage Guide" class="md-header-nav__button md-logo">
           
-            
-              <img src="../../img/webgeaz_logo_sm.png" width="24" height="24">
-            
+            <i class="md-icon"></i>
           
         </a>
       </div>
@@ -90,23 +81,24 @@
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  Developer
-                </span>
-              
+              <span class="md-header-nav__topic">
+                SUFIA Installation & Usage Guide
+              </span>
+              <span class="md-header-nav__topic">
+                Helper
+              </span>
             
-            Helper
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
@@ -127,6 +119,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -136,6 +129,7 @@
     
     <div class="md-container">
       
+        
       
       
       <main class="md-main">
@@ -149,9 +143,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        
-          <img src="../../img/webgeaz_logo_sm.png">
-        
+        <i class="md-icon"></i>
       
     </span>
     SUFIA Installation & Usage Guide
@@ -808,8 +800,8 @@
                 <h2 id="handlebars-helper">Handlebars Helper<a class="headerlink" href="#handlebars-helper" title="Permanent link">&para;</a></h2>
 <p>SUFIA additional helper for Handlebars. You may need to refer to Handlebars <a href="https://jknack.github.io/handlebars.java/helpers.html">documentation</a> to understand the concept.</p>
 <h3 id="value-lookup">Value Lookup<a class="headerlink" href="#value-lookup" title="Permanent link">&para;</a></h3>
-<p>Sometime you want to display the name / description of a particular id. For instance, consider
-you have table <code class="codehilite">hr_department_staff</code> with column <code class="codehilite">staff_id</code>, which is a foreign key to table <code class="codehilite">hr_staff</code>.
+<p>Sometimes you want to display the name / description of a particular id. For instance, consider
+you have a table <code class="codehilite">hr_department_staff</code> with column <code class="codehilite">staff_id</code>, which is a foreign key to table <code class="codehilite">hr_staff</code>.
 While iterating the <code class="codehilite">hr_department_staff</code> records, you may want to display the staff name instead of the staff_id.</p>
 <div class="codehilite"><pre><span></span><span class="x">Usage:</span>
 <span class="cp">{{</span><span class="nv">ref_lookup</span> <span class="nv">ref_id</span> <span class="na">table</span><span class="o">=</span><span class="s2">&quot;tableName&quot;</span> <span class="na">label</span><span class="o">=</span><span class="s2">&quot;name&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="cp">}}</span><span class="x"></span>
@@ -880,7 +872,7 @@ While iterating the <code class="codehilite">hr_department_staff</code> records,
 <span class="cp">{{</span><span class="k">/in</span><span class="cp">}}</span>
 </pre></div></p>
 <h3 id="equals-not-helper">Equals &amp; Not Helper<a class="headerlink" href="#equals-not-helper" title="Permanent link">&para;</a></h3>
-<p>Check if the value if equals or not equals.</p>
+<p>Check if the value is equal or not equal.</p>
 <div class="codehilite"><pre><span></span><span class="x">Usage:</span>
 <span class="cp">{{</span><span class="nf">#eq</span> <span class="nv">value1</span> <span class="nv">value2</span><span class="cp">}}</span><span class="x">..</span><span class="cp">{{</span><span class="nf">/eq</span><span class="cp">}}</span><span class="x"></span>
 <span class="cp">{{</span><span class="nf">#not</span> <span class="nv">value1</span> <span class="nv">value2</span><span class="cp">}}</span><span class="x">..</span><span class="cp">{{</span><span class="nf">/not</span><span class="cp">}}</span><span class="x"></span>
@@ -970,9 +962,9 @@ While iterating the <code class="codehilite">hr_department_staff</code> records,
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -984,10 +976,9 @@ While iterating the <code class="codehilite">hr_department_staff</code> records,
       
     </div>
     
-      <script src="../../assets/javascripts/application-946997f430.js"></script>
+      <script src="../../assets/javascripts/application.cae2244d.js"></script>
       
-      
-      <script>app.initialize({version:"0.16.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
       
     
     
