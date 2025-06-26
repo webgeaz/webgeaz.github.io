@@ -18,7 +18,7 @@
     
     
       
-        <title>Utilities in SØAD - SØAD Documentation</title>
+        <title>Utilities in SOAD - SØAD Documentation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#utilities-in-sad" class="md-skip">
+        <a href="#utilities-in-soad" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Utilities in SØAD
+              Utilities in SOAD
             
           </span>
         </div>
@@ -1647,7 +1647,7 @@
 
 
 
-<h1 id="utilities-in-sad">Utilities in SØAD</h1>
+<h1 id="utilities-in-soad">Utilities in SOAD</h1>
 <h3 id="rendering-the-view"><strong>Rendering the View</strong></h3>
 <p><strong>Import Statement</strong>:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">render</span>
@@ -1655,7 +1655,7 @@
 <h4 id="1-render-default-view">1. <strong>Render Default View</strong></h4>
 <dl>
 <dd>
-<p>The <code>render</code> utility is used to display HTML views using the default layout, with optional logic processing via the SØAD framework. It supports rendering static views or dynamically populating views using context data (<code>ctx</code>) and <a href="../helpers.html">Handlebars templates</a></p>
+<p>The <code>render</code> utility is used to display HTML views using the default layout, with optional logic processing via the SOAD framework. It supports rendering static views or dynamically populating views using context data (<code>ctx</code>) and <a href="../helpers.html">Handlebars templates</a></p>
 <p><strong>Basic Usage</strong>
 To redirect to a specific view (e.g., <code>login</code>), use:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;login&quot;</span><span class="p">)</span>
@@ -1664,7 +1664,7 @@ To redirect to a specific view (e.g., <code>login</code>), use:</p>
 <hr />
 <p><strong>With Context Data</strong>
 To pass dynamic data to the view, populate ctx.output:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SØAD&quot;</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SOAD&quot;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">login</span><span class="p">)</span>
 </span></code></pre></div>
 <p>In this case, the <code>name</code> variable can be accessed in the template using Handlebars syntax (<code>{{name}}</code>).</p>
@@ -1695,13 +1695,13 @@ To pass dynamic data to the view, populate ctx.output:</p>
 <p>This utility renders and returns a JSON response from the server, either from a specified object . It sets the appropriate content type and encoding for JSON responses and is typically used for API responses or HTMX requests expecting JSON data.</p>
 <p><strong>Basic Usage</strong></p>
 <p>To return a specific object as JSON instead of <code>ctx.output</code> as API, pass it as the second argument:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span> <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;SØAD&quot;</span><span class="p">}</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span> <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;SOAD&quot;</span><span class="p">}</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_json</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 </span></code></pre></div>
 <p>This will return the <code>data</code> object as a JSON response.</p>
 <div class="language-json no-copy highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SØAD&quot;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SOAD&quot;</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">}</span>
 </span></code></pre></div>
 <hr />
@@ -1832,11 +1832,11 @@ eg: <code>/web/static/pages/&lt;group&gt;/help/help.html</code></p>
 <p>The <code>render.as_pdf()</code> utility renders an HTML template (using <a href="../helpers.html">Handlebars</a>) into a PDF file. It supports dynamic data injection using <code>ctx.output</code> and can be downloaded or displayed inline.</p>
 <p><strong>Basic Usage</strong></p>
 <p>To render and download a PDF in HTML format(including the data):</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SØAD&quot;</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SOAD&quot;</span>
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_pdf</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="s2">&quot;invoice&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;invoice.pdf&quot;</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Or previe the PDF inline in the browser:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SØAD&quot;</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SOAD&quot;</span>
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_pdf</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="s2">&quot;summary&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;summary.pdf&quot;</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </span></code></pre></div>
 <hr />
@@ -1856,7 +1856,7 @@ eg: <code>/web/static/pages/&lt;group&gt;/help/help.html</code></p>
 </dd>
 </dl>
 <h3 id="file-upload"><strong>File Upload</strong></h3>
-<p>SØAD provides an easy way to upload files to the server. Usually the file will be uploaded to the server directory and the file path will be saved to the database for access usage.</p>
+<p>SOAD provides an easy way to upload files to the server. Usually the file will be uploaded to the server directory and the file path will be saved to the database for access usage.</p>
 <p><strong>Import Statement</strong>:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">fileupload</span>
 </span></code></pre></div>
@@ -1915,7 +1915,7 @@ eg: <code>/web/static/pages/&lt;group&gt;/help/help.html</code></p>
 </dd>
 </dl>
 <h3 id="rendering-and-sending-the-email"><strong>Rendering and Sending the Email</strong></h3>
-<p>SØAD provides an easy way to send the email to the user. The <code>mailer</code> class provides the methods to send the email to the user.
+<p>SOAD provides an easy way to send the email to the user. The <code>mailer</code> class provides the methods to send the email to the user.
 but, you need to import the <code>mailer</code> class from the <code>utils</code> module.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">mailer</span>
 </span></code></pre></div>
@@ -1952,10 +1952,10 @@ but, you need to import the <code>mailer</code> class from the <code>utils</code
 </dd>
 </dl>
 <h3 id="google-guava-libraries"><strong>Google GUAVA Libraries</strong></h3>
-<p>SØAD provides and utilizes the Google GUAVA libraries for the enhancing and improving the performance of the code. The GUAVA libraries are used for the specific purpose and the specific tasks.
+<p>SOAD provides and utilizes the Google GUAVA libraries for the enhancing and improving the performance of the code. The GUAVA libraries are used for the specific purpose and the specific tasks.
 for more details use please go to <a href="googleguava/basic-googleguava.html">Google Guava</a> </p>
 <h3 id="pdf-generator"><strong>PDF Generator</strong></h3>
-<p>SØAD provides a simplified and robust way to generate PDF files directly from HTML templates or raw HTML strings. With the <code>pdf</code> utility, you can render dynamic content into a well-formatted PDF and either stream it or save it to the file manager within the SØAD environment.</p>
+<p>SOAD provides a simplified and robust way to generate PDF files directly from HTML templates or raw HTML strings. With the <code>pdf</code> utility, you can render dynamic content into a well-formatted PDF and either stream it or save it to the file manager within the SOAD environment.</p>
 <p><strong>Import Statement</strong>:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">pdf</span>
 </span></code></pre></div>
