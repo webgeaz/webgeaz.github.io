@@ -1,0 +1,2067 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Using SØAD framework">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Utilities in SØAD - SØAD Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#utilities-in-sad" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SØAD Documentation" class="md-header__button md-logo" aria-label="SØAD Documentation" data-md-component="logo">
+      
+  <img src="../../assets/img/s0ad-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SØAD Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Utilities in SØAD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../intro.html" class="md-tabs__link">
+        
+  
+    
+  
+  Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../framework/overview.html" class="md-tabs__link">
+          
+  
+  SØAD Framework
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../overview.html" class="md-tabs__link">
+          
+  
+  SØAD Online IDE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/installation.html" class="md-tabs__link">
+          
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../code-libraries/datatables.html" class="md-tabs__link">
+          
+  
+  Cookbook
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../advanced-usage/custom-response.html" class="md-tabs__link">
+          
+  
+  Advanced Usage
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SØAD Documentation" class="md-nav__button md-logo" aria-label="SØAD Documentation" data-md-component="logo">
+      
+  <img src="../../assets/img/s0ad-logo.svg" alt="logo">
+
+    </a>
+    SØAD Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SØAD Framework
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            SØAD Framework
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/buildingblocks.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Blocks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/whyjython.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why Jython
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/components.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utilities and Helpers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Utilities and Helpers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/api.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Runtime API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/file-upload.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Upload
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/utils.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/helpers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Helpers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/base.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SØAD Base
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SØAD Online IDE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            SØAD Online IDE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Transaction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Transaction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="create-transactions.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transaction Editor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="versioning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Versioning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server_log.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-manager.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SØAD CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/directory-struct.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Directory Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-application.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build your first application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cookbook
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Cookbook
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-libraries/datatables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datatables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-libraries/generate-pdf.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate PDF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-libraries/generate-excel.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate Excel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-libraries/ajax.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AJAX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-libraries/htmx.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTMX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-libraries/json-api.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSON API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-libraries/listing.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Listing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-libraries/upload-download.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upload/Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-libraries/auth0-integration.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auth Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Advanced Usage
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced Usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced-usage/custom-response.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Response
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced-usage/custom-error.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Error Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced-usage/filter.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servlet Filter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced-usage/inheritance.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inheritance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rendering-the-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering the View
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rendering the View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-render-default-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Render Default View
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-render-json-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Render JSON Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-render-as-html-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Render as HTML Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-render-as-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Render as String
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-render-as-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Render as File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-render-as-blob" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Render as blob
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-render-as-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Render as PDF
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Upload
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Upload">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-to-upload-the-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. To Upload the File
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendering-and-sending-the-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering and Sending the Email
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rendering and Sending the Email">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-using-simple-string-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Using Simple String Methods:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-using-html-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Using HTML File:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-guava-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google GUAVA Libraries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      PDF Generator
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PDF Generator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-generate-pdf-from-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Generate PDF from HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-generate-pdf-from-html-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Generate PDF from HTML String:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="utilities-in-sad">Utilities in SØAD</h1>
+<h3 id="rendering-the-view"><strong>Rendering the View</strong></h3>
+<p><strong>Import Statement</strong>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">render</span>
+</span></code></pre></div>
+<h4 id="1-render-default-view">1. <strong>Render Default View</strong></h4>
+<dl>
+<dd>
+<p>The <code>render</code> utility is used to display HTML views using the default layout, with optional logic processing via the SØAD framework. It supports rendering static views or dynamically populating views using context data (<code>ctx</code>) and <a href="../helpers.html">Handlebars templates</a></p>
+<p><strong>Basic Usage</strong>
+To redirect to a specific view (e.g., <code>login</code>), use:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;login&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>This renders the <code>login</code> view without any additional logic or data.</p>
+<hr />
+<p><strong>With Context Data</strong>
+To pass dynamic data to the view, populate ctx.output:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SØAD&quot;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">login</span><span class="p">)</span>
+</span></code></pre></div>
+<p>In this case, the <code>name</code> variable can be accessed in the template using Handlebars syntax (<code>{{name}}</code>).</p>
+<hr />
+<p><strong>Rendering Page Directly from other group, and code</strong></p>
+<p>To render a page directly from other <code>&lt;group&gt;</code>, and <code>&lt;code&gt;</code> bypassing the default layout:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;register&quot;</span><span class="p">,</span> <span class="s2">&quot;base&quot;</span><span class="p">,</span> <span class="s2">&quot;reg&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>or you can do this:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">/t/base/reg/register&quot;</span> <span class="o">%</span> <span class="n">ctx</span><span class="o">.</span><span class="n">ctxPath</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>
+<p>Use <code>HTMX</code> or context-based rendering (<code>ctx</code>) for dynamic content updates or logic processing.</p>
+</li>
+<li>
+<p>The <code>render.as_view()</code> function ensures that the rendered page adheres to the default layout and theme structure used across the application.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+<h4 id="2-render-json-response">2. <strong>Render JSON Response</strong></h4>
+<dl>
+<dd>
+<p>This utility renders and returns a JSON response from the server, either from a specified object . It sets the appropriate content type and encoding for JSON responses and is typically used for API responses or HTMX requests expecting JSON data.</p>
+<p><strong>Basic Usage</strong></p>
+<p>To return a specific object as JSON instead of <code>ctx.output</code> as API, pass it as the second argument:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span> <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;SØAD&quot;</span><span class="p">}</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_json</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</span></code></pre></div>
+<p>This will return the <code>data</code> object as a JSON response.</p>
+<div class="language-json no-copy highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SØAD&quot;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<p><strong>using toMaps() from <code>List</code></strong></p>
+<p>The <code>toMaps()</code> function is used to convert the list of objects to a list of maps. This is useful when you want to convert the list of objects to a list of maps for the JSON response.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">tb_user</span> <span class="o">=</span> <span class="n">Tb_user</span><span class="o">.</span><span class="n">findAll</span><span class="p">()</span><span class="o">.</span><span class="n">toMaps</span><span class="p">()</span> <span class="c1"># findAll() (1) # toMaps() (2)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_json</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">tb_user</span><span class="p">)</span>
+</span></code></pre></div>
+<ol>
+<li><code>findAll()</code> is a method from <a href="https://javalite.github.io/activejdbc/snapshot/org/javalite/activejdbc/Model.html">activeJDBC</a> which are to retrieve all the records from the database table in the form of a list of objects.</li>
+<li><code>toMaps()</code> is a method from <a href="https://javalite.github.io/activejdbc/snapshot/org/javalite/activejdbc/Model.html">activeJDBC</a> which are to convert the list of objects to a list of maps.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>
+<p>Return JSON data for frontend components using HTMX or JavaScript.</p>
+</li>
+<li>
+<p>Create lightweight API responses within the same application logic flow.</p>
+</li>
+<li>
+<p>Respond to <a href="https://api.jquery.com/jQuery.ajax/">AJAX</a> requests or others plugin request with context or structured data.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+<h4 id="3-render-as-html-response">3. <strong>Render as HTML Response</strong></h4>
+<dl>
+<dd>
+<p>The <code>render.as_html()</code> utility is used to return a static HTML file directly to the client <strong>without</strong> any Handlebars or dynamic data rendering. This is typically useful for rendering pre-built HTML pages (such as documentation, help pages, or static content) stored in the server's file system.</p>
+<p><strong>Basic Usage</strong></p>
+<p>To render a static HTML file corresponding to the current request's code and location, use:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_html</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+</span></code></pre></div>
+<p>This automatically infers the <code>code</code> and <code>location</code> from the current context using <code>ctx.getCode()</code> and constructs the full file path accordingly.</p>
+<hr />
+<p><strong>With Custom Code and Location</strong></p>
+<p>You can explicitly specify the <code>code</code> and <code>location</code> to render the static HTML file:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_html</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;/web/static/pages&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>This will render the HTML file located at <code>&lt;location&gt;/&lt;group&gt;/&lt;code&gt;/&lt;code&gt;.html</code> location.
+eg: <code>/web/static/pages/&lt;group&gt;/help/help.html</code></p>
+</dd>
+</dl>
+<h4 id="4-render-as-string">4. <strong>Render as String</strong></h4>
+<dl>
+<dd>
+<p>The <code>render.as_string()</code> utility is used to return a raw/simple HTML string as the response, bypassing templates and static files. This is ideal for rendering simple HTML snippets directly from code, such as inline alerts, messages, or dynamically generated fragments.</p>
+<p><strong>Basic Usage</strong></p>
+<p>To return a raw/simple HTML string as the response:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_string</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;&lt;h1&gt;Access Denied&lt;/h1&gt;&lt;p&gt;You are not authorized.&lt;/p&gt;&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>This sends the HTML string directly to the client browser without any further processing.</p>
+</dd>
+</dl>
+<h4 id="4-render-as-file">4. <strong>Render as File</strong></h4>
+<dl>
+<dd>
+<p>The <code>render.as_file()</code> utility allows you to serve files (such as PDFs, images, or documents) to the client. It sets the appropriate headers and streams the file content for download or inline display in the browser.</p>
+<details class="tip">
+<summary>File types:</summary>
+<ul>
+<li>pdf: <code>application/pdf</code>.</li>
+<li>image: <code>image/png</code>, <code>image/jpeg</code>.</li>
+<li>text: <code>text/plain</code>, <code>text/html</code>, <code>text/css</code>, <code>text/javascript</code>.</li>
+<li>documents: <code>application/msword</code>, <code>application/vnd.openxmlformats-officedocument.wordprocessingml.document</code>, <code>application/vnd.ms-excel</code>, <code>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</code>, <code>application/vnd.ms-powerpoint</code>, <code>application/vnd.openxmlformats-officedocument.presentationml.presentation</code>.</li>
+</ul>
+</details>
+<p><strong>Basic Usage</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_file</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;/path/to/report.pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;application/pdf&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>This will serve and download the specified PDF file to the client.</p>
+<hr />
+<p><strong>Optional Parameters</strong></p>
+<ul>
+<li><strong>filename</strong>: Custom filename for the download (defaults to the file’s name).</li>
+<li><strong>attachment</strong>: Set to False to display the file inline (e.g., open in-browser), instead of downloading.</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_file</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;/path/to/image.png&quot;</span><span class="p">,</span> <span class="s2">&quot;image/png&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;preview.png&quot;</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></code></pre></div>
+<p>This will serve the image file with a custom filename and display it inline in the browser.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Use <code>render.as_file()</code> for serving downloadable files or inline content.</li>
+<li>Specify the correct MIME type for the file being served to ensure proper handling by the browser.</li>
+<li>Use <code>filename</code> and <code>attachment</code> parameters to control the download behavior and filename.</li>
+</ul>
+</div>
+</dd>
+</dl>
+<h4 id="5-render-as-blob">5. <strong>Render as blob</strong></h4>
+<dl>
+<dd>
+<p>The <code>render.as_blob()</code> utility is used to return binary data (such as images, audio, or other non-text files) as a response. It sets the appropriate headers and encodes the binary data for transmission over HTTP.</p>
+<p><strong>Basic Usage</strong></p>
+<p>To send a blob as a downloadable file:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_blob</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="s2">&quot;application/pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;invoice.pdf&quot;</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+<p>To show the content inline in the browser:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_blob</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="s2">&quot;application/pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;preview.pdf&quot;</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>
+<p><strong>content</strong>: The raw binary data (e.g., <code>byte[]</code> or <code>bytes</code>).</p>
+</li>
+<li>
+<p><strong>content_type</strong>: MIME type (e.g., <code>"application/pdf"</code>, <code>"image/png"</code>).</p>
+</li>
+<li>
+<p><strong>filename</strong>: The file name to be shown in the browser or used for downloading.</p>
+</li>
+<li>
+<p><strong>attachment</strong>: If <code>True</code>, prompts a download; if <code>False</code>, displays inline.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+<h4 id="6-render-as-pdf">6. <strong>Render as PDF</strong></h4>
+<dl>
+<dd>
+<p>The <code>render.as_pdf()</code> utility renders an HTML template (using <a href="../helpers.html">Handlebars</a>) into a PDF file. It supports dynamic data injection using <code>ctx.output</code> and can be downloaded or displayed inline.</p>
+<p><strong>Basic Usage</strong></p>
+<p>To render and download a PDF in HTML format(including the data):</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SØAD&quot;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_pdf</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="s2">&quot;invoice&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;invoice.pdf&quot;</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Or previe the PDF inline in the browser:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SØAD&quot;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_pdf</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="s2">&quot;summary&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;summary.pdf&quot;</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<p><strong>Templates Rendering with Handlebars</strong>:</p>
+<p>The template supports dynamic content using ctx.output data:</p>
+<div class="language-html highlight"><span class="filename">invoice.html</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Invoice<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Invoice for {{name}}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Thank you for your purchase!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>All <a href="../helpers.html">Handlebars</a> helpers like <code>eq</code>, <code>and</code>, <code>dateFmt</code>, <code>ref_lookup</code>, etc. are supported in the PDF.</p>
+</dd>
+</dl>
+<h3 id="file-upload"><strong>File Upload</strong></h3>
+<p>SØAD provides an easy way to upload files to the server. Usually the file will be uploaded to the server directory and the file path will be saved to the database for access usage.</p>
+<p><strong>Import Statement</strong>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">fileupload</span>
+</span></code></pre></div>
+<details class="tip">
+<summary>File types:</summary>
+<ul>
+<li>pdf: <code>application/pdf</code>.</li>
+<li>image: <code>image/png</code>, <code>image/jpeg</code>.</li>
+<li>text: <code>text/plain</code>, <code>text/html</code>, <code>text/css</code>, <code>text/javascript</code>.</li>
+<li>documents: <code>application/msword</code>, <code>application/vnd.openxmlformats-officedocument.wordprocessingml.document</code>, <code>application/vnd.ms-excel</code>, <code>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</code>, <code>application/vnd.ms-powerpoint</code>, <code>application/vnd.openxmlformats-officedocument.presentationml.presentation</code>.</li>
+</ul>
+</details>
+<p>To handle the file from the request from the user, which are to upload the file to the server. This are the ways to handle it:</p>
+<details class="warning">
+<summary>The uploaded File need to be in MultiPart form data</summary>
+<ul>
+<li>In the html the in the form tag, need to add this <code>enctype="multipart/form-data"</code> to upload the file to the server.</li>
+</ul>
+<div class="language-html highlight"><span class="filename">index.html</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;{{ctxPath}}/t/base/upload/upload_image&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">enctype</span><span class="o">=</span><span class="s">&quot;multipart/form-data&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    <span class="cm">&lt;!-- Your basic form here --&gt;</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;file&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;image&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;image&quot;</span> <span class="na">accept</span><span class="o">=</span><span class="s">&quot;image/png, image/jpeg, image/jpg&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</details>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">request</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">getRequest</span><span class="p">()</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">image</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getParameter</span><span class="p">(</span><span class="s2">&quot;image&quot;</span><span class="p">)</span>       <span class="c1"># File content (bytes)</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">image_fn</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getParameter</span><span class="p">(</span><span class="s2">&quot;image_fn&quot;</span><span class="p">)</span> <span class="c1"># Original File names &lt;= Will be generated</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="n">image_ft</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getParameter</span><span class="p">(</span><span class="s2">&quot;image_ft&quot;</span><span class="p">)</span> <span class="c1"># MIME/file type &lt;= Will be generated </span>
+</span></code></pre></div>
+<h4 id="1-to-upload-the-file">1. <strong>To Upload the File</strong></h4>
+<dl>
+<dd>
+<p>The <code>write_file()</code> method is used to save the uploaded file to the server directory. </p>
+<p><strong>Usage Example</strong>:</p>
+<div class="language-python select highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">java.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">File</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="n">file_location</span> <span class="o">=</span> <span class="s2">&quot;/path-to-upload</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="n">uploaded_file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="n">file_location</span><span class="p">)</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="k">if</span> <span class="ow">not</span> <span class="n">uploaded_file</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span> <span class="c1"># Check if the directory exists</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>    <span class="n">uploaded_file</span><span class="o">.</span><span class="n">mkdir</span><span class="p">()</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="k">if</span> <span class="n">image</span> <span class="ow">and</span> <span class="n">image_fn</span><span class="p">:</span> <span class="c1"># Check if the file is not empty</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>    <span class="n">file_path</span> <span class="o">=</span> <span class="n">uploaded_file</span><span class="o">.</span><span class="n">getPath</span><span class="p">()</span> <span class="o">+</span> <span class="n">File</span><span class="o">.</span><span class="n">separator</span> <span class="o">+</span> <span class="s2">&quot;image_&quot;</span> <span class="o">+</span> <span class="n">image_fn</span> <span class="c1"># File path to save the file</span>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>    <span class="n">fn</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>    <span class="n">fileupload</span><span class="o">.</span><span class="n">write_file</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">fn</span><span class="p">)</span> <span class="c1"># Write the file to the server directory</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>The directory/path of the file, file name, and file type need to be save to the database for access usage.</li>
+</ul>
+</div>
+</dd>
+</dl>
+<h3 id="rendering-and-sending-the-email"><strong>Rendering and Sending the Email</strong></h3>
+<p>SØAD provides an easy way to send the email to the user. The <code>mailer</code> class provides the methods to send the email to the user.
+but, you need to import the <code>mailer</code> class from the <code>utils</code> module.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">mailer</span>
+</span></code></pre></div>
+<p><code>mailer.send(sender_email, receiver_email, subject, email_content, html=None)</code></p>
+<p>There are two ways to write and send the email to the user:</p>
+<h4 id="1-using-simple-string-methods">1. <strong>Using Simple String Methods</strong>:</h4>
+<dl>
+<dd>
+<p>The below code is used to send the email to the user using the simple string methods.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">email_content</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="s2">&lt;table&gt;</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="s2">    &lt;tr&gt;</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="s2">        &lt;td&gt;Hi, User&lt;/td&gt;</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="s2">    &lt;/tr&gt;</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="s2">    &lt;tr&gt;</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="s2">        &lt;td&gt;Your OTP is: 1234&lt;/td&gt;</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="s2">    &lt;/tr&gt;</span>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="s2">&lt;/table&gt;</span>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>
+</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="n">mailer</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;noreply@soad.online&quot;</span><span class="p">,</span> <span class="s2">&quot;receiver@yopmail.com&quot;</span><span class="p">,</span> <span class="s2">&quot;Your Subject Here&quot;</span><span class="p">,</span> <span class="n">email_content</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+</dd>
+</dl>
+<h4 id="2-using-html-file">2. <strong>Using HTML File</strong>:</h4>
+<dl>
+<dd>
+<p>The below code is used to send the email to the user using the HTML file.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">render</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="n">email_content</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;email_template&quot;</span><span class="p">)()</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="n">mailer</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;noreply@soad.online&quot;</span><span class="p">,</span> <span class="s2">&quot;receiver@yopmail.com&quot;</span><span class="p">,</span> <span class="s2">&quot;Your Subject Here&quot;</span><span class="p">,</span> <span class="n">email_content</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+</dd>
+</dl>
+<h3 id="google-guava-libraries"><strong>Google GUAVA Libraries</strong></h3>
+<p>SØAD provides and utilizes the Google GUAVA libraries for the enhancing and improving the performance of the code. The GUAVA libraries are used for the specific purpose and the specific tasks.
+for more details use please go to <a href="googleguava/basic-googleguava.html">Google Guava</a> </p>
+<h3 id="pdf-generator"><strong>PDF Generator</strong></h3>
+<p>SØAD provides a simplified and robust way to generate PDF files directly from HTML templates or raw HTML strings. With the <code>pdf</code> utility, you can render dynamic content into a well-formatted PDF and either stream it or save it to the file manager within the SØAD environment.</p>
+<p><strong>Import Statement</strong>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">pdf</span>
+</span></code></pre></div>
+<h4 id="1-generate-pdf-from-html">1. <strong>Generate PDF from HTML</strong></h4>
+<dl>
+<dd>
+<p>You can render a dynamic template using <code>render.as_view(...)</code> and convert it directly into a PDF file:</p>
+<p><strong>Usage Example</strong>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">pdf_file</span> <span class="o">=</span> <span class="s2">&quot;/path-to-save-pdf-file&quot;</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="n">content</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;invoice&quot;</span><span class="p">)()</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="n">pdf</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">pdf_file</span><span class="p">)</span>
+</span></code></pre></div>
+</dd>
+</dl>
+<h4 id="2-generate-pdf-from-html-string">2. <strong>Generate PDF from HTML String</strong>:</h4>
+<dl>
+<dd>
+<p>If you prefer working with raw HTML strings (e.g., generated manually or from external data), you can still produce a PDF easily:</p>
+<p><strong>Usage Example</strong>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">pdf_file</span> <span class="o">=</span> <span class="s2">&quot;/path-to-save-pdf-file&quot;</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="n">content</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="s2">    &lt;html&gt;</span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="s2">        &lt;body&gt;</span>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="s2">            &lt;h1&gt;Your Invoice&lt;/h1&gt;</span>
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="s2">            &lt;p&gt;Thank you for your purchase!&lt;/p&gt;</span>
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="s2">        &lt;/body&gt;</span>
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="s2">    &lt;/html&gt;</span>
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="s2">    &quot;&quot;&quot;</span>
+</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="n">pdf</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">pdf_file</span><span class="p">)</span>
+</span></code></pre></div>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The path for saving pdf file should be defined if want to save the pdf file to the server</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Webgeaz Sdn. Bhd. All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tabs.link", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.path"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
