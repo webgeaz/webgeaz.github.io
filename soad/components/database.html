@@ -849,19 +849,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-new-tables" class="md-nav__link">
+  <a href="#create-new-table" class="md-nav__link">
     <span class="md-ellipsis">
-      Create New Tables
+      Create New Table
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Create New Tables">
+    <nav class="md-nav" aria-label="Create New Table">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-in-data-type-conversion-table" class="md-nav__link">
+  <a href="#supported-data-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Build-in Data Type Conversion Table
+      Supported Data Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sad-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      SØAD Conventions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-type-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Type Mapping
     </span>
   </a>
   
@@ -869,15 +887,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generate-crud" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generate CRUD
-    </span>
-  </a>
   
 </li>
       
@@ -894,6 +903,15 @@
   <a href="#clone-table" class="md-nav__link">
     <span class="md-ellipsis">
       Clone Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate CRUD
     </span>
   </a>
   
@@ -918,19 +936,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql-query" class="md-nav__link">
+  <a href="#open-query" class="md-nav__link">
     <span class="md-ellipsis">
-      SQL Query
+      Open Query
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SQL Query">
+    <nav class="md-nav" aria-label="Open Query">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#common-sql-operations-in-sad" class="md-nav__link">
+  <a href="#common-sql-operations-supported" class="md-nav__link">
     <span class="md-ellipsis">
-      Common SQL Operations in SØAD
+      Common SQL Operations Supported
     </span>
   </a>
   
@@ -1640,19 +1658,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-new-tables" class="md-nav__link">
+  <a href="#create-new-table" class="md-nav__link">
     <span class="md-ellipsis">
-      Create New Tables
+      Create New Table
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Create New Tables">
+    <nav class="md-nav" aria-label="Create New Table">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-in-data-type-conversion-table" class="md-nav__link">
+  <a href="#supported-data-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Build-in Data Type Conversion Table
+      Supported Data Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sad-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      SØAD Conventions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-type-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Type Mapping
     </span>
   </a>
   
@@ -1660,15 +1696,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generate-crud" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generate CRUD
-    </span>
-  </a>
   
 </li>
       
@@ -1685,6 +1712,15 @@
   <a href="#clone-table" class="md-nav__link">
     <span class="md-ellipsis">
       Clone Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate CRUD
     </span>
   </a>
   
@@ -1709,19 +1745,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql-query" class="md-nav__link">
+  <a href="#open-query" class="md-nav__link">
     <span class="md-ellipsis">
-      SQL Query
+      Open Query
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SQL Query">
+    <nav class="md-nav" aria-label="Open Query">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#common-sql-operations-in-sad" class="md-nav__link">
+  <a href="#common-sql-operations-supported" class="md-nav__link">
     <span class="md-ellipsis">
-      Common SQL Operations in SØAD
+      Common SQL Operations Supported
     </span>
   </a>
   
@@ -1749,11 +1785,13 @@
 
 
 <h1 id="database">Database</h1>
-<p>The application database stores and manages data for specific application, including users, projects, files, and system settings. It follows a relational structure with tables linked by primary keys (id column) to ensure data integrity.</p>
+<p>SØAD Online IDE provides a built-in Database module that allows developers to manage database schema and interact with data directly within the IDE—without needing external tools or installations.</p>
+<p>This module is especially useful for inspecting tables, writing SQL queries, and performing schema modifications in real-time while building your SØAD application.</p>
 <h2 id="list-of-tables">List of Tables</h2>
-<p>SØAD stores data in multiple tables, each serving a specific purpose. Understanding these tables helps users interact with the database efficiently.</p>
-<p><a class="glightbox" href="../assets/img/list_tables.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;List of Tables&quot;" src="../assets/img/list_tables.png" width="800" /></a>
-Selecting the <strong>Database</strong> tab displays a list of tables within the current system. The <strong>search bar</strong> can be used to quickly locate a specific table. The <strong>Action</strong> button next to a table type provides several management options, including:</p>
+<p>To display the list of tables, select the <strong>Database</strong> menu from the main navigation in the SØAD Online IDE. This opens the schema browser, where all tables in the current database are listed.</p>
+<p>A search bar at the top of the panel allows you to quickly locate a specific table by name. Just type part of the table name, and matching results will appear instantly—making navigation efficient even in large schemas.</p>
+<p>The <strong>Action</strong> button next to a table type provides several management options, including:</p>
+<p><a class="glightbox" href="../assets/img/list_tables.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;List of Tables&quot;" src="../assets/img/list_tables.png" width="800" /></a></p>
 <ul>
 <li><strong>View Data</strong> - Display the records stored in the selected table.</li>
 <li><strong>View Table</strong> - Show the table structure, including columns and data types.</li>
@@ -1761,29 +1799,9 @@ Selecting the <strong>Database</strong> tab displays a list of tables within the
 <li><strong>Generate CRUD</strong> - Automatically generate Create, Read, Update, and Delete operations for the table.</li>
 <li><strong>Drop Table</strong> - Permanently delete the table from the database.</li>
 </ul>
-<h2 id="create-new-tables">Create New Tables</h2>
-<p>SØAD provides a utility to create tables similar to any Database Manager tools. The setup is quite standard and straight forward, however certain aspects have been customized to suit SØAD usage.</p>
-<ol>
-<li>
-<p><strong>Data Type</strong> - This is as standard SØAD data type that is used in Transaction, Data and Query.
-    Refer the <a href="#build-in-data-type-conversion-table">conversion table</a>.</p>
-</li>
-<li>
-<p><strong>BLOB</strong> - This is a type for storage of file, images, etc. uploaded. It will create 3 columns:</p>
-<ul>
-<li>Column to store the bytes</li>
-<li>Column to store file name</li>
-<li>Column to store file type
-<strong>Example:</strong> If column name is 'resume', 3 columns will be created: <code>resume</code>, <code>resume_fn</code>, and <code>resume_ft</code>.</li>
-</ul>
-</li>
-</ol>
-<p><a class="glightbox" href="../assets/img/create_table.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Create New Tables&quot;" src="../assets/img/create_table.png" width="800" /></a>
-Clicking the <strong>Create New Table</strong> button, located at the top right of the screen, will open a modal window. Enter the required information in the provided fields to create a new table.</p>
-<div class="admonition warning søad convention">
-<p class="admonition-title">Warning</p>
-<p>Every table must have a primary key column named <code>id</code>. A model class representing the table will be generated with class name same with table name (ORM) e.g. table <code>person</code> will have a correspondent class <code>Person</code>.</p>
-</div>
+<h2 id="create-new-table">Create New Table</h2>
+<p>To create a new table, click on the <strong>Create New Table</strong> button located at the top right of the screen. This opens a modal window where you can define the table structure.</p>
+<p><a class="glightbox" href="../assets/img/create_table.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Create New Tables&quot;" src="../assets/img/create_table.png" width="800" /></a></p>
 <table>
 <thead>
 <tr>
@@ -1799,33 +1817,33 @@ Clicking the <strong>Create New Table</strong> button, located at the top right 
 <td style="text-align: left;"><code>hr_employee</code></td>
 </tr>
 <tr>
-<td style="text-align: left;">Comment (Table)</td>
+<td style="text-align: left;">Table Comments</td>
 <td style="text-align: left;">Useful description for table</td>
 <td style="text-align: left;">Employee Personal Record</td>
 </tr>
 <tr>
-<td style="text-align: left;">Field</td>
+<td style="text-align: left;">Column Name</td>
 <td style="text-align: left;">Column Name (max 64 characters)</td>
 <td style="text-align: left;"><code>staff_no</code></td>
 </tr>
 <tr>
-<td style="text-align: left;">Type</td>
-<td style="text-align: left;">Data Type (Refer below for type conversion)</td>
-<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Data Type</td>
+<td style="text-align: left;">Data Type (<a href="#supported-data-types">Refer below</a>)</td>
+<td style="text-align: left;">VARCHAR</td>
 </tr>
 <tr>
 <td style="text-align: left;">Length</td>
-<td style="text-align: left;">Length of data in integer (only applicable to type TEXT)</td>
+<td style="text-align: left;">Length of data in integer (only applicable to type VARCHAR and DECIMAL)</td>
 <td style="text-align: left;">20</td>
 </tr>
 <tr>
-<td style="text-align: left;">Null</td>
+<td style="text-align: left;">NULL</td>
 <td style="text-align: left;">Column can accept NULL value or not</td>
 <td style="text-align: left;">NOT NULL</td>
 </tr>
 <tr>
-<td style="text-align: left;">Default</td>
-<td style="text-align: left;">Default value (if NULL value inserted)</td>
+<td style="text-align: left;">Index</td>
+<td style="text-align: left;">Column is either PRIMARY (primary key), UNIQUE (unique index), INDEX (normal index) or NONE (normal column)</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
@@ -1834,13 +1852,8 @@ Clicking the <strong>Create New Table</strong> button, located at the top right 
 <td style="text-align: left;"></td>
 </tr>
 <tr>
-<td style="text-align: left;">Key</td>
-<td style="text-align: left;">Column is either PRIMARY (primary key), UNIQUE (unique index), INDEX (normal index) or NONE (normal column)</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
 <td style="text-align: left;">Comment</td>
-<td style="text-align: left;">Usefull description of column</td>
+<td style="text-align: left;">Useful description of column</td>
 <td style="text-align: left;">Staff No</td>
 </tr>
 </tbody>
@@ -1859,82 +1872,101 @@ Clicking the <strong>Create New Table</strong> button, located at the top right 
 <p>To move a column to the bottom, click the <strong>{arrow down}</strong> button.</p>
 </li>
 </ul>
-<div class="admonition tip best practice">
-<p class="admonition-title">Tip</p>
+<h4 id="supported-data-types">Supported Data Types</h4>
+<p>The following data types are available:</p>
+<ul>
+<li><code>VARCHAR</code></li>
+<li><code>TEXT</code></li>
+<li><code>MEDIUMTEXT</code></li>
+<li><code>INT</code></li>
+<li><code>BIGINT</code></li>
+<li><code>BIT</code></li>
+<li><code>DECIMAL</code></li>
+<li><code>DATE</code></li>
+<li><code>DATETIME</code></li>
+<li><code>TIME</code></li>
+<li><code>BLOB</code></li>
+<li><code>MEDIUMBLOB</code></li>
+</ul>
+<h4 id="sad-conventions">SØAD Conventions</h4>
+<p>SØAD has a special treatment for handling BLOB (Binary Large Object) data types, which are used to store large binary files such as images or documents. When creating a BLOB column, SØAD automatically generates three related columns:</p>
+<ul>
+<li>Column to store the binary data (BLOB)</li>
+<li>Column to store the file name (VARCHAR)</li>
+<li>Column to store the file type (VARCHAR)</li>
+</ul>
+<p>This convention simplifies file handling in the application, allowing you to easily manage file uploads and retrievals. For example, if you create a column named <code>resume</code>, SØAD will automatically create three columns: <code>resume</code>, <code>resume_fn</code> (for file name), and <code>resume_ft</code> (for file type).</p>
+<div class="admonition tip">
+<p class="admonition-title">Best Practice</p>
 <p>Use prefix for table name for easy maintenance. Normally the group name is a good candidate for prefix name e.g. prefix HR Group's table with <code>hr_</code>.</p>
 </div>
-<h3 id="build-in-data-type-conversion-table">Build-in Data Type Conversion Table</h3>
+<div class="admonition warning">
+<p class="admonition-title">SØAD Convention</p>
+<p>Every table must have a primary key column named <code>id</code>. A model class representing the table will be generated with class name same with table name (ORM) e.g. table <code>person</code> will have a correspondent class <code>Person</code>. Refer to the <a href="#data-type-mapping">Data Type Mapping</a> section below for details on how MySQL data types are mapped to Java types.</p>
+</div>
+<h3 id="data-type-mapping">Data Type Mapping</h3>
+<p>Below is a reference table mapping common MySQL data types to the Java types used in SØAD:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">SØAD Type</th>
-<th style="text-align: left;">MySQL Type</th>
-<th style="text-align: left;">Java Type</th>
+<th>MySQL Data Type</th>
+<th>Java Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">TEXT</td>
-<td style="text-align: left;"><code>VARCHAR(length)</code><br>length as defined.<br><em>if length &gt; 9999 Type <code>TEXT</code> will be used.</em></td>
-<td style="text-align: left;">String</td>
+<td>VARCHAR</td>
+<td>String</td>
 </tr>
 <tr>
-<td style="text-align: left;">INT</td>
-<td style="text-align: left;"><code>INTEGER</code></td>
-<td style="text-align: left;">Integer</td>
+<td>TEXT</td>
+<td>String</td>
 </tr>
 <tr>
-<td style="text-align: left;">BIT</td>
-<td style="text-align: left;"><code>BIT</code></td>
-<td style="text-align: left;">Boolean</td>
+<td>MEDIUMTEXT</td>
+<td>String</td>
 </tr>
 <tr>
-<td style="text-align: left;">DECIMAL</td>
-<td style="text-align: left;"><code>DECIMAL(18,5)</code></td>
-<td style="text-align: left;">BigDecimal</td>
+<td>INT</td>
+<td>Integer</td>
 </tr>
 <tr>
-<td style="text-align: left;">DATE</td>
-<td style="text-align: left;"><code>DATE</code></td>
-<td style="text-align: left;">Date</td>
+<td>BIGINT</td>
+<td>java.math.BigInteger</td>
 </tr>
 <tr>
-<td style="text-align: left;">DATETIME</td>
-<td style="text-align: left;"><code>DATETIME</code></td>
-<td style="text-align: left;">Date</td>
+<td>BIT</td>
+<td>Boolean</td>
 </tr>
 <tr>
-<td style="text-align: left;">TIME</td>
-<td style="text-align: left;"><code>TIME</code></td>
-<td style="text-align: left;">Date</td>
+<td>DECIMAL</td>
+<td>java.math.BigDecimal</td>
 </tr>
 <tr>
-<td style="text-align: left;">BLOB</td>
-<td style="text-align: left;"><code>MEDIUMBLOB</code></td>
-<td style="text-align: left;">byte[]</td>
+<td>DATE</td>
+<td>java.sql.Date</td>
 </tr>
 <tr>
-<td style="text-align: left;">CURRENCY</td>
-<td style="text-align: left;"><code>DECIMAL(18,2)</code></td>
-<td style="text-align: left;">BigDecimal</td>
+<td>DATETIME</td>
+<td>java.time.LocalDateTime</td>
 </tr>
 <tr>
-<td style="text-align: left;">LONGTEXT</td>
-<td style="text-align: left;"><code>MEDIUMTEXT</code></td>
-<td style="text-align: left;">String</td>
+<td>TIME</td>
+<td>java.sql.Time</td>
+</tr>
+<tr>
+<td>BLOB</td>
+<td>byte[]</td>
+</tr>
+<tr>
+<td>MEDIUMBLOB</td>
+<td>byte[]</td>
 </tr>
 </tbody>
 </table>
-<h2 id="generate-crud">Generate CRUD</h2>
-<p>To Generate CRUD functions, click on the <strong>Generate CRUD</strong> link as below:</p>
-<p><a class="glightbox" href="../assets/img/generate_crud.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Generate Crud&quot;" src="../assets/img/generate_crud.png" width="800" /></a></p>
-<p>After filling in the Group, Code, and Name, it will generate a Query, Create Data, Edit Data, and Delete Data functions.</p>
-<p><a class="glightbox" href="../assets/img/modal_crud.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Modal Crud&quot;" src="../assets/img/modal_crud.png" width="300" /></a></p>
 <h2 id="alter-table">Alter Table</h2>
-<p>The <strong>Alter Table</strong> feature in SØAD allows modifications to an existing table structure without affecting the stored data. This includes adding new columns, changing data types, or removing unnecessary columns.</p>
-<p>Using this feature, tables can be adjusted as needed to accommodate new requirements while maintaining data integrity.</p>
-<p><a class="glightbox" href="../assets/img/alter_table.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Alter Table&quot;" src="../assets/img/alter_table.png" width="800" /></a>
-To edit an existing table, click on the <strong>Action</strong> button and select <strong>Edit Table</strong>. The <strong>Alter Table</strong> section will appear on the right side of the screen, allowing modifications to the table structure.</p>
+<p>To edit an existing table, click on the <strong>View Table</strong> link and click <strong>Edit Table</strong> button at the bottom. The table structure will be displayed, allowing modifications to the table structure.</p>
+<p><a class="glightbox" href="../assets/img/alter_table.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Alter Table&quot;" src="../assets/img/alter_table.png" width="800" /></a></p>
 <ul>
 <li>
 <p>To add a new column, click the <strong>{+}</strong> symbol.</p>
@@ -1949,23 +1981,28 @@ To edit an existing table, click on the <strong>Action</strong> button and selec
 <p>After making the necessary changes, click <strong>Execute</strong> on the right side of the table to apply the modifications.</p>
 <h2 id="clone-table">Clone Table</h2>
 <p>To clone a table, click on the <strong>Clone Table</strong> link as below:</p>
-<p><a class="glightbox" href="../assets/img/clone_table.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Clone Table&quot;" src="../assets/img/clone_table.png" width="800" /></a>
-The <strong>Clone Table</strong> feature in SØAD allows users to duplicate an existing table along with its structure and data. This is useful for creating backups, testing modifications, or setting up similar tables without manually recreating them.</p>
+<p><a class="glightbox" href="../assets/img/clone_table.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Clone Table&quot;" src="../assets/img/clone_table.png" width="800" /></a></p>
+<p>The <strong>Clone Table</strong> feature allows users to duplicate an existing table along with its structure and data. This is useful for creating backups, testing modifications, or setting up similar tables without manually recreating them.</p>
 <p>When cloning a table, the system will generate a new table with the same columns, data types, and constraints as the original table. Users can modify the cloned table as needed after creation.</p>
+<h2 id="generate-crud">Generate CRUD</h2>
+<p>To Generate CRUD functions, click on the <strong>Generate CRUD</strong> link as below:</p>
+<p><a class="glightbox" href="../assets/img/generate_crud.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Generate Crud&quot;" src="../assets/img/generate_crud.png" width="800" /></a></p>
+<p>After filling in the Group, Code, and Name, it will generate a new Transaction with listing, create, update, and delete operations for the table. This feature automates the creation of basic CRUD (Create, Read, Update, Delete) operations for the selected table.</p>
+<p><a class="glightbox" href="../assets/img/modal_crud.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Modal Crud&quot;" src="../assets/img/modal_crud.png" width="300" /></a></p>
 <h2 id="drop-table">Drop Table</h2>
 <p>To drop a table, click on the <strong>Drop Table</strong> link as below:</p>
-<p><a class="glightbox" href="../assets/img/drop_table.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Drop Table&quot;" src="../assets/img/drop_table.png" width="800" /></a>
-The <strong>Drop Table</strong> feature in SØAD allows users to permanently delete a table from the database. This action removes both the table structure and all stored data, making it irrevisible.</p>
+<p><a class="glightbox" href="../assets/img/drop_table.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Drop Table&quot;" src="../assets/img/drop_table.png" width="800" /></a></p>
 <p>Before dropping a table, ensure it is no longer needed, as this action cannot be undone. Use this feature with caution to avoid accidental data loss.</p>
 <h2 id="introspect">Introspect</h2>
-<p>Click on the <strong>Introspect</strong> link as below to introspection process:</p>
-<p><a class="glightbox" href="../assets/img/introspect.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Introspect&quot;" src="../assets/img/introspect.png" width="400" /></a>
-The <strong>Introspect</strong> feature in SØAD automatically generates Java classes from database tables by reading the table structure. This process runs automatically and ensures that the generated files reflect the latest database scheme. </p>
-<p>If any modifications are made directly to the database outside of SØAD, SØAD will not detect these changes. Therefore, introspection is necessary to synchronize the system with the updated table structure, similar to restarting a server.</p>
-<h2 id="sql-query">SQL Query</h2>
-<p>SQL (Structured Query Language) queries allow users to interact with the SØAD database by retrieving, adding, updating, or deleting data. Understanding basic queries helps users manage and access information efficiently.</p>
+<p>Click on the <strong>Introspect</strong> link as below to trigger introspection process:</p>
+<p><a class="glightbox" href="../assets/img/introspect.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;Introspect&quot;" src="../assets/img/introspect.png" width="400" /></a></p>
+<p>The <strong>Introspect</strong> feature in SØAD automatically generates Java classes from database tables by reading the table structure. This process runs automatically and ensures that the generated files reflect the latest database scheme. </p>
+<p>However, if any modifications are made directly to the database outside of SØAD, it will not detect these changes. Therefore, manual introspection is necessary to synchronize the system with the updated table structure, similar to restarting a server.</p>
+<h2 id="open-query">Open Query</h2>
+<p><strong>Open Query</strong> function allows users to interact with the database by retrieving, adding, updating, or deleting data.</p>
+<p>To open the SQL query editor, click on the <strong>Open Query</strong> button located at the top right of the Database module. This opens a text area where you can write and execute SQL queries directly against your database.</p>
 <p><a class="glightbox" href="../assets/img/sql_query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="&quot;SQL Query&quot;" src="../assets/img/sql_query.png" width="800" /></a></p>
-<h3 id="common-sql-operations-in-sad">Common SQL Operations in SØAD</h3>
+<h3 id="common-sql-operations-supported">Common SQL Operations Supported</h3>
 <p><strong>1. Retrieving Data</strong> - Use the <code>SELECT</code> statement to fetch record form the table.
 <div class="language-SQL highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span>
 </span></code></pre></div></p>
