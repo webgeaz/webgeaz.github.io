@@ -1850,6 +1850,8 @@
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </span></code></pre></div></p>
 <p>In this example, submit button will invoke <code>register(ctx)</code> method in <code>Home</code> class.</p>
+<p>In SØAD, <strong>all methods defined inside a Transaction class are treated as actions</strong>, which can be invoked directly through corresponding URLs.</p>
+<p>Each action method must include the <code>ctx</code> parameter. The framework automatically calls the specified method and injects the current <a href="api.html#available-methods-and-properties">WebContext</a> object, allowing your transaction to handle requests with full access to parameters, session, and others.</p>
 <h3 id="transaction-folder-structure">Transaction Folder Structure</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>web/
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  home.py
@@ -1904,6 +1906,7 @@
 <li>Transaction URL: <code>/t/web/welcome</code></li>
 </ul>
 <p>This context path is useful when constructing links or redirecting within views and templates to ensure consistency across environments.</p>
+<hr />
 <h2 id="view">View</h2>
 <h3 id="routing-to-views">Routing to Views</h3>
 <p>Each transaction ends by setting <code>ctx.go_to</code> to a function that define the response. The most common output is an HTML page rendered using the <code>render.as_view()</code> function:</p>
@@ -1953,6 +1956,7 @@
 <li><code>get</code></li>
 </ul>
 <p>You can find more details about these helpers in the Utilities chapter of this documentation.</p>
+<hr />
 <h2 id="model">Model</h2>
 <p>In SØAD Framework, Model classes are automatically generated from the database tables using ActiveJDBC. Once generated, these classes are automatically instrumented.</p>
 <p>Instrumentation in ActiveJDBC refers to the process of enhancing the compiled Java Model classes so they are ActiveJDBC-aware. This means they gain access to methods such as <code>saveIt()</code>, <code>findAll()</code>, <code>first()</code>, <code>where()</code>, and many others provided by the ActiveJDBC framework.</p>
