@@ -985,6 +985,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1594,6 +1603,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1618,7 +1636,7 @@
 <p><a class="glightbox" href="../assets/img/syslog_ss.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Server Log UI" src="../assets/img/syslog_ss.png" /></a></p>
 <h3 id="features">Features</h3>
 <ul>
-<li><strong>Live Log View</strong>: Displays recent logs, including application events, transaction traces, errors, and <code>print()</code> output from transaction code.</li>
+<li><strong>Live Log View</strong>: Displays recent logs, including application events, transaction traces, errors, and log output from transaction code.</li>
 <li><strong>Line Limit</strong>: You can specify how many of the latest lines you want to view. By default, the system shows the last <strong>800 lines</strong>.</li>
 <li><strong>Scroll Support</strong>: You can scroll through logs to explore older entries in the current range.</li>
 <li><strong>Download Full Log</strong>: A <strong>Download</strong> button is available to export the entire log for offline analysis, team sharing, or archival purposes.</li>
@@ -1626,11 +1644,27 @@
 <hr />
 <h2 id="use-cases">Use Cases</h2>
 <ul>
-<li><strong>Debugging</strong>: Trace <code>print()</code> output or inspect transaction execution.</li>
+<li><strong>Debugging</strong>: Trace log output or inspect transaction execution.</li>
 <li><strong>Monitoring</strong>: Track server events, startup information, and servlet activity.</li>
 <li><strong>Error Analysis</strong>: Quickly locate stack traces or failure messages.</li>
 </ul>
 <p>The Server Log Viewer is a valuable tool during development and testing and is especially helpful for diagnosing issues without needing to access the file system directly.</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>When you run a transaction, any <code>print()</code> statements or logging calls will appear in the Server Log Viewer. This allows you to see real-time output from your transaction code, making it easier to debug and understand application behavior.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sufia.util</span><span class="w"> </span><span class="kn">import</span> <span class="n">Log</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyTransaction</span><span class="p">:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">):</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="n">Log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;Starting my transaction&quot;</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="c1"># Your transaction logic here</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This will appear in the server log&quot;</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="n">Log</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;Transaction completed successfully&quot;</span><span class="p">)</span> <span class="c1">#same as info()</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>print()</code> statements in your transaction will appear in the server log. However, for more structured and consistent logging, it is recommended to use the <code>Log.info()</code>, <code>Log.debug()</code>, or <code>Log.print()</code> methods.</p>
+<p>If SØAD is running in a containerized environment, the <code>print()</code> output cannot be captured by the IDE. Therefore, you should use the <code>Log.info()</code>, <code>Log.debug()</code>, or <code>Log.print()</code> methods, as these work well inside containers.</p>
+</div>
 
 
 
