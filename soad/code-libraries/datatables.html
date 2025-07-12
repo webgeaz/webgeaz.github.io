@@ -1624,7 +1624,7 @@
 
   <h1>Datatables</h1>
 
-<p>This code example shows how to build interactive tables using DataTables's server-side mode, with full support for paging, sorting, and column-specific search.</p>
+<p>This code example shows how to build interactive tables using DataTables's server-side mode, with full support for pagination, sorting, and searching.</p>
 <hr />
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Transaction</label><label for="__tabbed_1_2">View</label><label for="__tabbed_1_3">SQL</label><label for="__tabbed_1_4">Output</label></div>
 <div class="tabbed-content">
@@ -1691,7 +1691,7 @@
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>        <span class="n">start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">getParameter</span><span class="p">(</span><span class="s2">&quot;start&quot;</span><span class="p">))</span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>        <span class="n">length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">getParameter</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">))</span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>        <span class="c1"># Build WHERE clause for global or column-specific search</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>        <span class="c1"># Build WHERE clause for global search</span>
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>        <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;1=1&quot;</span>
 </span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>        <span class="n">params</span> <span class="o">=</span> <span class="p">[]</span>
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>
