@@ -1612,6 +1612,50 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-usage/data-source.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Source & Resource Bundle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-usage/internationalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi-language Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1763,15 +1807,15 @@
 <p>SØAD CLI is a client for SØAD that allows you to manage your SØAD projects easily. It provides commands to pull and push transactions from the SØAD Server. By using the CLI, you get the ability to edit your transactions locally using your favorite editor and then push the changes back to the SØAD Server. you can pull single transaction or all transactions from the Server but you can push only single transaction to the Server.</p>
 <p>By using this CLI, you can leverage the full power of your local editor, such as Visual Studio Code, along with its extensions and features. This allows you to edit transactions with advanced tools like syntax highlighting, linting, and version control integration, ensuring a seamless and efficient development experience.</p>
 <h2 id="installation">Installation</h2>
-<p>To install the SØAD CLI, you can download the latest release from the <a href="https://github.com/your-repo/søad-cli/releases">SØAD CLI GitHub repository</a>. After downloading, extract the contents and add the <code>sufia</code> executable to your system's PATH.</p>
+<p>To install the SØAD CLI, you can download the latest release from the <a href="https://github.com/your-repo/søad-cli/releases">SØAD CLI GitHub repository</a>. After downloading, extract the contents and add the <code>soad</code> executable to your system's PATH.</p>
 <h2 id="usage">Usage</h2>
 <p>To use the SØAD CLI, open your terminal and run the following command:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sufia<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>soad<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </span></code></pre></div>
 <h2 id="commands">Commands</h2>
 <h3 id="pull"><code>pull</code></h3>
 <p>Pulls transactions from the SØAD Server to your local machine.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sufia<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>soad<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </span></code></pre></div>
 <h4 id="options">Options</h4>
 <ul>
@@ -1781,14 +1825,14 @@
 </ul>
 <h3 id="push"><code>push</code></h3>
 <p>Pushes a transaction from your local machine to the SØAD Server.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sufia<span class="w"> </span>push<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>soad<span class="w"> </span>push<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </span></code></pre></div>
 <h4 id="options_1">Options</h4>
 <ul>
 <li><code>--group &lt;group_name&gt;</code>: Specify the group of the transaction.</li>
 <li><code>--code &lt;transaction_code&gt;</code>: Specify the code of the transaction to push.</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sufia<span class="w"> </span><span class="nb">help</span><span class="w"> </span><span class="o">[</span>command<span class="o">]</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>soad<span class="w"> </span><span class="nb">help</span><span class="w"> </span><span class="o">[</span>command<span class="o">]</span>
 </span></code></pre></div>
 <h4 id="options_2">Options</h4>
 <ul>
@@ -1797,16 +1841,16 @@
 <h3 id="examples">Examples</h3>
 <ul>
 <li>Pull all transactions:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sufia<span class="w"> </span>pull<span class="w"> </span>--all
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--all
 </span></code></pre></div></li>
 <li>Pull transactions from a specific group:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sufia<span class="w"> </span>pull<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;
 </span></code></pre></div></li>
 <li>Pull a specific transaction:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sufia<span class="w"> </span>pull<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
 </span></code></pre></div></li>
 <li>Push a transaction to the server:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sufia<span class="w"> </span>push<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>soad<span class="w"> </span>push<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
 </span></code></pre></div></li>
 </ul>
 

@@ -836,6 +836,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#8-i18n" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. i18n
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1639,6 +1648,50 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-usage/data-source.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Source & Resource Bundle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-usage/internationalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi-language Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1787,6 +1840,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#8-i18n" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. i18n
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1925,6 +1987,20 @@
 <p>Retrieve values from <code>ctx.output</code> by keys containing special characters or spaces.</p>
 <div class="language-handlebars highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="x">&lt;p&gt;</span><span class="cp">{{</span><span class="nv">get</span> <span class="s2">&quot;complex key-name&quot;</span><span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
 </span></code></pre></div>
+<h3 id="8-i18n">8. <code>i18n</code></h3>
+<p>Internationalization helper to fetch localized strings. This helper retrieves strings from the i18n resource files (<code>messages.properties</code>) based on the current locale or <code>__locale__</code> value from session attributes. To use this helper, you need to have a <code>messages.properties</code> file in your resources directory with the appropriate key-value pairs.</p>
+<div class="language-handlebars highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="cp">{{</span><span class="nv">i18n</span> <span class="s2">&quot;welcome.message&quot;</span><span class="cp">}}</span>
+</span></code></pre></div>
+<p>Properties files example:</p>
+<div class="language-properties highlight"><span class="filename">messages.properties</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="na">welcome.message</span><span class="o">=</span><span class="s">Welcome to SØAD</span>
+</span></code></pre></div>
+<div class="language-properties highlight"><span class="filename">messages_ms.properties</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="na">welcome.message</span><span class="o">=</span><span class="s">Selamat datang ke SØAD</span>
+</span></code></pre></div>
+<p>To set the locale, you can use the <code>__locale__</code> session attribute:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">request</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">getRequest</span><span class="p">()</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">request</span><span class="o">.</span><span class="n">getSession</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s2">&quot;__locale__&quot;</span><span class="p">,</span> <span class="s2">&quot;ms&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Refer to the <a href="../advanced-usage/internationalization.html">Multi-language Support</a> section for more details on how to set up and use i18n in SØAD.</p>
 
 
 

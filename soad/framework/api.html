@@ -666,6 +666,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#how-to-access-ctx-in-a-servlet-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Access ctx in a Servlet Filter
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1635,6 +1644,50 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-usage/data-source.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Source & Resource Bundle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-usage/internationalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi-language Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1698,6 +1751,15 @@
   <a href="#integration-with-view" class="md-nav__link">
     <span class="md-ellipsis">
       Integration with View
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-access-ctx-in-a-servlet-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Access ctx in a Servlet Filter
     </span>
   </a>
   
@@ -1889,6 +1951,11 @@
 <p>In your HTML:</p>
 <div class="language-handlebars highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">&lt;h1&gt;Welcome, </span><span class="cp">{{</span><span class="nv">user_name</span><span class="cp">}}</span><span class="x">&lt;/h1&gt;</span>
 </span></code></pre></div>
+<h3 id="how-to-access-ctx-in-a-servlet-filter">How to Access ctx in a Servlet Filter</h3>
+<p>If you need to access the ctx object from within a component like a Servlet Filter, you can retrieve it directly from the request attribute.</p>
+<p>Use the following method to get the ctx object:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">ctx</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s2">&quot;soadContext&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <hr />
 <h2 id="render-response-output-utilities"><code>render</code> — Response Output Utilities</h2>
 <p>The <code>render</code> module defines how a transaction responds to a request. These utilities help return HTML, JSON, string, files, or binary content from the server. Each render method should be assigned to <code>ctx.go_to</code>.</p>
@@ -1896,7 +1963,7 @@
 <p>Renders a Handlebars HTML template as the response. This is the most common way to return a page to the browser in SØAD.</p>
 <p>This function uses the view name to locate the appropriate <code>.html</code> file within the transaction's corresponding <code>_group</code> folder. If not specified, it defaults to the current transaction's group and code.</p>
 <p><strong>Function Signature:</strong>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">view</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">combine_map</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">view</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">combine_map</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </span></code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -1909,38 +1976,38 @@
 <li><code>combine_map</code> (Map, optional): Extra data to merge into the Handlebars context.</li>
 </ul>
 <p><strong>Basic usage:</strong></p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Welcome&quot;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;home&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Welcome&quot;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;home&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>This will render <code>_home/home.html</code> and pass <code>title</code> as a Handlebars variable.</p>
 <p><strong>Render from another transaction group:</strong></p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;register&quot;</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s2">&quot;auth&quot;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s2">&quot;signup&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;register&quot;</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s2">&quot;auth&quot;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s2">&quot;signup&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>This will look for <code>_auth/signup/register.html</code>.</p>
 <h3 id="2-renderas_json">2. <code>render.as_json()</code></h3>
 <p>Returns a JSON-formatted response to the client. Useful for AJAX or API-style interactions.</p>
 <p><strong>Function Signature:</strong>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_json</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_json</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </span></code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>obj</code> (optional): a dictionary or serializable object to return as JSON. If not provided, <code>ctx.output</code> is used.</li>
 </ul>
 <p><strong>Basic usage:</strong>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Operation successful&quot;</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_json</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Operation successful&quot;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_json</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
 </span></code></pre></div></p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span> <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Borhan&quot;</span><span class="p">}}</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_json</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span> <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Borhan&quot;</span><span class="p">}}</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_json</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 </span></code></pre></div>
 <p><strong>Example with ActiveJDBC model:</strong></p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">users</span> <span class="o">=</span> <span class="n">Tb_user</span><span class="o">.</span><span class="n">findAll</span><span class="p">()</span><span class="o">.</span><span class="n">toMaps</span><span class="p">()</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_json</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">users</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">users</span> <span class="o">=</span> <span class="n">Tb_user</span><span class="o">.</span><span class="n">findAll</span><span class="p">()</span><span class="o">.</span><span class="n">toMaps</span><span class="p">()</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_json</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">users</span><span class="p">)</span>
 </span></code></pre></div>
 <h3 id="3-renderas_html">3. <code>render.as_html()</code></h3>
 <p>Returns a raw HTML file directly from the filesystem, bypassing the Handlebars rendering engine. Ideal for serving pre-rendered static content.</p>
 <p><strong>Function Signature:</strong>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_html</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_html</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </span></code></pre></div>
 <strong>Parameters:</strong></p>
 <ul>
@@ -1948,29 +2015,29 @@
 <li><code>loc</code> (str, optional): Alternative path location override.</li>
 </ul>
 <p><strong>Basic usage:</strong>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_html</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;dashboard&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_html</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;dashboard&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <p><strong>Render from a custom folder:</strong></p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_html</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s2">&quot;faq&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;/web/static/pages&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_html</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s2">&quot;faq&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;/web/static/pages&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>This will look for <code>/web/static/pages/&lt;app_name&gt;/&lt;group&gt;/faq.html</code></p>
 <h3 id="4-renderas_string">4. <code>render.as_string()</code></h3>
 <p>Returns raw string content (HTML or plain text) directly to the browser. Bypasses any view engine or file lookup.</p>
 <p><strong>Use case:</strong> Error messages, short inline content, quick HTML feedback.</p>
 <p><strong>Function Signature:</strong>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_string</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_string</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 </span></code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>text</code>: The string content to return. This can be HTML or plain text.</li>
 </ul>
 <p><strong>Example:</strong>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_string</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;Access Denied&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_string</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;Access Denied&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="5-renderas_file">5. <code>render.as_file()</code></h3>
 <p>Sends a file to the client for download or inline viewing.</p>
 <p><strong>Function Signature:</strong>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_file</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_file</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -1980,16 +2047,16 @@
 <li><code>attachment</code> (bool): if <code>True</code>, forces download; if <code>False</code>, displays inline. Default is <code>True</code>.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_file</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">reportFile</span><span class="p">,</span> <span class="s2">&quot;application/pdf&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;report.pdf&quot;</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_file</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">reportFile</span><span class="p">,</span> <span class="s2">&quot;application/pdf&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;report.pdf&quot;</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></code></pre></div>
 <p><strong>Display an image:</strong></p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_file</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;/path/to/image.png&quot;</span><span class="p">,</span> <span class="s2">&quot;image/png&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_file</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;/path/to/image.png&quot;</span><span class="p">,</span> <span class="s2">&quot;image/png&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h3 id="6-renderas_blob">6. <code>render.as_blob()</code></h3>
 <p>Returns raw binary content such as images, audio, or PDF streams.</p>
 <p><strong>Use case:</strong> Useful when file content is stored in memory (e.g., in a database blob).</p>
 <p><strong>Function Signature:</strong>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_blob</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_blob</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -1999,14 +2066,14 @@
 <li><code>attachment</code> (bool): if <code>True</code>, forces download; if <code>False</code>, displays inline. Default is <code>True</code>.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">attachment</span> <span class="o">=</span> <span class="n">Attachment</span><span class="o">.</span><span class="n">findById</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">file_content</span> <span class="o">=</span> <span class="n">attachment</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">)</span>  <span class="c1"># Assuming content is stored as blob</span>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_blob</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">file_content</span><span class="p">,</span> <span class="s2">&quot;application/pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;preview.pdf&quot;</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">attachment</span> <span class="o">=</span> <span class="n">Attachment</span><span class="o">.</span><span class="n">findById</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">file_content</span> <span class="o">=</span> <span class="n">attachment</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">)</span>  <span class="c1"># Assuming content is stored as blob</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_blob</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">file_content</span><span class="p">,</span> <span class="s2">&quot;application/pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;preview.pdf&quot;</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </span></code></pre></div>
 <h3 id="7-renderas_pdf">7. <code>render.as_pdf()</code></h3>
 <p>Renders a Handlebars-based HTML template into a PDF document. Can be served inline or as a download. The PDF generation is handled by the Flying Saucer library, which converts well-formed XML (or XHTML) to PDF format.</p>
 <p><strong>Function Signature:</strong>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_pdf</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">view</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">combine_map</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">render</span><span class="o">.</span><span class="n">as_pdf</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">view</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">combine_map</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">attachment</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </span></code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -2017,32 +2084,32 @@
 <li><code>attachment</code>: if <code>True</code>, triggers download</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="language-python highlight"><span class="filename">report.py</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;attendance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Attendance</span><span class="o">.</span><span class="n">findAll</span><span class="p">()</span>
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;2023-10-01&quot;</span>
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_pdf</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;report&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">report.py</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;attendance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Attendance</span><span class="o">.</span><span class="n">findAll</span><span class="p">()</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="n">ctx</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;2023-10-01&quot;</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_pdf</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;report&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<div class="language-html highlight"><span class="filename">report.html</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>PDF Report<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Attendance Report<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Date: {{date}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
-</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Status<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span><span id="__span-23-13"><a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>        {{#each attendance}}
-</span><span id="__span-23-14"><a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span><span id="__span-23-15"><a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{name}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span><span id="__span-23-16"><a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{status}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span><span id="__span-23-17"><a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a>        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span><span id="__span-23-18"><a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a>        {{/each}}
-</span><span id="__span-23-19"><a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a>    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</span><span id="__span-23-20"><a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>End of Report<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span><span id="__span-23-21"><a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span><span id="__span-23-22"><a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="language-html highlight"><span class="filename">report.html</span><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>PDF Report<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Attendance Report<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Date: {{date}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Status<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>        {{#each attendance}}
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{name}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-24-16"><a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{status}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-24-17"><a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a>        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-24-18"><a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a>        {{/each}}
+</span><span id="__span-24-19"><a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a>    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span><span id="__span-24-20"><a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>End of Report<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-24-21"><a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-24-22"><a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></code></pre></div>
 
 

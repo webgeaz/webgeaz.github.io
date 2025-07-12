@@ -590,9 +590,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#url-mapping" class="md-nav__link">
+  <a href="#routing" class="md-nav__link">
     <span class="md-ellipsis">
-      URL Mapping
+      Routing
     </span>
   </a>
   
@@ -621,15 +621,6 @@
   
     <nav class="md-nav" aria-label="View">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#routing-to-views" class="md-nav__link">
-    <span class="md-ellipsis">
-      Routing to Views
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#view-files" class="md-nav__link">
@@ -1628,6 +1619,50 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-usage/data-source.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Source & Resource Bundle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-usage/internationalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi-language Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1681,9 +1716,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#url-mapping" class="md-nav__link">
+  <a href="#routing" class="md-nav__link">
     <span class="md-ellipsis">
-      URL Mapping
+      Routing
     </span>
   </a>
   
@@ -1712,15 +1747,6 @@
   
     <nav class="md-nav" aria-label="View">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#routing-to-views" class="md-nav__link">
-    <span class="md-ellipsis">
-      Routing to Views
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#view-files" class="md-nav__link">
@@ -1857,7 +1883,7 @@
 </span></code></pre></div></p>
 <p>In this example, submit button will invoke <code>register(ctx)</code> method in <code>Home</code> class.</p>
 <p>In SØAD, <strong>all methods defined inside a Transaction class are treated as actions</strong>, which can be invoked directly through corresponding URLs.</p>
-<p>Each action method must include the <code>ctx</code> parameter. The framework automatically calls the specified method and injects the current <a href="api.html#available-methods-and-properties">WebContext</a> object, allowing your transaction to handle requests with full access to parameters, session, and others.</p>
+<p>Each action method must include the <code>ctx</code> parameter. The framework automatically calls the specified method and injects the current <a href="api.html#available-methods-and-properties">WebContext</a> object, allowing your transaction to handle requests with full access to parameters, session, and others (e.g. HTTP Request &amp; Response).</p>
 <h3 id="transaction-folder-structure">Transaction Folder Structure</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>web/
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  home.py
@@ -1881,8 +1907,8 @@
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;add&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>This approach makes it easy to organize multiple page variations under the same transaction and supports clean separation of logic and presentation.</p>
-<h3 id="url-mapping">URL Mapping</h3>
-<p>SØAD routes every request through a clean, convention-based URL structure:</p>
+<h3 id="routing">Routing</h3>
+<p>SØAD routes every request through a clean, convention-based URL structure to the Transaction:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/t/{group}/{code}/{action}
 </span></code></pre></div>
 <ul>
@@ -1891,7 +1917,7 @@
 <li><code>{code}</code> — transaction file/class</li>
 <li><code>{action}</code> — method inside the class; defaults to <code>view</code></li>
 </ul>
-<p><strong>Example:</strong></p>
+<p><strong>Example URL Mapping:</strong></p>
 <ul>
 <li><code>/t/base/login</code> → calls <code>Login.view()</code></li>
 <li><code>/t/web/home/register</code> → calls <code>Home.register()</code></li>
@@ -1914,11 +1940,10 @@
 <p>This context path is useful when constructing links or redirecting within views and templates to ensure consistency across environments.</p>
 <hr />
 <h2 id="view">View</h2>
-<h3 id="routing-to-views">Routing to Views</h3>
 <p>Each transaction ends by setting <code>ctx.go_to</code> to a function that define the response. The most common output is an HTML page rendered using the <code>render.as_view()</code> function:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">ctx</span><span class="o">.</span><span class="n">go_to</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;home&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p>This will render the home.html view inside the <code>_home</code> folder.</p>
+<p>This will render the <code>home.html</code> view inside the <code>_home</code> folder.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code>ctx.go_to</code> parameter can accept either a string or a function. When a string is provided, it is treated as a URL path, and the framework redirects the user to that URL using <code>response.sendRedirect()</code>. If a function is provided, it is executed, and its output is returned to the user. The function is responsible for processing the response, including setting the content type, status code, and writing the response body to the <code>HttpServletResponse</code> object.</p>
