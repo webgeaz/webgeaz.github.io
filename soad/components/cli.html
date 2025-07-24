@@ -1043,6 +1043,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    <span class="md-ellipsis">
+      login
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pull" class="md-nav__link">
     <span class="md-ellipsis">
       pull
@@ -1053,7 +1077,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
+  <a href="#options_1" class="md-nav__link">
     <span class="md-ellipsis">
       Options
     </span>
@@ -1077,7 +1101,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#options_1" class="md-nav__link">
+  <a href="#options_2" class="md-nav__link">
     <span class="md-ellipsis">
       Options
     </span>
@@ -1086,7 +1110,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#options_2" class="md-nav__link">
+  <a href="#options_3" class="md-nav__link">
     <span class="md-ellipsis">
       Options
     </span>
@@ -1641,6 +1665,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../advanced-usage/external-connection.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connect to External Database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../advanced-usage/internationalization.html" class="md-nav__link">
         
   
@@ -1716,6 +1762,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    <span class="md-ellipsis">
+      login
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pull" class="md-nav__link">
     <span class="md-ellipsis">
       pull
@@ -1726,7 +1796,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
+  <a href="#options_1" class="md-nav__link">
     <span class="md-ellipsis">
       Options
     </span>
@@ -1750,7 +1820,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#options_1" class="md-nav__link">
+  <a href="#options_2" class="md-nav__link">
     <span class="md-ellipsis">
       Options
     </span>
@@ -1759,7 +1829,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#options_2" class="md-nav__link">
+  <a href="#options_3" class="md-nav__link">
     <span class="md-ellipsis">
       Options
     </span>
@@ -1804,55 +1874,87 @@
 
   <h1>SØAD CLI</h1>
 
-<p>SØAD CLI is a client for SØAD that allows you to manage your SØAD projects easily. It provides commands to pull and push transactions from the SØAD Server. By using the CLI, you get the ability to edit your transactions locally using your favorite editor and then push the changes back to the SØAD Server. you can pull single transaction or all transactions from the Server but you can push only single transaction to the Server.</p>
+<p>SØAD CLI is a client for SØAD that allows you to manage your SØAD projects easily. It provides commands to pull and push transactions from the SØAD Server. By using the CLI, you get the ability to edit your transactions locally using your favorite editor and then push the changes back to the SØAD Server. You can pull single transaction or all transactions from the Server but you can push only single transaction to the Server.</p>
 <p>By using this CLI, you can leverage the full power of your local editor, such as Visual Studio Code, along with its extensions and features. This allows you to edit transactions with advanced tools like syntax highlighting, linting, and version control integration, ensuring a seamless and efficient development experience.</p>
 <h2 id="installation">Installation</h2>
-<p>To install the SØAD CLI, you can download the latest release from the <a href="https://github.com/your-repo/søad-cli/releases">SØAD CLI GitHub repository</a>. After downloading, extract the contents and add the <code>soad</code> executable to your system's PATH.</p>
+<p>To install the SØAD CLI, you can download the latest release from the <a href="https://github.com/webgeaz/soadcli/releases">SØAD CLI GitHub repository</a>. After downloading, extract the contents and add the <code>soad</code> executable to your system's PATH.</p>
 <h2 id="usage">Usage</h2>
 <p>To use the SØAD CLI, open your terminal and run the following command:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>soad<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>~ ❯ soad --help
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>A CLI for SØAD Online IDE
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Usage:
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  soad [command]
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Available Commands:
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  clean       Delete all files in the output directory
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  compare     Compare local and server version using Meld
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  completion  Generate the autocompletion script for the specified shell
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  config      Manage CLI configuration
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  create      Create a new transaction remotely and pull it locally
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  delete      Delete a transaction from the server and local copy
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  help        Help about any command
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  list        List available transactions
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  login       Authenticate and save token
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  pull        Pull one or all transactions from the SØAD server
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  push        Push a transaction to the SØAD server
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>Flags:
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>  -h, --help            help for soad
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>      --server string   Base URL of SØAD Server (default &quot;http://localhost:8080&quot;)
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>Use &quot;soad [command] --help&quot; for more information about a command.
+</span></code></pre></div>
 <h2 id="commands">Commands</h2>
-<h3 id="pull"><code>pull</code></h3>
-<p>Pulls transactions from the SØAD Server to your local machine.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>soad<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+<h3 id="login"><code>login</code></h3>
+<p>Login to SØAD Server. You need to login first before you can run any command.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>soad<span class="w"> </span>login<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </span></code></pre></div>
 <h4 id="options">Options</h4>
 <ul>
-<li><code>--all</code>: Pull all transactions from the server.</li>
-<li><code>--group &lt;group_name&gt;</code>: Pull transactions from a specific group.</li>
-<li><code>--code &lt;transaction_code&gt;</code>: Pull a specific transaction by its code.</li>
+<li><code>--server</code>: Set the server's URL (e.g. https://playground.sufia.online).</li>
 </ul>
-<h3 id="push"><code>push</code></h3>
-<p>Pushes a transaction from your local machine to the SØAD Server.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>soad<span class="w"> </span>push<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+<h3 id="pull"><code>pull</code></h3>
+<p>Pulls transactions from the SØAD Server to your local machine.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>soad<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </span></code></pre></div>
 <h4 id="options_1">Options</h4>
 <ul>
-<li><code>--group &lt;group_name&gt;</code>: Specify the group of the transaction.</li>
-<li><code>--code &lt;transaction_code&gt;</code>: Specify the code of the transaction to push.</li>
+<li><code>--all</code>: Pull all transactions from the server.</li>
+<li><code>--group &lt;group_name&gt; --code &lt;transaction_code&gt;</code>: Pull a specific transaction by its group and code.</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>soad<span class="w"> </span><span class="nb">help</span><span class="w"> </span><span class="o">[</span>command<span class="o">]</span>
+<h3 id="push"><code>push</code></h3>
+<p>Pushes a transaction from your local machine to the SØAD Server.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>soad<span class="w"> </span>push<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </span></code></pre></div>
 <h4 id="options_2">Options</h4>
+<ul>
+<li><code>--group &lt;group_name&gt; --code &lt;transaction_code&gt;</code>: Specify the group and code of the transaction.</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>soad<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span>--help
+</span></code></pre></div>
+<h4 id="options_3">Options</h4>
 <ul>
 <li><code>command</code>: The specific command you want help with (e.g., <code>pull</code>, <code>push</code>).</li>
 </ul>
 <h3 id="examples">Examples</h3>
 <ul>
 <li>Pull all transactions:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--all
-</span></code></pre></div></li>
-<li>Pull transactions from a specific group:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--all
 </span></code></pre></div></li>
 <li>Pull a specific transaction:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
 </span></code></pre></div></li>
 <li>Push a transaction to the server:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>soad<span class="w"> </span>push<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>soad<span class="w"> </span>push<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
 </span></code></pre></div></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Occasionally, pushing a transaction might fail due to security restrictions such as those enforced by a Web Application Firewall (WAF). If this happens, try using the <code>--zip</code> option when pushing. This will compress the transaction into a zip file before uploading, which can help bypass WAF limitations. Using zip option might be faster sometimes, especially for larger transactions.</p>
+</div>
 
 
 
