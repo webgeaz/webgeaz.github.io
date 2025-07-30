@@ -1024,6 +1024,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       Usage
@@ -1109,8 +1118,56 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compare" class="md-nav__link">
+    <span class="md-ellipsis">
+      compare
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="compare">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#options_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    <span class="md-ellipsis">
+      help
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="help">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_4" class="md-nav__link">
     <span class="md-ellipsis">
       Options
     </span>
@@ -1134,6 +1191,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment &amp; Releases
+    </span>
+  </a>
   
 </li>
       
@@ -1743,6 +1809,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       Usage
@@ -1828,8 +1903,56 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compare" class="md-nav__link">
+    <span class="md-ellipsis">
+      compare
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="compare">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#options_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    <span class="md-ellipsis">
+      help
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="help">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_4" class="md-nav__link">
     <span class="md-ellipsis">
       Options
     </span>
@@ -1856,6 +1979,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#deployment-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment &amp; Releases
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1878,6 +2010,12 @@
 <p>By using this CLI, you can leverage the full power of your local editor, such as Visual Studio Code, along with its extensions and features. This allows you to edit transactions with advanced tools like syntax highlighting, linting, and version control integration, ensuring a seamless and efficient development experience.</p>
 <h2 id="installation">Installation</h2>
 <p>To install the SØAD CLI, you can download the latest release from the <a href="https://github.com/webgeaz/soadcli/releases">SØAD CLI GitHub repository</a>. After downloading, extract the contents and add the <code>soad</code> executable to your system's PATH.</p>
+<h2 id="configuration">Configuration</h2>
+<p>The CLI stores credentials and settings in <code>.config.json</code> in the current directory. It supports:</p>
+<ul>
+<li>Encrypted token storage (with passphrase)</li>
+<li>Multiple project folders with isolated config</li>
+</ul>
 <h2 id="usage">Usage</h2>
 <p>To use the SØAD CLI, open your terminal and run the following command:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>soad<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
@@ -1889,23 +2027,30 @@
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  soad [command]
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Available Commands:
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  clean       Delete all files in the output directory
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  compare     Compare local and server version using Meld
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  completion  Generate the autocompletion script for the specified shell
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  config      Manage CLI configuration
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  create      Create a new transaction remotely and pull it locally
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  delete      Delete a transaction from the server and local copy
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  help        Help about any command
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  list        List available transactions
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  login       Authenticate and save token
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  pull        Pull one or all transactions from the SØAD server
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  push        Push a transaction to the SØAD server
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>Flags:
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>  -h, --help            help for soad
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>      --server string   Base URL of SØAD Server (default &quot;http://localhost:8080&quot;)
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>Use &quot;soad [command] --help&quot; for more information about a command.
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  changed     List transactions that have local changes
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  clean       Delete all files in the src directory
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  compare     Compare local and server version using Meld
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  completion  Generate the autocompletion script for the specified shell
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  config      Manage CLI configuration
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  create      Create a new transaction remotely and pull it locally
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  delete      Delete a transaction from the server and local copy
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  deploy      Copy local source code to deployment folder using original SØAD structure
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  help        Help about any command
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  list        List available transactions
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  login       Authenticate and save token
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>  pull        Pull one or all transactions from the SØAD server
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>  push        Push a transaction to the SØAD server
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>  push-all    Push all locally changed transactions (safely)
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  push-remote Push selected transactions to another SØAD server with a specific version
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>  release     Create a new release snapshot on remote server
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>  rollback    Rollback server to a specific release version
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>Flags:
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>  -h, --help            help for soad
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>      --insecure        Allow insecure server connections when using SSL
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>      --server string   Base URL of SØAD Server (default &quot;http://localhost:8080&quot;)
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>Use &quot;soad [command] --help&quot; for more information about a command.
 </span></code></pre></div>
 <h2 id="commands">Commands</h2>
 <h3 id="login"><code>login</code></h3>
@@ -1914,7 +2059,7 @@
 </span></code></pre></div>
 <h4 id="options">Options</h4>
 <ul>
-<li><code>--server</code>: Set the server's URL (e.g. https://playground.sufia.online).</li>
+<li><code>--server</code>: Set the server's URL (e.g. https://playground.sufia.online). This option is required.</li>
 </ul>
 <h3 id="pull"><code>pull</code></h3>
 <p>Pulls transactions from the SØAD Server to your local machine.</p>
@@ -1933,23 +2078,61 @@
 <ul>
 <li><code>--group &lt;group_name&gt; --code &lt;transaction_code&gt;</code>: Specify the group and code of the transaction.</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>soad<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span>--help
+<h3 id="compare"><code>compare</code></h3>
+<p>Compare the local version of a transaction with the server version using Meld by default. You can change the comparison tool by setting the <code>diff_tool</code> parameter in the CLI configuration. If Meld or your preferred tool is not in your system PATH, specify its full path in the <code>diff_tool</code> setting.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>soad<span class="w"> </span>compare<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </span></code></pre></div>
 <h4 id="options_3">Options</h4>
+<ul>
+<li><code>--group &lt;group_name&gt; --code &lt;transaction_code&gt;</code>: Specify the group and code of the transaction to compare.</li>
+</ul>
+<h4 id="example">Example</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>soad<span class="w"> </span>compare<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># Set the diff tool to use for comparison (e.g., Meld)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>soad<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>diff_tool<span class="w"> </span><span class="s2">&quot;/path/to/meld&quot;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1"># Set the diff tool to use for comparison (e.g., Visual Studio Code)</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>soad<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>diff_tool<span class="w"> </span><span class="s2">&quot;code --diff&quot;</span>
+</span></code></pre></div>
+<h3 id="help"><code>help</code></h3>
+<p>Get help for a specific command.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>soad<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span>--help
+</span></code></pre></div>
+<h4 id="options_4">Options</h4>
 <ul>
 <li><code>command</code>: The specific command you want help with (e.g., <code>pull</code>, <code>push</code>).</li>
 </ul>
 <h3 id="examples">Examples</h3>
 <ul>
 <li>Pull all transactions:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--all
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--all
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>soad<span class="w"> </span>pull<span class="w"> </span>&lt;group_name&gt;/*
 </span></code></pre></div></li>
 <li>Pull a specific transaction:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>soad<span class="w"> </span>pull<span class="w"> </span>&lt;group_name&gt;/&lt;transaction_code&gt;
 </span></code></pre></div></li>
 <li>Push a transaction to the server:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>soad<span class="w"> </span>push<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>soad<span class="w"> </span>push<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>soad<span class="w"> </span>push<span class="w"> </span>&lt;group_name&gt;/&lt;transaction_code&gt;
 </span></code></pre></div></li>
+</ul>
+<h2 id="deployment-releases">Deployment &amp; Releases</h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Create a new release</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>soad<span class="w"> </span>release<span class="w"> </span>--version<span class="w"> </span><span class="s2">&quot;v1.0&quot;</span><span class="w"> </span>--notes<span class="w"> </span><span class="s2">&quot;Initial release&quot;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># Rollback to a specific release version or </span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c1"># latest release if no version is specified</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>soad<span class="w"> </span>rollback<span class="w"> </span>--version<span class="w"> </span><span class="s2">&quot;v1.0&quot;</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="c1"># List all releases</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>soad<span class="w"> </span>release<span class="w"> </span>--list<span class="w"> </span>
+</span></code></pre></div>
+<ul>
+<li>Releases are snapshots of your transactions, allowing you to manage versions and rollbacks effectively.</li>
+<li>Releases are saved server-side with metadata and checksums.</li>
+<li>Rollback restores all transactions to a named release version.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
