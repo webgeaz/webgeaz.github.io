@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="file-manager.html">
+        <link rel="prev" href="gmail-auth.html">
       
       
-        <link rel="next" href="../getting-started/installation.html">
+        <link rel="next" href="generate-pdf.html">
       
       
       <link rel="icon" href="../assets/img/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>SØAD CLI - SØAD Documentation</title>
+        <title>Send Email (API) - SØAD Documentation</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#sending-emails-via-external-apis" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SØAD CLI
+              Send Email (API)
             
           </span>
         </div>
@@ -254,13 +254,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="overview.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../components/overview.html" class="md-tabs__link">
           
   
   SØAD Online IDE
@@ -292,11 +290,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../code-libraries/listing.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="listing.html" class="md-tabs__link">
           
   
   Cookbook
@@ -745,28 +745,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -778,7 +773,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             SØAD Online IDE
@@ -792,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="overview.html" class="md-nav__link">
+      <a href="../components/overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -814,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="database.html" class="md-nav__link">
+      <a href="../components/database.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -875,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="transactions/create-transactions.html" class="md-nav__link">
+      <a href="../components/transactions/create-transactions.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -897,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="transactions/versioning.html" class="md-nav__link">
+      <a href="../components/transactions/versioning.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="server_log.html" class="md-nav__link">
+      <a href="../components/server_log.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -949,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="file-manager.html" class="md-nav__link">
+      <a href="../components/file-manager.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -968,29 +963,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    SØAD CLI
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="cli.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../components/cli.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1000,213 +976,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#login" class="md-nav__link">
-    <span class="md-ellipsis">
-      login
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="login">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pull" class="md-nav__link">
-    <span class="md-ellipsis">
-      pull
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="pull">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#push" class="md-nav__link">
-    <span class="md-ellipsis">
-      push
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="push">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compare" class="md-nav__link">
-    <span class="md-ellipsis">
-      compare
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="compare">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Options
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#help" class="md-nav__link">
-    <span class="md-ellipsis">
-      help
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="help">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-releases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deployment &amp; Releases
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1335,23 +1104,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1363,7 +1137,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Cookbook
@@ -1377,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-libraries/listing.html" class="md-nav__link">
+      <a href="listing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1399,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-libraries/crud.html" class="md-nav__link">
+      <a href="crud.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1421,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-libraries/upload-download.html" class="md-nav__link">
+      <a href="upload-download.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1443,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-libraries/datatables.html" class="md-nav__link">
+      <a href="datatables.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1465,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-libraries/ajax.html" class="md-nav__link">
+      <a href="ajax.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1487,7 +1261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-libraries/json-api.html" class="md-nav__link">
+      <a href="json-api.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1509,7 +1283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-libraries/htmx.html" class="md-nav__link">
+      <a href="htmx.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1531,7 +1305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-libraries/auth0-integration.html" class="md-nav__link">
+      <a href="auth0-integration.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1553,7 +1327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-libraries/gmail-auth.html" class="md-nav__link">
+      <a href="gmail-auth.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1572,10 +1346,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../code-libraries/mail-api.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="mail-api.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1585,6 +1368,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1597,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-libraries/generate-pdf.html" class="md-nav__link">
+      <a href="generate-pdf.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1619,7 +1403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-libraries/generate-excel.html" class="md-nav__link">
+      <a href="generate-excel.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1858,203 +1642,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#login" class="md-nav__link">
-    <span class="md-ellipsis">
-      login
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="login">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pull" class="md-nav__link">
-    <span class="md-ellipsis">
-      pull
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="pull">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#push" class="md-nav__link">
-    <span class="md-ellipsis">
-      push
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="push">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compare" class="md-nav__link">
-    <span class="md-ellipsis">
-      compare
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="compare">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Options
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#help" class="md-nav__link">
-    <span class="md-ellipsis">
-      help
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="help">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-releases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deployment &amp; Releases
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -2070,139 +1659,145 @@
 
 
 
-  <h1>SØAD CLI</h1>
-
-<p>SØAD CLI is a client for SØAD that allows you to manage your SØAD projects easily. It provides commands to pull and push transactions from the SØAD Server. By using the CLI, you get the ability to edit your transactions locally using your favorite editor and then push the changes back to the SØAD Server. You can pull single transaction or all transactions from the Server but you can push only single transaction to the Server.</p>
-<p>By using this CLI, you can leverage the full power of your local editor, such as Visual Studio Code, along with its extensions and features. This allows you to edit transactions with advanced tools like syntax highlighting, linting, and version control integration, ensuring a seamless and efficient development experience.</p>
-<h2 id="installation">Installation</h2>
-<p>To install the SØAD CLI, you can download the latest release from the <a href="https://github.com/webgeaz/soadcli/releases">SØAD CLI GitHub repository</a>. After downloading, extract the contents and add the <code>soad</code> executable to your system's PATH.</p>
-<h2 id="configuration">Configuration</h2>
-<p>The CLI stores credentials and settings in <code>.config.json</code> in the current directory. It supports:</p>
-<ul>
-<li>Encrypted token storage (with passphrase)</li>
-<li>Multiple project folders with isolated config</li>
-</ul>
-<h2 id="usage">Usage</h2>
-<p>To use the SØAD CLI, open your terminal and run the following command:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>soad<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>~ ❯ soad --help
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>A CLI for SØAD Online IDE
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Usage:
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  soad [command]
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Available Commands:
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  changed     List transactions that have local changes
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  clean       Delete all files in the src directory
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  compare     Compare local and server version using Meld
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  completion  Generate the autocompletion script for the specified shell
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  config      Manage CLI configuration
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  create      Create a new transaction remotely and pull it locally
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  delete      Delete a transaction from the server and local copy
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  deploy      Copy local source code to deployment folder using original SØAD structure
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  help        Help about any command
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  list        List available transactions
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  login       Authenticate and save token
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>  pull        Pull one or all transactions from the SØAD server
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>  push        Push a transaction to the SØAD server
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>  push-all    Push all locally changed transactions (safely)
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  push-remote Push selected transactions to another SØAD server with a specific version
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>  release     Create a new release snapshot on remote server
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>  rollback    Rollback server to a specific release version
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>Flags:
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>  -h, --help            help for soad
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>      --insecure        Allow insecure server connections when using SSL
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>      --server string   Base URL of SØAD Server (default &quot;http://localhost:8080&quot;)
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>Use &quot;soad [command] --help&quot; for more information about a command.
-</span></code></pre></div>
-<h2 id="commands">Commands</h2>
-<h3 id="login"><code>login</code></h3>
-<p>Login to SØAD Server. You need to login first before you can run any command.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>soad<span class="w"> </span>login<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</span></code></pre></div>
-<h4 id="options">Options</h4>
-<ul>
-<li><code>--server</code>: Set the server's URL (e.g. https://playground.sufia.online). This option is required.</li>
-</ul>
-<h3 id="pull"><code>pull</code></h3>
-<p>Pulls transactions from the SØAD Server to your local machine.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>soad<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</span></code></pre></div>
-<h4 id="options_1">Options</h4>
-<ul>
-<li><code>--all</code>: Pull all transactions from the server.</li>
-<li><code>--group &lt;group_name&gt; --code &lt;transaction_code&gt;</code>: Pull a specific transaction by its group and code.</li>
-</ul>
-<h3 id="push"><code>push</code></h3>
-<p>Pushes a transaction from your local machine to the SØAD Server.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>soad<span class="w"> </span>push<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</span></code></pre></div>
-<h4 id="options_2">Options</h4>
-<ul>
-<li><code>--group &lt;group_name&gt; --code &lt;transaction_code&gt;</code>: Specify the group and code of the transaction.</li>
-</ul>
-<h3 id="compare"><code>compare</code></h3>
-<p>Compare the local version of a transaction with the server version using Meld by default. You can change the comparison tool by setting the <code>diff_tool</code> parameter in the CLI configuration. If Meld or your preferred tool is not in your system PATH, specify its full path in the <code>diff_tool</code> setting.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>soad<span class="w"> </span>compare<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</span></code></pre></div>
-<h4 id="options_3">Options</h4>
-<ul>
-<li><code>--group &lt;group_name&gt; --code &lt;transaction_code&gt;</code>: Specify the group and code of the transaction to compare.</li>
-</ul>
-<h4 id="example">Example</h4>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>soad<span class="w"> </span>compare<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># Set the diff tool to use for comparison (e.g., Meld)</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>soad<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>diff_tool<span class="w"> </span><span class="s2">&quot;/path/to/meld&quot;</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1"># Set the diff tool to use for comparison (e.g., Visual Studio Code)</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>soad<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>diff_tool<span class="w"> </span><span class="s2">&quot;code --diff&quot;</span>
-</span></code></pre></div>
-<h3 id="help"><code>help</code></h3>
-<p>Get help for a specific command.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>soad<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span>--help
-</span></code></pre></div>
-<h4 id="options_4">Options</h4>
-<ul>
-<li><code>command</code>: The specific command you want help with (e.g., <code>pull</code>, <code>push</code>).</li>
-</ul>
-<h3 id="examples">Examples</h3>
-<ul>
-<li>Pull all transactions:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--all
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>soad<span class="w"> </span>pull<span class="w"> </span>&lt;group_name&gt;/*
-</span></code></pre></div></li>
-<li>Pull a specific transaction:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>soad<span class="w"> </span>pull<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>soad<span class="w"> </span>pull<span class="w"> </span>&lt;group_name&gt;/&lt;transaction_code&gt;
-</span></code></pre></div></li>
-<li>Push a transaction to the server:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>soad<span class="w"> </span>push<span class="w"> </span>--group<span class="w"> </span>&lt;group_name&gt;<span class="w"> </span>--code<span class="w"> </span>&lt;transaction_code&gt;
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>soad<span class="w"> </span>push<span class="w"> </span>&lt;group_name&gt;/&lt;transaction_code&gt;
-</span></code></pre></div></li>
-</ul>
-<h2 id="deployment-releases">Deployment &amp; Releases</h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Create a new release</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>soad<span class="w"> </span>release<span class="w"> </span>--version<span class="w"> </span><span class="s2">&quot;v1.0&quot;</span><span class="w"> </span>--notes<span class="w"> </span><span class="s2">&quot;Initial release&quot;</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># Rollback to a specific release version or </span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c1"># latest release if no version is specified</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>soad<span class="w"> </span>rollback<span class="w"> </span>--version<span class="w"> </span><span class="s2">&quot;v1.0&quot;</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="c1"># List all releases</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>soad<span class="w"> </span>release<span class="w"> </span>--list<span class="w"> </span>
-</span></code></pre></div>
-<ul>
-<li>Releases are snapshots of your transactions, allowing you to manage versions and rollbacks effectively.</li>
-<li>Releases are saved server-side with metadata and checksums.</li>
-<li>Rollback restores all transactions to a named release version.</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Occasionally, pushing a transaction might fail due to security restrictions such as those enforced by a Web Application Firewall (WAF). If this happens, try using the <code>--zip</code> option when pushing. This will compress the transaction into a zip file before uploading, which can help bypass WAF limitations. Using zip option might be faster sometimes, especially for larger transactions.</p>
+<h1 id="sending-emails-via-external-apis">Sending Emails via External APIs</h1>
+<p>In addition to the built-in <code>mailer</code> <a href="../framework/utils.html#1-email">utility</a>, SØAD can integrate with third-party email providers such as Mailgun, SendGrid, or Amazon SES. These services provide reliable delivery and advanced features beyond simple SMTP.</p>
+<p>The following recipe demonstrates how to send email through the SendGrid API using a Jetty HttpClient (implemented as a singleton). The same approach can be applied to other REST-based providers by adjusting the endpoint, authentication, and parameters.</p>
+<hr />
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Transaction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">mail_sender.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span>
+<span class="normal"><a href="#__codelineno-0-43">43</a></span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span>
+<span class="normal"><a href="#__codelineno-0-46">46</a></span>
+<span class="normal"><a href="#__codelineno-0-47">47</a></span>
+<span class="normal"><a href="#__codelineno-0-48">48</a></span>
+<span class="normal"><a href="#__codelineno-0-49">49</a></span>
+<span class="normal"><a href="#__codelineno-0-50">50</a></span>
+<span class="normal"><a href="#__codelineno-0-51">51</a></span>
+<span class="normal"><a href="#__codelineno-0-52">52</a></span>
+<span class="normal"><a href="#__codelineno-0-53">53</a></span>
+<span class="normal"><a href="#__codelineno-0-54">54</a></span>
+<span class="normal"><a href="#__codelineno-0-55">55</a></span>
+<span class="normal"><a href="#__codelineno-0-56">56</a></span>
+<span class="normal"><a href="#__codelineno-0-57">57</a></span>
+<span class="normal"><a href="#__codelineno-0-58">58</a></span>
+<span class="normal"><a href="#__codelineno-0-59">59</a></span>
+<span class="normal"><a href="#__codelineno-0-60">60</a></span>
+<span class="normal"><a href="#__codelineno-0-61">61</a></span>
+<span class="normal"><a href="#__codelineno-0-62">62</a></span>
+<span class="normal"><a href="#__codelineno-0-63">63</a></span>
+<span class="normal"><a href="#__codelineno-0-64">64</a></span>
+<span class="normal"><a href="#__codelineno-0-65">65</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">Log</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">org.eclipse.jetty.client</span><span class="w"> </span><span class="kn">import</span> <span class="n">HttpClient</span><span class="p">,</span> <span class="n">WWWAuthenticationProtocolHandler</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">org.eclipse.jetty.client</span><span class="w"> </span><span class="kn">import</span> <span class="n">StringRequestContent</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">java.util.concurrent.locks</span><span class="w"> </span><span class="kn">import</span> <span class="n">ReentrantLock</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">java.util.function</span><span class="w"> </span><span class="kn">import</span> <span class="n">Consumer</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c1"># this class is shared across transactions</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="k">class</span><span class="w"> </span><span class="nc">HttpClientProvider</span><span class="p">:</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>    <span class="n">_client</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>    <span class="n">_lock</span> <span class="o">=</span> <span class="n">ReentrantLock</span><span class="p">()</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_client</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>        <span class="c1"># Double-checked locking to be safe under concurrency</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>            <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>                    <span class="n">client</span> <span class="o">=</span> <span class="n">HttpClient</span><span class="p">()</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>                    <span class="n">client</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>                    <span class="c1"># Disable default auth handler - if you have auth issue with mail API</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>                    <span class="n">client</span><span class="o">.</span><span class="n">getProtocolHandlers</span><span class="p">()</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">WWWAuthenticationProtocolHandler</span><span class="o">.</span><span class="n">NAME</span><span class="p">)</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>                    <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">client</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>            <span class="k">finally</span><span class="p">:</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="k">class</span><span class="w"> </span><span class="nc">HeadersConsumer</span><span class="p">(</span><span class="n">Consumer</span><span class="p">):</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">accept</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fields</span><span class="p">):</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a>        <span class="c1"># Prefer env var or secure config for API key</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a>        <span class="n">api_key</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;MAIL_API_KEY&quot;</span><span class="p">)</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>        <span class="n">fields</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Authorization&quot;</span><span class="p">,</span> <span class="s2">&quot;Bearer &quot;</span> <span class="o">+</span> <span class="n">api_key</span><span class="p">)</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a>        <span class="n">fields</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">,</span> <span class="s2">&quot;application/json&quot;</span><span class="p">)</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="k">class</span><span class="w"> </span><span class="nc">Mail_sender</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">):</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a>        <span class="n">api_url</span> <span class="o">=</span> <span class="s2">&quot;https://api.sendgrid.com/v3/mail/send&quot;</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a>        <span class="n">fr</span> <span class="o">=</span> <span class="s2">&quot;from@example.com&quot;</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a>        <span class="n">to</span> <span class="o">=</span> <span class="s2">&quot;to@example.com&quot;</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a>        <span class="n">subject</span> <span class="o">=</span> <span class="s2">&quot;Test Email&quot;</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a>        <span class="n">content</span> <span class="o">=</span> <span class="s2">&quot;Hello, this is a test email.&quot;</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43"></a>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44"></a>        <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45"></a>            <span class="n">client</span> <span class="o">=</span> <span class="n">HttpClientProvider</span><span class="o">.</span><span class="n">get_client</span><span class="p">()</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46"></a>            <span class="n">client_request</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">POST</span><span class="p">(</span><span class="n">api_url</span><span class="p">)</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47"></a>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48"></a>            <span class="n">client_request</span><span class="o">.</span><span class="n">headers</span><span class="p">(</span><span class="n">HeadersConsumer</span><span class="p">())</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49"></a>            <span class="n">mail_data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50"></a>                <span class="s2">&quot;personalizations&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;to&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="n">to</span><span class="p">}]}],</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51"></a>                <span class="s2">&quot;from&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="n">fr</span><span class="p">},</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52"></a>                <span class="s2">&quot;subject&quot;</span><span class="p">:</span> <span class="n">subject</span><span class="p">,</span>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53"></a>                <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54"></a>                    <span class="p">{</span>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55"></a>                        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56"></a>                        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">content</span>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57"></a>                    <span class="p">}</span>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58"></a>                <span class="p">]</span>
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59"></a>            <span class="p">}</span>
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60"></a>            <span class="n">body</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">mail_data</span><span class="p">)</span>
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61"></a>            <span class="n">client_request</span><span class="o">.</span><span class="n">body</span><span class="p">(</span><span class="n">StringRequestContent</span><span class="p">(</span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span> <span class="n">body</span><span class="p">))</span>
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62"></a>            <span class="n">client_response</span> <span class="o">=</span> <span class="n">client_request</span><span class="o">.</span><span class="n">send</span><span class="p">()</span>
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63"></a>            <span class="n">Log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;Mail API response: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">client_response</span><span class="o">.</span><span class="n">getContentAsString</span><span class="p">())</span>
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64"></a>        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65"></a>            <span class="n">Log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;Mail API error: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+</div>
 </div>
 
 
@@ -2241,7 +1836,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="file-manager.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: File Manager">
+          <a href="gmail-auth.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Google OAuth">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2251,20 +1846,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                File Manager
+                Google OAuth
               </div>
             </div>
           </a>
         
         
           
-          <a href="../getting-started/installation.html" class="md-footer__link md-footer__link--next" aria-label="Next: Installation">
+          <a href="generate-pdf.html" class="md-footer__link md-footer__link--next" aria-label="Next: Generate PDF">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Installation
+                Generate PDF
               </div>
             </div>
             <div class="md-footer__button md-icon">
