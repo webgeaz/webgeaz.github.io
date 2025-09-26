@@ -722,6 +722,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#helper-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helper Quick Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#built-in-handlebars-helpers" class="md-nav__link">
     <span class="md-ellipsis">
       Built-in Handlebars Helpers
@@ -1814,6 +1823,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#helper-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helper Quick Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#built-in-handlebars-helpers" class="md-nav__link">
     <span class="md-ellipsis">
       Built-in Handlebars Helpers
@@ -1960,6 +1978,83 @@
 
 <h1 id="handlebarsjava-helpers">Handlebars.java Helpers</h1>
 <p>Handlebars.java provides built-in helpers that extend the templating capabilities, making HTML templates dynamic and easier to manage. SØAD Framework also includes custom helpers to further enhance your templates. This chapter explains the most common helpers and custom SØAD-specific helpers available.</p>
+<h2 id="helper-quick-reference">Helper Quick Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Helper</th>
+<th>Category</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>if</code>, <code>unless</code></td>
+<td>Built-in</td>
+<td>Conditional blocks that render or skip markup based on a truthy value.</td>
+</tr>
+<tr>
+<td><code>each</code></td>
+<td>Built-in</td>
+<td>Iterates over collections and renders children for every item.</td>
+</tr>
+<tr>
+<td><code>eq</code>, <code>neq</code></td>
+<td>Logical</td>
+<td>Compare two values for equality or inequality inside inline conditions.</td>
+</tr>
+<tr>
+<td><code>gt</code>, <code>gte</code>, <code>lt</code>, <code>lte</code></td>
+<td>Logical</td>
+<td>Evaluate greater-than and less-than comparisons without writing Java code.</td>
+</tr>
+<tr>
+<td><code>and</code>, <code>or</code>, <code>not</code></td>
+<td>Logical</td>
+<td>Combine boolean expressions to keep template logic concise.</td>
+</tr>
+<tr>
+<td><code>ref_lookup</code></td>
+<td>Data</td>
+<td>Fetch a labeled value from a referenced table or object using a key.</td>
+</tr>
+<tr>
+<td><code>select</code>, <code>option</code></td>
+<td>Form</td>
+<td>Generate dropdown elements populated from tables, collections, or filters.</td>
+</tr>
+<tr>
+<td><code>dateFmt</code></td>
+<td>Formatting</td>
+<td>Render dates using any <code>java.time</code>-style format pattern.</td>
+</tr>
+<tr>
+<td><code>in</code></td>
+<td>Logical</td>
+<td>Check whether a value exists in an array, list, or delimited string.</td>
+</tr>
+<tr>
+<td><code>html</code></td>
+<td>Formatting</td>
+<td>Sanitize rich text, expose basic formatting, and auto-link URLs.</td>
+</tr>
+<tr>
+<td><code>session</code></td>
+<td>Context</td>
+<td>Read an attribute directly from the current HTTP session.</td>
+</tr>
+<tr>
+<td><code>get</code></td>
+<td>Context</td>
+<td>Access keys in <code>ctx.output</code> that contain spaces or special characters.</td>
+</tr>
+<tr>
+<td><code>i18n</code></td>
+<td>Localization</td>
+<td>Resolve a translation key from the active locale resource bundle.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="built-in-handlebars-helpers">Built-in Handlebars Helpers</h2>
 <p>Below are basic built-in Handlebars helpers commonly used:</p>
@@ -1992,9 +2087,13 @@
 <ul>
 <li><strong>eq</strong>: Checks equality.</li>
 </ul>
-<div class="language-handlebars highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">{{</span><span class="m m-Attribute">#if</span> <span class="nv">(eq</span> <span class="nv">role</span> <span class="s2">&quot;admin&quot;</span><span class="nv">)</span><span class="cp">}}</span>
+<div class="language-handlebars highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">{{</span><span class="m m-Attribute">#eq</span> <span class="nv">role</span> <span class="s2">&quot;admin&quot;</span><span class="cp">}}</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="x">  &lt;p&gt;Admin Panel&lt;/p&gt;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="cp">{{</span><span class="m m-Attribute">/if</span><span class="cp">}}</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="cp">{{</span><span class="m m-Attribute">/eq</span><span class="cp">}}</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="cp">{{</span><span class="m m-Attribute">#if</span> <span class="nv">(eq</span> <span class="nv">role</span> <span class="s2">&quot;admin&quot;</span><span class="nv">)</span><span class="cp">}}</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="x">  &lt;p&gt;Admin Panel&lt;/p&gt;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="cp">{{</span><span class="m m-Attribute">/if</span><span class="cp">}}</span>
 </span></code></pre></div>
 <p>For more information on the Handlebars templating language and available features, visit the official documentation at <a href="https://jknack.github.io/handlebars.java/">https://jknack.github.io/handlebars.java/</a>.</p>
 <hr />
