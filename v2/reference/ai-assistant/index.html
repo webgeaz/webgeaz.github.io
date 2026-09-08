@@ -998,6 +998,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#choosing-ai-run-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing AI run limits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#opening-the-assistant" class="md-nav__link">
     <span class="md-ellipsis">
       Opening the assistant
@@ -1338,6 +1347,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#choosing-ai-run-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing AI run limits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#opening-the-assistant" class="md-nav__link">
     <span class="md-ellipsis">
       Opening the assistant
@@ -1660,6 +1678,49 @@ per field:</p>
 <p>If the assistant reports that it is <em>not configured</em>, no endpoint / key / model
 has been resolved from any of the sources above.</p>
 </div>
+<hr />
+<h2 id="choosing-ai-run-limits">Choosing AI run limits<a class="headerlink" href="#choosing-ai-run-limits" title="Permanent link">&para;</a></h2>
+<p>Three settings have an outsized effect on whether the assistant can finish a
+large task reliably:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it limits</th>
+<th>When to tune it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ai.turn.cap</code> (<code>ai_turn_cap</code>)</td>
+<td>Model and tool-use round trips for ordinary editor chat</td>
+<td>Raise for a genuinely larger edit; lower it for a less capable model that starts repeating itself.</td>
+</tr>
+<tr>
+<td><code>ai.one.shot.turn.cap</code> (<code>ai_one_shot_turn_cap</code>)</td>
+<td>Round trips for whole-app generation from an empty workspace</td>
+<td>This is intentionally separate and normally higher because a complete app needs planning, several writes, and validation.</td>
+</tr>
+<tr>
+<td><code>ai.context.max.tokens</code> (<code>ai_context_max_tokens</code>)</td>
+<td>Prior chat and tool history included in each model request</td>
+<td>Raise for a large-context model so it retains more of a long build; keep enough room for instructions, tool results, and the next response.</td>
+</tr>
+</tbody>
+</table>
+<p>A turn is one model response and its resulting tool work, not one visible chat
+message. Creating a transaction often takes roughly three turns. Both turn caps
+are safety limits: they stop an unattended run from looping forever, especially
+with a smaller or less reliable model. Increase them only for work that needs
+additional steps.</p>
+<p>When history exceeds <code>ai.context.max.tokens</code>, the oldest complete turns are
+trimmed from the request, though the full transcript remains saved. Do not set
+the budget to the model's advertised context window: the system prompt, tool
+calls/results, and output all consume that window too. For example, <code>200000</code>
+tokens is a useful starting point for a 1M-context model; models with a smaller
+window need a lower, conservative budget. See the <a href="../configuration/#email-and-ai">configuration
+reference</a> for the property defaults and all AI
+settings.</p>
 <hr />
 <h2 id="opening-the-assistant">Opening the assistant<a class="headerlink" href="#opening-the-assistant" title="Permanent link">&para;</a></h2>
 <p>Open a transaction in the editor and click the <strong>AI</strong> button in the toolbar to

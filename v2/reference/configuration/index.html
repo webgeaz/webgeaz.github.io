@@ -1319,7 +1319,20 @@ dots with underscores. Read the current TLS limitation in
 not explicit requests for protected access.</p>
 <p>Generation limits include <code>ai.turn.cap</code>, <code>ai.one.shot.turn.cap</code>,
 <code>ai.context.max.tokens</code>, and <code>ai.max.output.tokens</code>; tune them against the
-selected provider's actual limits.
+selected provider's actual limits. <code>ai.turn.cap</code> is the maximum number of
+model/tool-use round trips for a normal IDE chat task. <code>ai.one.shot.turn.cap</code>
+is the separate, usually higher limit for generating a complete dashboard or
+application from an empty workspace. A new transaction commonly takes about
+three turns, so raise the relevant cap only when the task needs more work;
+keeping it modest prevents a weak model from repeating unproductive tool calls.</p>
+<p><code>ai.context.max.tokens</code> is the history budget sent on each round; older whole
+turns are trimmed while the full transcript remains stored. It must leave room
+inside the model's context window for the system prompt, tool results, and the
+new response. Smaller-context or less capable models generally need a lower
+turn cap and a conservative context budget. For a model with a 1M-token window,
+a larger budget such as <code>200000</code> can preserve more of a long build's history,
+but it is still deliberately below the advertised window. The environment
+names are <code>ai_turn_cap</code>, <code>ai_one_shot_turn_cap</code>, and <code>ai_context_max_tokens</code>.
 These are development/IDE settings, not runtime application requirements.</p>
 <h2 id="advanced-runtime-mappings">Advanced runtime mappings<a class="headerlink" href="#advanced-runtime-mappings" title="Permanent link">&para;</a></h2>
 <p>Servlet/filter mappings are configured as <code>servlet.&lt;name&gt;.mapping/file</code> and
