@@ -1697,41 +1697,26 @@ map above links to every supporting asset.</p>
 controller/view into its nested src/group/code location and push it.
 Global assets and database SQL use their own upload/migration workflow.</p>
 <h2 id="build-the-css">Build the CSS<a class="headerlink" href="#build-the-css" title="Permanent link">&para;</a></h2>
-<p>From the repository root:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>docs/examples/tracker
+<p>In a local copy of the example assets:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>tracker-example
 npm<span class="w"> </span>ci
 npm<span class="w"> </span>run<span class="w"> </span>build:css
 </code></pre></div>
-<p>The compiled stylesheet is committed for direct use. It has no browser CDN
+<p>The compiled stylesheet is included for direct use. It has no browser CDN
 dependency. Node/Tailwind are build tools; they are not needed by the deployed JVM.</p>
 <h2 id="prepare-a-container-release">Prepare a container release<a class="headerlink" href="#prepare-a-container-release" title="Permanent link">&para;</a></h2>
-<p>From the repository root, with Java 21 and app/lib built:</p>
-<div class="highlight"><pre><span></span><code>java<span class="w"> </span>-cp<span class="w"> </span><span class="s1">'app/lib/*'</span><span class="w"> </span>org.python.util.jython<span class="w"> </span>-B<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>docs/examples/tracker/tools/prepare.py<span class="w"> </span>docs/examples/tracker/release
-</code></pre></div>
-<p>The preparation tool requires a <strong>new destination</strong> and refuses to overwrite
-one. It copies the example webapp, uses the real framework manifest generator
-to produce checksummed metadata/MySQL/H2 SQL, checks the controllers with the
-IDE's static policy audit, and adds the application Dockerfile.
-It does not access a database or deploy anything.</p>
-<p>The script lives at <code>docs/examples/tracker/tools/prepare.py</code> in the repository;
-verification/development scripts are excluded from the published website.
-Use the <a href="../../chapters/14-docker/">Docker chapter</a> for the complete build and
-database installation sequence.</p>
+<p>Create the tracker in S0ADM or synchronize it with the <code>soad</code> CLI, then use the
+release/export workflow supplied by your IDE deployment. The exported release
+must include the transaction sources, compiled stylesheet, welcome selection,
+signed security manifest, and matching authentication SQL. Use the
+<a href="../../chapters/14-docker/">Docker chapter</a> for the build and database
+installation sequence.</p>
 <h2 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h2>
-<p>From the repository root:</p>
-<div class="highlight"><pre><span></span><code>./dev.sh<span class="w"> </span>build
-python3<span class="w"> </span>docs/examples/tracker/tests/smoke.py
-</code></pre></div>
-<p>The test prepares a temporary runtime, installs auth/business SQL into an
-isolated H2 database in MySQL mode, starts the real Jetty/Jython application on
-an available port, creates disposable accounts, and uses HTTP cookie sessions.
-It exercises CSRF, ownership, role denial, form validation, escaping, CRUD,
-assignment, pagination, JSON, uploads, downloads, and deletion. It terminates
-its server and removes its temporary runtime/database afterward.</p>
-<p>It does not contact a live IDE or change your development database. It does not
-replace testing MySQL, real SMTP/TOTP delivery, browser interactions, or a
-Docker/Kubernetes deployment in your target environment.</p>
+<p>Test the deployed development application with disposable application accounts.
+Exercise CSRF, ownership, role denial, form validation, escaping, CRUD,
+assignment, pagination, JSON, uploads, downloads, and deletion. This does not
+replace testing production-compatible MySQL, real SMTP/TOTP delivery, browser
+interactions, or a Docker/Kubernetes deployment in your target environment.</p>
 <h2 id="deliberate-limits">Deliberate limits<a class="headerlink" href="#deliberate-limits" title="Permanent link">&para;</a></h2>
 <p>Assignment does not share access; only the project owner sees its records.
 The administrator deletion permission does not bypass ownership. Accounts are

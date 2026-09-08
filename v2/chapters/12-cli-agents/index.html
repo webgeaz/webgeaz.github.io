@@ -1193,8 +1193,8 @@ turn a source sync into a complete production release.</p>
 <p>Obtain the CLI from your SØAD distribution. The checked installer targets
 <a href="https://github.com/Webgeaz-Sdn-Bhd/soadcli/releases">Webgeaz-Sdn-Bhd releases</a>;
 older documentation refers to <a href="https://github.com/webgeaz/soadcli">webgeaz/soadcli</a>.
-Release access could not be verified publicly during this consolidation; use the
-release/installer supplied with your installation if a repository requires access.</p>
+If release access is restricted, use the installer supplied with your SØAD
+installation.</p>
 <p>The installer expects archives named <code>soadcli_&lt;os&gt;_&lt;arch&gt;.tar.gz</code>, containing a
 <code>soad</code> executable. macOS uses <code>darwin</code>, Linux uses <code>linux</code>, Apple Silicon uses
 <code>arm64</code>, and x86-64 uses <code>amd64</code>. After downloading and extracting the matching
@@ -1215,13 +1215,12 @@ soad<span class="w"> </span>login<span class="w"> </span>--server<span class="w"
 soad<span class="w"> </span>list
 </code></pre></div>
 <p>Interactive login saves project configuration and credentials in
-<code>.config.json</code>. Keep it out of Git, release archives, and agent prompts.
+<code>.config.json</code>. Keep it out of source-control systems, release archives, and agent prompts.
 Use separate project directories for development and production connections.
 For noninteractive login, the verified CLI supports <code>SOAD_LOGIN</code> and
 <code>SOAD_PASSWORD</code>, or <code>SOAD_API_KEY</code> and <code>SOAD_APP_ID</code>; inject them from your
 secret manager instead of command arguments.</p>
-<p>The examples were checked against the installed CLI help (commit <code>5342396</code>).
-Use <code>soad COMMAND --help</code> to confirm flags in another version.</p>
+<p>Use <code>soad COMMAND --help</code> to confirm the flags supported by your installed version.</p>
 <h2 id="local-and-runtime-paths">Local and runtime paths<a class="headerlink" href="#local-and-runtime-paths" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1336,7 +1335,8 @@ ACCESS_POLICY and ownership checks, show the diff, then push the approved
 change. Do not modify schema or publish a release.</p>
 </blockquote>
 <p>Older skill bundles may contain obsolete authentication or rendering examples.
-Use this repository's contracts when they disagree, and update the bundle.
+Use the current developer guide when an older skill bundle disagrees, and update
+the installed bundle.
 After pushing, test the real application session and expected response content;
 an IDE API token does not authenticate a browser to the runtime application.</p>
 

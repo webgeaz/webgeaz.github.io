@@ -1186,7 +1186,7 @@
 
 
 <h1 id="error-page-reference">Error page reference<a class="headerlink" href="#error-page-reference" title="Permanent link">&para;</a></h1>
-<p>The runtime bundles three generic HTML pages in <code>app/server/errors/</code>. They use
+<p>The runtime bundles three generic HTML error pages. They use
 <code>/assets/soad-auth/auth.css</code>, include a context-aware home link, and never display
 exception messages or stack traces. Responses use UTF-8 and <code>Cache-Control: no-store</code>.</p>
 <table>
@@ -1219,7 +1219,7 @@ exception messages or stack traces. Responses use UTF-8 and <code>Cache-Control:
 </tr>
 </tbody>
 </table>
-<p>Paths are relative to <code>app/webapp/WEB-INF/jython/</code>; template paths are relative to
+<p>Paths are relative to <code>WEB-INF/jython/</code>; template paths are relative to
 its <code>default/</code> directory. Include <code>__init__.py</code> in <code>default/</code> and <code>default/errors/</code>
 when creating the files manually. Each override is optional and discovered
 independently. Default-app overrides handle application requests, including other
@@ -1325,12 +1325,12 @@ the runtime never enables it automatically, even in development.</p>
 is separate from explicit 500 routing; configure <code>error.page_exception</code> to replace
 the exception page. Explicit configured pages retain their existing servlet
 lifecycle; the dedicated lifecycle described above applies to the built-in route.</p>
-<p>Rebuild the runtime (<code>./dev.sh build</code>) and restart to install the Java changes.
-Deploy <code>server/ErrorViews.py</code>, <code>server/errors/</code>, and the updated auth stylesheet
-with the runtime. Restart after changing error mappings or production override
-code. In <code>sufia.mode=development</code>, overrides reload on each error request, following
-transaction conventions. Bundled HTML is read on each error. No migration is
-needed. Existing PDF rendering error handling is unchanged.</p>
+<p>Publish these runtime files through the container release workflow supplied with
+your SØAD installation, then restart the runtime. Restart after changing error
+mappings or production override code. In <code>sufia.mode=development</code>, overrides
+reload on each error request, following transaction conventions. Bundled HTML is
+read on each error. No migration is needed. Existing PDF rendering error handling
+is unchanged.</p>
 
 
 

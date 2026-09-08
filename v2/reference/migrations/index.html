@@ -1172,10 +1172,10 @@
 your application's business/auth schema. Choose the intended database before
 running any SQL.</p>
 <h2 id="existing-s0adm-installations">Existing S0ADM installations<a class="headerlink" href="#existing-s0adm-installations" title="Permanent link">&para;</a></h2>
-<p>New IDE databases are initialized from <code>app/s0adm/setupdb-s0adm.sql</code> when empty.
-An existing database is not rebuilt by restarting an image.
-Review the numbered SQL files under <code>app/migrations/</code> against your installed
-columns and migration history:</p>
+<p>New IDE databases are initialized by the S0ADM container when empty. An existing
+database is not rebuilt by restarting an image. IDE control-plane migrations are
+provided with the SØAD distribution and must be applied by the deployment
+operator against the installed version.</p>
 <table>
 <thead>
 <tr>
@@ -1222,20 +1222,12 @@ columns and migration history:</p>
 </tr>
 </tbody>
 </table>
-<p>Back up before changes. The migration files are not a promise that every SQL
-dialect accepts every statement or that an already-applied file can be rerun.
-For local H2 using <code>dev.sh</code>, stop the app before <code>migrate</code>:</p>
-<div class="highlight"><pre><span></span><code>./dev.sh<span class="w"> </span>stop
-./dev.sh<span class="w"> </span>migrate<span class="w"> </span>app/migrations/002_user_2fa.sql
-./dev.sh<span class="w"> </span>start
-</code></pre></div>
-<p>Use the appropriate unapplied migration, not necessarily 002. Check the script's
-database target. External H2 access while a process is running requires compatible
-<code>AUTO_SERVER</code> settings; stopping the local process avoids file-lock ambiguity.
-For MySQL use your normal reviewed migration client.</p>
-<p>The historical README's 2FA guidance has been consolidated here. Its key
-requirement remains: existing installs need the schema update and refreshed
-models, not just new application files.</p>
+<p>Back up before changes. Stop the S0ADM container before applying an embedded-H2
+migration through the operator procedure supplied with the image; this avoids
+file-lock ambiguity. Use only the migration applicable to the installed release
+and database target. For MySQL use your normal reviewed migration client.</p>
+<p>Existing installs need the schema update and refreshed models, not just a newer
+container image.</p>
 <h2 id="application-migrations">Application migrations<a class="headerlink" href="#application-migrations" title="Permanent link">&para;</a></h2>
 <p>Keep ordered, version-controlled business SQL in your application project.
 The tracker initial schema is for a fresh database; evolve it using new

@@ -1186,35 +1186,29 @@
 
 
 <h1 id="2-getting-started">2. Getting started<a class="headerlink" href="#2-getting-started" title="Permanent link">&para;</a></h1>
-<p>By the end of this chapter you will have a development server and a working HTML
-transaction. Use a disposable local instance for the tutorial.</p>
+<p>By the end of this chapter you will have a working HTML transaction in a
+container-deployed S0ADM development environment.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
-<li>A checkout of this repository and a Java 21 JDK; set <code>JAVA_HOME</code> to its installation.</li>
-<li>Docker or another container command compatible with the repository's development script.</li>
-<li>Access to Gradle dependencies for the initial build.</li>
-<li>A browser. Python 3 is needed only to build the documentation, not to run transactions.</li>
+<li>The URL of a running S0ADM development deployment.</li>
+<li>An IDE account with developer access to the target application.</li>
+<li>A separate application account after authentication is configured.</li>
+<li>A browser. Install the <code>soad</code> CLI only when you want to use a local editor.</li>
 </ul>
-<p>From the repository root:</p>
-<div class="highlight"><pre><span></span><code>java<span class="w"> </span>-version
-./dev.sh<span class="w"> </span>build
-<span class="nv">NERDCTL</span><span class="o">=</span>docker<span class="w"> </span>./dev.sh<span class="w"> </span>startdb
-./dev.sh<span class="w"> </span>start
-./dev.sh<span class="w"> </span>status
+<p>Open the S0ADM URL supplied by your operator and sign in. Confirm that the target
+application and its datasource are available. Container startup, database
+credentials, volumes, and port mappings are deployment concerns; application
+developers do not need the SØAD framework source tree.</p>
+<p>For local-editor development, create an empty workspace and connect the CLI to
+that same IDE deployment:</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>hello-workspace
+<span class="nb">cd</span><span class="w"> </span>hello-workspace
+soad<span class="w"> </span>login<span class="w"> </span>--server<span class="w"> </span>https://ide.example.com
+soad<span class="w"> </span>list
 </code></pre></div>
-<p>Use <code>NERDCTL=nerdctl.lima</code> instead if that is your installed container tool.
-Open <code>http://localhost:8080/s0adm/</code>. Use the development account configured in
-<code>dev.sh</code>; obtain its values locally rather than copying development credentials
-into a deployment. The script currently supplies its own IDE account defaults.
-Environment variables supplied before <code>dev.sh start</code> do not override every value
-it sets internally.</p>
-<p>This workflow runs the IDE database in H2 and the application database in MySQL.
-Use <code>./dev.sh logs</code> for startup errors and <code>./dev.sh stop</code> to stop the process.
-<code>NERDCTL=docker ./dev.sh stopdb</code> stops the local database container.</p>
-<p>If port 8080 is busy, use <code>./dev.sh start 9090</code>. Check <code>dev.sh</code> for current
-<code>DB_PORT</code>, <code>DB_NAME</code>, <code>DB_USER</code>, and <code>DB_PW</code> defaults before connecting with a
-database client. Do not assume the root Compose file is a clean deployment
-template; use the sanitized examples in this guide.</p>
+<p>The CLI stores the selected server/application configuration in the workspace.
+Keep its credentials private. See <a href="../12-cli-agents/">CLI and agents</a> for the full
+create, pull, compare, and push workflow.</p>
 <h2 id="configure-the-default-application">Configure the default application<a class="headerlink" href="#configure-the-default-application" title="Permanent link">&para;</a></h2>
 <p>Open System Settings → Applications → the default application. Configure security
 before expecting application routes to work. For the tracker choose:</p>
@@ -1270,8 +1264,8 @@ instructions and the permission grants needed by the full tracker.</p>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Save/compile and open <code>http://localhost:8080/t/web/hello</code>. Sign in with the
-application account if redirected. You should see “Hello from SØAD” and your name.
+<p>Save/compile and open <code>/t/web/hello</code> on your development deployment. Sign in with
+the application account if redirected. You should see “Hello from SØAD” and your name.
 For a public brochure app, choose public profile/mode and an explicit public
 policy instead; do not change this protected tutorial to public to bypass setup.</p>
 <h2 id="common-first-run-failures">Common first-run failures<a class="headerlink" href="#common-first-run-failures" title="Permanent link">&para;</a></h2>
@@ -1284,12 +1278,8 @@ policy instead; do not change this protected tutorial to public to bypass setup.
 </thead>
 <tbody>
 <tr>
-<td>No Java or build failure</td>
-<td><code>JAVA_HOME</code>, Java version, Gradle dependency access</td>
-</tr>
-<tr>
-<td>Connection refused</td>
-<td>Process status, port, logs</td>
+<td>IDE unavailable</td>
+<td>Deployment URL, container status, ingress/port, operator logs</td>
 </tr>
 <tr>
 <td>Missing models/table</td>
@@ -1309,9 +1299,9 @@ policy instead; do not change this protected tutorial to public to bypass setup.
 </tr>
 </tbody>
 </table>
-<p>For plain HTTP development, set <code>session_cookie_secure=false</code> and
-<code>session_cookie_samesite=LAX</code> for the server process if its active profile requires
-secure cookies. Restore secure cookies for HTTPS deployment.</p>
+<p>For a plain HTTP development deployment, the operator may set
+<code>session_cookie_secure=false</code> and <code>session_cookie_samesite=LAX</code>. Restore secure
+cookies for HTTPS deployment.</p>
 <p>Next: <a href="../03-planning/">plan the tracker</a>.</p>
 
 

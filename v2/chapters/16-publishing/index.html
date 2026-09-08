@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#16-put-this-documentation-online" class="md-skip">
+        <a href="#16-publish-application-documentation" class="md-skip">
           Skip to content
         </a>
       
@@ -754,45 +754,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preview-and-build" class="md-nav__link">
+  <a href="#choose-what-to-publish" class="md-nav__link">
     <span class="md-ellipsis">
-      Preview and build
+      Choose what to publish
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-a-github-pages" class="md-nav__link">
+  <a href="#keep-release-information-together" class="md-nav__link">
     <span class="md-ellipsis">
-      Option A: GitHub Pages
+      Keep release information together
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-b-any-static-web-host" class="md-nav__link">
+  <a href="#publish-safely" class="md-nav__link">
     <span class="md-ellipsis">
-      Option B: any static web host
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diagrams-search-and-offline-environments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diagrams, search, and offline environments
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maintain-the-chapters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Maintain the chapters
+      Publish safely
     </span>
   </a>
   
@@ -1143,45 +1125,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preview-and-build" class="md-nav__link">
+  <a href="#choose-what-to-publish" class="md-nav__link">
     <span class="md-ellipsis">
-      Preview and build
+      Choose what to publish
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-a-github-pages" class="md-nav__link">
+  <a href="#keep-release-information-together" class="md-nav__link">
     <span class="md-ellipsis">
-      Option A: GitHub Pages
+      Keep release information together
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-b-any-static-web-host" class="md-nav__link">
+  <a href="#publish-safely" class="md-nav__link">
     <span class="md-ellipsis">
-      Option B: any static web host
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diagrams-search-and-offline-environments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diagrams, search, and offline environments
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maintain-the-chapters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Maintain the chapters
+      Publish safely
     </span>
   </a>
   
@@ -1203,115 +1167,75 @@
 
 
 
-<h1 id="16-put-this-documentation-online">16. Put this documentation online<a class="headerlink" href="#16-put-this-documentation-online" title="Permanent link">&para;</a></h1>
-<p>The Markdown under <code>docs/</code> is the source of truth. The repository's
-<code>mkdocs.yml</code> builds a static website with Material for MkDocs, chapter navigation,
-search, code highlighting, and Mermaid diagrams.</p>
-<h2 id="preview-and-build">Preview and build<a class="headerlink" href="#preview-and-build" title="Permanent link">&para;</a></h2>
-<p>From the repository root:</p>
-<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv-docs
-.venv-docs/bin/python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-docs.txt
-.venv-docs/bin/mkdocs<span class="w"> </span>serve
-</code></pre></div>
-<p>Open <code>http://127.0.0.1:8000</code>. On Windows use the virtual environment's
-<code>Scripts</code> directory in place of <code>bin</code>.
-The docs tooling uses Python 3; this is independent of application Jython 2.7.
-See <a href="https://squidfunk.github.io/mkdocs-material/getting-started/">Material installation</a>
-for platform alternatives.</p>
-<p>Build and validate:</p>
-<div class="highlight"><pre><span></span><code>.venv-docs/bin/mkdocs<span class="w"> </span>build<span class="w"> </span>--strict
-</code></pre></div>
-<p>The resulting <code>site/</code> directory is the deployable website. Do not host
-<code>mkdocs serve</code> as a production service. Before publishing, set <code>site_url</code> in
-<code>mkdocs.yml</code> to the final URL, including a path prefix if applicable, for example
-<code>https://docs.example.com/soad/</code>.</p>
-<h2 id="option-a-github-pages">Option A: GitHub Pages<a class="headerlink" href="#option-a-github-pages" title="Permanent link">&para;</a></h2>
-<p>Put the documentation repository on GitHub, enable Pages in repository Settings,
-and use a dedicated <code>gh-pages</code> branch as the publishing source. From an authorized
-checkout with Git push access:</p>
-<div class="highlight"><pre><span></span><code>.venv-docs/bin/mkdocs<span class="w"> </span>gh-deploy
-</code></pre></div>
-<p>This builds the site and pushes its generated contents to the publication branch.
-It does not deploy your SØAD application. For a private source repository, confirm
-your GitHub plan's Pages visibility and access rules before publishing.</p>
-<p>For automatic publication, adapt the optional workflow below and save it as
-<code>.github/workflows/docs.yml</code> only when you want pushes to publish:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Publish documentation</span>
-<span class="nt">on</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">main</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">paths</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"docs/**"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"mkdocs.yml"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"requirements-docs.txt"</span><span class="p p-Indicator">]</span>
-<span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
-<span class="nt">permissions</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="nt">jobs</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">docs</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
-<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
-<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">"3.12"</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python -m pip install -r requirements-docs.txt</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs build --strict</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs gh-deploy</span>
-</code></pre></div>
-<p>Change <code>main</code> to your actual publication branch and review action versions/pins
-under your organization's CI policy. This example is documentation, not an
-enabled workflow. See <a href="https://squidfunk.github.io/mkdocs-material/publishing-your-site/">Material's publishing guide</a>
-for the host setup.</p>
-<h2 id="option-b-any-static-web-host">Option B: any static web host<a class="headerlink" href="#option-b-any-static-web-host" title="Permanent link">&para;</a></h2>
-<p>Upload the <strong>contents</strong> of <code>site/</code> to your static host's document root, bucket,
-or artifact deployment. Configure HTTPS, directory index support, and the base
-path corresponding to <code>site_url</code>. For a managed build service:</p>
+<h1 id="16-publish-application-documentation">16. Publish application documentation<a class="headerlink" href="#16-publish-application-documentation" title="Permanent link">&para;</a></h1>
+<p>Application documentation should travel with the application release without
+requiring access to the SØAD framework source. Write documentation in your own
+workspace, publish it through your organization's normal documentation service,
+and link it from the application where useful.</p>
+<h2 id="choose-what-to-publish">Choose what to publish<a class="headerlink" href="#choose-what-to-publish" title="Permanent link">&para;</a></h2>
+<p>Useful application documentation includes:</p>
+<ul>
+<li>user workflows and role-specific capabilities;</li>
+<li>application URLs and supported browsers;</li>
+<li>administrator setup and recovery procedures;</li>
+<li>business-schema migration order;</li>
+<li>application configuration that operators must supply;</li>
+<li>health checks, backup expectations, and rollback constraints.</li>
+</ul>
+<p>Do not publish IDE credentials, application passwords, API keys, database
+credentials, invitation tokens, private hostnames, or generated security
+artifacts containing environment-specific details.</p>
+<h2 id="keep-release-information-together">Keep release information together<a class="headerlink" href="#keep-release-information-together" title="Permanent link">&para;</a></h2>
+<p>Record the following for each application release:</p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
-<th>Value</th>
+<th>Item</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Install</td>
-<td>python -m pip install -r requirements-docs.txt</td>
+<td>Application version</td>
+<td>Identifies the transaction and asset release</td>
 </tr>
 <tr>
-<td>Build</td>
-<td>mkdocs build --strict</td>
+<td>SØAD runtime version</td>
+<td>Identifies the compatible runtime container</td>
 </tr>
 <tr>
-<td>Output</td>
-<td>site</td>
+<td>CLI version</td>
+<td>Helps reproduce source synchronization behavior</td>
+</tr>
+<tr>
+<td>Image digest</td>
+<td>Identifies the exact deployed container</td>
+</tr>
+<tr>
+<td>Business migration version</td>
+<td>Identifies the expected application schema</td>
+</tr>
+<tr>
+<td>Security manifest checksum</td>
+<td>Identifies matching authentication metadata</td>
 </tr>
 </tbody>
 </table>
-<p>With an existing web server, serve the generated HTML/assets as ordinary files.
-Do not expose the repository root, <code>.git</code>, runtime configuration, or databases.
-For a custom domain configure the host's domain binding, DNS, and TLS certificate.</p>
-<h2 id="diagrams-search-and-offline-environments">Diagrams, search, and offline environments<a class="headerlink" href="#diagrams-search-and-offline-environments" title="Permanent link">&para;</a></h2>
-<p>Mermaid fences render through the theme's
-<a href="https://squidfunk.github.io/mkdocs-material/reference/diagrams/">diagram integration</a>.
-Diagram JavaScript may need network access in a browser. For an air-gapped host,
-package a reviewed local Mermaid asset and configure local loading, or pre-render
-diagrams to SVG as part of your site's build. Test actual deployment CSP/network
-rules; a successful Markdown build alone does not prove diagrams render.</p>
-<p>Open the hosted site over HTTP(S), not just as <code>file://</code> pages, to test search
-and asset loading. Text beside each diagram explains the same relationship for
-readers whose renderer does not support Mermaid.</p>
-<h2 id="maintain-the-chapters">Maintain the chapters<a class="headerlink" href="#maintain-the-chapters" title="Permanent link">&para;</a></h2>
-<p>Update navigation when adding a page. Use relative <code>.md</code> links and stable
-headings; run strict builds after moves. Update the example, configuration
-reference, and acceptance cases whenever a framework contract changes.</p>
-<p>The maintainer archive is deliberately excluded from both publication and search.
-It preserves historical implementation notes and old root content; do not copy it
-into public navigation as current product documentation. Example verification
-tools/tests are also excluded from the generated site.</p>
-<p>Before publishing check the home page, one code-heavy chapter, authentication,
-deployment, search, mobile navigation, and all diagrams. The numbered chapters
-remain readable as Markdown if you decide to change site generators later.</p>
+<p>The S0ADM release/export workflow and the <code>soad</code> CLI are the application source
+boundaries. Documentation may describe their commands, but should not assume the
+reader has framework internals, build scripts, or the SØAD product source tree.</p>
+<h2 id="publish-safely">Publish safely<a class="headerlink" href="#publish-safely" title="Permanent link">&para;</a></h2>
+<p>Build your documentation using the tooling selected by your organization, then
+upload only its generated public output to the documentation host. Keep source
+configuration, credentials, local CLI configuration, databases, and temporary
+release artifacts outside the public document root.</p>
+<p>For internal applications, apply the same access-control expectations to the
+documentation site. A public documentation URL can disclose routes, roles, data
+models, and operational details even when the application itself is protected.</p>
+<p>After publication, verify links, search, mobile layout, authentication boundaries,
+and any command examples against the deployed development environment. Update the
+documentation whenever transaction behavior, roles, permissions, migrations, or
+runtime requirements change.</p>
 
 
 

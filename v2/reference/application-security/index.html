@@ -1388,9 +1388,8 @@
 SOAD applications. It is intended for application developers, deployers, and
 operators.</p>
 <h2 id="architecture-and-production-boundary">Architecture and production boundary<a class="headerlink" href="#architecture-and-production-boundary" title="Permanent link">&para;</a></h2>
-<p><code>app/s0adm/</code> is the online IDE and control plane. It is not an authentication
-service for deployed applications and must not be included in production
-images.</p>
+<p>S0ADM is the online IDE and control plane. It is not an authentication service
+for deployed applications and must not be included in production images.</p>
 <p>Generated applications use one of these modes:</p>
 <table>
 <thead>
@@ -1517,21 +1516,16 @@ card without re-entering roles — see <a href="#switching-providers">Switching 
 have the AI assistant propose a security plan while editing transactions in a
 normal (non-one-shot) chat session — including full roles and permissions:</p>
 <ul>
-<li>The chat session exposes a <code>stage_app_security</code> tool only when
-  <code>session.security_management</code> is true, which the server sets from
-  <code>is_superadmin(user_id)</code> on every chat session
-  (<code>app/s0adm/ai/chat.py</code>, <code>set_security_management</code>). Non-superadmins never
-  see this tool; regular one-shot generation sessions reject it too — one-shot
-  uses its own embedded plan instead.</li>
+<li>The chat session exposes a <code>stage_app_security</code> tool only to a superadmin.
+  Non-superadmins never see this tool; regular one-shot generation sessions
+  reject it too because one-shot generation uses its own embedded plan.</li>
 <li>Asking the assistant to set up or change roles/permissions/profile calls
-  <code>stage_app_security</code> (<code>app/s0adm/ai/tools.py</code>, <code>_stage_app_security</code>), which
-  builds and validates the manifest, checks that no already-assigned role
+  <code>stage_app_security</code>, which builds and validates the manifest, checks that no already-assigned role
   would be orphaned, and audits every routed transaction's <code>ACCESS_POLICY</code>
   against the proposed plan — but only <em>stages</em> it. Nothing is written yet.</li>
 <li>The staged plan appears in the normal diff/approval UI alongside any staged
-  code changes. Approving it (<code>app/s0adm/ai/chat.py</code>, <code>approve</code>) re-checks
-  that the approver is a superadmin, then calls the same
-  <code>security_mod.configure_app_security(...)</code> used by the manual form — so the
+  code changes. Approval re-checks that the approver is a superadmin, then uses
+  the same publication path as the manual form, so the
   effect (manifest + SQL bundles written, local-auth schema installed, setup
   link issued) is identical either way.</li>
 </ul>
@@ -1574,15 +1568,13 @@ The manual application Roles and permissions editor also supports those grants.<
 <p>Only MySQL production databases and H2 development/test databases are supported
 initially. Generation and installation reject other dialects.</p>
 <ol>
-<li>Build the runtime base, which intentionally does not copy <code>app/s0adm/</code>:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>build<span class="w"> </span>-f<span class="w"> </span>app/Dockerfile-base-runtime<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-t<span class="w"> </span>your-registry/soad-runtime:VERSION<span class="w"> </span>app
-</code></pre></div>
-<ol>
 <li>
-<p>Build the generated application layer using <code>app/Dockerfile-runtime</code> and that
-   base image.</p>
+<p>Obtain the application-only runtime base and release/export workflow supplied
+   with your SØAD installation. The runtime base intentionally omits S0ADM.</p>
+</li>
+<li>
+<p>Export the generated application from the IDE, then build its application
+   layer using the supplied runtime base and release Dockerfile.</p>
 </li>
 <li>
 <p>Extract or obtain <code>WEB-INF/deploy/auth-mysql.sql</code> from the generated
@@ -1845,8 +1837,8 @@ through an operator-reviewed database migration; the runtime never drops them.</
 <li>The shipped production profile uses <code>HttpOnly</code>, <code>SameSite=None</code>, and <code>Secure</code>.
   The tracker deployment explicitly selects <code>Lax</code> for its same-site flow.</li>
 </ul>
-<p>The runtime image build also fails when <code>/app/s0adm</code> exists or generated
-application source imports or links to <code>s0adm</code>. In a valid production image,
+<p>The runtime image validation also fails when S0ADM is present or generated
+application source imports or links to it. In a valid production image,
 <code>/s0adm/*</code> has no mapping and returns <code>404</code>.</p>
 
 

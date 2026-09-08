@@ -1219,15 +1219,10 @@ does not prove that a protected application works correctly.</p>
 </tr>
 </tbody>
 </table>
-<p>The tracker includes an isolated JVM/H2 test script. See
-<a href="../../examples/tracker/#verification">its README</a> for the command and exactly
-which boundaries it covers.</p>
-<p>Framework-maintainer checks from this repository:</p>
-<div class="highlight"><pre><span></span><code>./dev.sh<span class="w"> </span><span class="nb">test</span>
-</code></pre></div>
-<p>These are offline JUnit/Jython checks with H2. Browser integration uses
-<code>./dev.sh test-ide-ui</code>; <code>test-ide-all</code> also runs HTTP smoke checks. Those commands
-need the container/browser environment and test the IDE, not automatically every
+<p>Run application tests against your container-deployed development environment.
+Use the S0ADM transaction runner for focused checks, then exercise authenticated
+HTTP and browser flows against the real application URL. A framework test suite
+is an operator/product-maintainer concern and does not automatically test the
 application you create.</p>
 <h2 id="tracker-acceptance-checklist">Tracker acceptance checklist<a class="headerlink" href="#tracker-acceptance-checklist" title="Permanent link">&para;</a></h2>
 <ol>

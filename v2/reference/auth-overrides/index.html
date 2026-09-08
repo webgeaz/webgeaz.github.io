@@ -1564,9 +1564,8 @@ is copied into a deployed application and works without a restart.</p>
 <p>This document is <strong>structure only</strong> — it defines filenames, required markup,
 available data, and the validator rules. All visual design (layout, palette,
 typography, spacing, component styling) is left to the generator.</p>
-<p>Source of truth: <code>app/server/auth/overrides.py</code> (validator) and
-<code>app/server/AuthServlet.py</code> (context builder). See also
-<a href="../application-security/#customizing-built-in-authentication-pages">application security</a>.</p>
+<p>The runtime validator and authentication context builder enforce this contract.
+See also <a href="../application-security/#customizing-built-in-authentication-pages">application security</a>.</p>
 <hr />
 <h2 id="1-output-layout">1. Output layout<a class="headerlink" href="#1-output-layout" title="Permanent link">&para;</a></h2>
 <p>⚠️ <strong>Not every file goes into <code>WEB-INF/auth-overrides/</code>.</strong> The stylesheet must be

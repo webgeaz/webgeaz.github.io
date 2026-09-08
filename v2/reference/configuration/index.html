@@ -1317,9 +1317,9 @@ dots with underscores. Read the current TLS limitation in
 <code>ai.auto.accept</code>. IDE-saved fields take precedence over properties/environment.
 <code>ai.one.shot.auto.security</code> defaults true; turning it off changes inference,
 not explicit requests for protected access.</p>
-<p>For generation limits inspect <code>app/s0adm/ai/config.py</code> for
-<code>ai.turn.cap</code>, <code>ai.one.shot.turn.cap</code>, <code>ai.context.max.tokens</code>, and
-<code>ai.max.output.tokens</code>; tune against the selected provider's actual limits.
+<p>Generation limits include <code>ai.turn.cap</code>, <code>ai.one.shot.turn.cap</code>,
+<code>ai.context.max.tokens</code>, and <code>ai.max.output.tokens</code>; tune them against the
+selected provider's actual limits.
 These are development/IDE settings, not runtime application requirements.</p>
 <h2 id="advanced-runtime-mappings">Advanced runtime mappings<a class="headerlink" href="#advanced-runtime-mappings" title="Permanent link">&para;</a></h2>
 <p>Servlet/filter mappings are configured as <code>servlet.&lt;name&gt;.mapping/file</code> and

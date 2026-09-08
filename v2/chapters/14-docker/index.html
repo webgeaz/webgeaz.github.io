@@ -1189,15 +1189,15 @@
 <p>Build an application-only image, install its database bundles, and create an
 application administrator. S0ADM belongs on the development instance.</p>
 <h2 id="prepare-an-immutable-application-release">Prepare an immutable application release<a class="headerlink" href="#prepare-an-immutable-application-release" title="Permanent link">&para;</a></h2>
-<p>The tutorial's <a href="../../examples/tracker/#prepare-a-container-release">preparation script</a>
-creates a fresh <code>release/</code> containing only its source, built CSS, welcome
-configuration, security manifest, and SQL bundles. It does not export live users
-or copy the IDE database.</p>
-<p>For your own app, use S0ADM's release preparation where available or construct
-an equivalent reviewed build context. The CLI's <code>deploy TARGET_FOLDER</code> only
-rearranges transaction source; separately include your assets, application
-libraries, welcome configuration, auth overrides, manifest, and SQL bundles.
-Do not copy the entire IDE <code>webapp/</code> directory into an application image.</p>
+<p>Use the release/export workflow supplied by your S0ADM deployment to obtain an
+application build context containing reviewed transaction source, assets,
+welcome configuration, security manifest, and SQL bundles. It must not export
+live users or copy the IDE database.</p>
+<p>The CLI's <code>deploy TARGET_FOLDER</code> only rearranges transaction source. Use it when
+your supplied image workflow expects runtime layout, then separately include the
+exported assets, application libraries, welcome configuration, auth overrides,
+manifest, and SQL bundles. Do not copy the entire IDE workspace into an
+application image.</p>
 <pre class="mermaid"><code>flowchart LR
     Source[Reviewed application source and assets] --&gt; Context[Release context]
     Policy[Security plan] --&gt; Manifest[Manifest and auth SQL]
@@ -1206,26 +1206,22 @@ Do not copy the entire IDE <code>webapp/</code> directory into an application im
     Manifest --&gt; Database[(Production database)]
     Image --&gt; Runtime
     Runtime --&gt; Database</code></pre>
-<p>From the repository root, after building the tracker CSS:</p>
-<div class="highlight"><pre><span></span><code>./dev.sh<span class="w"> </span>build
-java<span class="w"> </span>-cp<span class="w"> </span><span class="s1">'app/lib/*'</span><span class="w"> </span>org.python.util.jython<span class="w"> </span>-B<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>docs/examples/tracker/tools/prepare.py<span class="w"> </span>docs/examples/tracker/release
-docker<span class="w"> </span>build<span class="w"> </span>-f<span class="w"> </span>app/Dockerfile-base-runtime<span class="w"> </span>-t<span class="w"> </span>soad-runtime:tracker<span class="w"> </span>app
-docker<span class="w"> </span>build<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">BASE_IMAGE</span><span class="o">=</span>soad-runtime:tracker<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-t<span class="w"> </span>tracker:1.0<span class="w"> </span>docs/examples/tracker/release
+<p>Build from the exported release directory using the runtime base image supplied
+with your SØAD installation:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>tracker-release
+docker<span class="w"> </span>build<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">BASE_IMAGE</span><span class="o">=</span>registry.example.com/soad/runtime:VERSION<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-t<span class="w"> </span>registry.example.com/apps/tracker:1.0<span class="w"> </span>.
 </code></pre></div>
-<p>The base uses Java 21 and contains <code>server/</code> and <code>soad-auth-admin</code>; it omits
-<code>s0adm/</code>. The application Dockerfile writes <code>webapp/</code> through
-<code>/opt/sufia/webapp/</code>, the target of the base's <code>/app/webapp</code> symlink.
-Keep the base/application versions coupled; use a private registry and immutable
-tags or digests for your releases.</p>
+<p>The supplied application runtime contains the framework and <code>soad-auth-admin</code>
+but omits S0ADM. Keep the base/application versions coupled; use a private
+registry and immutable tags or digests for releases.</p>
 <h2 id="local-container-rehearsal">Local container rehearsal<a class="headerlink" href="#local-container-rehearsal" title="Permanent link">&para;</a></h2>
 <p>The <a href="../../examples/tracker/compose.yaml">Compose example</a> is deliberately a
 localhost HTTP rehearsal, with an isolated MySQL database. Supply
 <code>TRACKER_DB_PASSWORD</code> and <code>TRACKER_DB_ROOT_PASSWORD</code> through your shell's secret
 input mechanism or an untracked <code>.env</code> file in the example directory.
-Do not commit that file.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>docs/examples/tracker
+Do not include that file in source control or release artifacts.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>tracker-example
 docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>db
 docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>db<span class="w"> </span>mysql<span class="w"> </span>--user<span class="o">=</span>root<span class="w"> </span>--password<span class="w"> </span>--database<span class="o">=</span>tracker<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-e<span class="w"> </span><span class="s2">"source /install/auth-mysql.sql; source /install/tracker.sql;"</span>

@@ -1297,9 +1297,8 @@ Use actual configured recipients and reviewed templates. <code>send_api</code> i
 provider-specific path; inspect its configured API integration before adopting it.
 See <a href="../../chapters/09-integrations/#email">email deployment constraints</a>.</p>
 <p>Bundled libraries include Java time/IO, Google Guava, Apache Commons, Apache POI,
-Jakarta Mail, and the PDF converter. The authoritative versions are in
-<code>sufiao-core/build.gradle</code>; do not infer that any arbitrary Java JAR is already
-bundled.</p>
+Jakarta Mail, and the PDF converter. Check the library list for your installed
+SØAD version; do not infer that an arbitrary Java JAR is bundled.</p>
 <p>Log through <code>from sufia.util import Log</code> and <code>Log.info(ctx, message)</code>.
 Use <code>utils.fileupload.UploadedFile</code> for multipart file handling rather than
 calling a second upload parser.</p>

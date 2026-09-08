@@ -1222,8 +1222,8 @@ It assumes an existing MySQL database and an installed Ingress controller.</p>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>tracker
 kubectl<span class="w"> </span>-n<span class="w"> </span>tracker<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>tracker-db<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--from-file<span class="o">=</span><span class="nv">password</span><span class="o">=</span>/secure/path/tracker-db-password
-kubectl<span class="w"> </span>-n<span class="w"> </span>tracker<span class="w"> </span>apply<span class="w"> </span>--dry-run<span class="o">=</span>server<span class="w"> </span>-f<span class="w"> </span>docs/examples/tracker/kubernetes.yaml
-kubectl<span class="w"> </span>-n<span class="w"> </span>tracker<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>docs/examples/tracker/kubernetes.yaml
+kubectl<span class="w"> </span>-n<span class="w"> </span>tracker<span class="w"> </span>apply<span class="w"> </span>--dry-run<span class="o">=</span>server<span class="w"> </span>-f<span class="w"> </span>tracker-kubernetes.yaml
+kubectl<span class="w"> </span>-n<span class="w"> </span>tracker<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>tracker-kubernetes.yaml
 kubectl<span class="w"> </span>-n<span class="w"> </span>tracker<span class="w"> </span>rollout<span class="w"> </span>status<span class="w"> </span>deployment/tracker
 </code></pre></div>
 <p>These commands act on the current kubectl context. Check it before applying.

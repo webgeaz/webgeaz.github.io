@@ -1204,31 +1204,28 @@ same framework; S0ADM is its development and administration interface.</p>
 <td><a href="chapters/13-testing/">13. Testing</a>, <a href="chapters/14-docker/">14. Docker</a>, <a href="chapters/15-kubernetes/">15. Kubernetes</a></td>
 </tr>
 <tr>
-<td>Put this guide online</td>
+<td>Publish application documentation</td>
 <td><a href="chapters/16-publishing/">16. Publishing</a></td>
 </tr>
 </tbody>
 </table>
 <p>Chapters have a learning sequence; the Reference navigation contains detailed
-contracts you can consult without interrupting the tutorial. Markdown links work
-in a Git browser and in the generated website.</p>
+contracts you can consult without interrupting the tutorial.</p>
 <h2 id="what-you-will-build">What you will build<a class="headerlink" href="#what-you-will-build" title="Permanent link">&para;</a></h2>
 <p>The <a href="examples/tracker/">tracker example</a> includes projects, tasks,
 assignment to application users, status filtering, pagination, validation,
 private attachments, and a JSON endpoint. Members manage their own projects;
 an administrator permission controls destructive project deletion. Business
 ownership is checked independently of route permissions.</p>
-<p>The tutorial uses the <code>default</code> application and MySQL, Java 21, and local
-application authentication. H2 is used for isolated checks. Production deployment
-contains the application and authentication runtime, without the S0ADM IDE.</p>
+<p>The tutorial uses the <code>default</code> application and MySQL with local application
+authentication. Production deployment contains the application and authentication
+runtime, without the S0ADM IDE.</p>
 <h2 id="version-and-verification">Version and verification<a class="headerlink" href="#version-and-verification" title="Permanent link">&para;</a></h2>
-<p>This guide was consolidated against the repository implementation on
-2026-09-06. Consult the checked-out Gradle dependencies and <code>soad version</code> when
-comparing another installation. CLI examples were checked against executable help
-from commit <code>5342396</code> (a development build); installed releases may differ.
-The example README records reproducible verification commands and limitations.</p>
+<p>Run <code>soad version</code> and <code>soad COMMAND --help</code> when comparing instructions with
+another installation. Installed CLI releases may expose different optional flags.
+The example README records its verification checklist and limitations.</p>
 <p>No live account, API key, license, database password, or private registry is
-required merely to read or build this documentation site.</p>
+required merely to read this guide.</p>
 
 
 
